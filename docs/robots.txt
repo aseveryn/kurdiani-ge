@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kurdiani.ge/sitemap.xml
