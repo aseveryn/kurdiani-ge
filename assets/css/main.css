@@ -793,7 +793,20 @@ body.lightbox-open { overflow: hidden; }
 
 /* ---------- services ---------- */
 
-.services-block { margin-top: 48px; }
+.about-services {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 64px 16px 0;
+}
+.about-services h2 {
+  margin: 0 0 6px;
+  color: var(--fg);
+  font-family: var(--serif);
+  font-size: 27px;
+  line-height: 34px;
+  font-weight: 700;
+}
+.about-services .services { color: var(--muted); }
 /* two-by-two boxes divided by hairlines; the 01..04 marks are generated so
    the content files stay plain lists in every language */
 .services {
@@ -953,7 +966,7 @@ body.lightbox-open { overflow: hidden; }
   .hero-intro p:first-child { font-size: 19px; line-height: 30px; }
   .stats { padding: 30px 5%; gap: 22px 50px; }
   .stat-num { font-size: 48px; line-height: 54px; }
-  .home-services, .section-heading { padding-left: 5%; padding-right: 5%; }
+  .home-services, .about-services, .section-heading { padding-left: 5%; padding-right: 5%; }
 }
 
 /* ---------- project tiles (home selection + projects page) ---------- */

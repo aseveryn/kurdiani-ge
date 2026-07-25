@@ -957,9 +957,11 @@ def render_projects(projects, lang):
 def render_about(lang):
     adir = os.path.join(CONTENT, "about")
     body = read_lang_file(adir, "about", lang)
+    # the services sit below both columns, not inside the text column, so the
+    # boxes get the full width and the space beside the photographs is used
     services = read_lang_file(adir, "services", lang)
-    if services:
-        body += '\n<section class="services-block">' + services + "</section>"
+    services_block = (f'<section class="about-services">{services}</section>'
+                      if services else "")
 
     shots = []
     src = os.path.join(adir, "portrait.jpg")
@@ -1028,6 +1030,7 @@ def render_about(lang):
             {body}
           </div>
         </div>
+        {services_block}
       </div>"""
     page += footer(lang)
     write(os.path.join(DOCS, *filter(None, [lang_dir(lang), "about"]), "index.html"), page)
