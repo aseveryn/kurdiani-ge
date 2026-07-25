@@ -25,6 +25,30 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://kurdiani.ge/projects/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/projects/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/projects/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/projects/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/projects/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/projects/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/projects/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/projects/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/projects/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/projects/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/projects/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/projects/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kurdiani.ge/about/</loc>
     <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/about/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/about/"/>

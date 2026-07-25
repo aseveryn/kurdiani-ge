@@ -57,6 +57,17 @@ DEFAULT_LANG = "ka"
 
 STRINGS = {
     "en": {
+        "projects": "Projects",
+        "all_projects": "All projects",
+        "home": "Home",
+        "projects_title": "Projects — Kurdiani Architects, Tbilisi",
+        "projects_desc": "The complete portfolio of Kurdiani Architects: houses and villas, hotels, restaurants, offices, interiors and public buildings in Tbilisi and across Georgia.",
+        "cat_residential": "Residential",
+        "cat_hotel": "Hotel",
+        "cat_restaurant": "Restaurant",
+        "cat_office": "Office",
+        "cat_public": "Public",
+        "cat_interior": "Interior",
         "selected_work": "Selected work",
         "services": "Services",
         "service_list": "Architecture|Interior design|Reconstruction and renovation|Construction",
@@ -97,6 +108,17 @@ STRINGS = {
         ),
     },
     "ka": {
+        "projects": "პროექტები",
+        "all_projects": "ყველა პროექტი",
+        "home": "მთავარი",
+        "projects_title": "პროექტები — ქურდიანი არქიტექტორები, თბილისი",
+        "projects_desc": "ქურდიანი არქიტექტორების სრული პორტფოლიო: სახლები და ვილები, სასტუმროები, რესტორნები, ოფისები, ინტერიერები და საზოგადოებრივი შენობები თბილისსა და საქართველოში.",
+        "cat_residential": "საცხოვრებელი",
+        "cat_hotel": "სასტუმრო",
+        "cat_restaurant": "რესტორანი",
+        "cat_office": "ოფისი",
+        "cat_public": "საზოგადოებრივი",
+        "cat_interior": "ინტერიერი",
         "selected_work": "შერჩეული პროექტები",
         "services": "მომსახურება",
         "service_list": "არქიტექტურა|ინტერიერის დიზაინი|რეკონსტრუქცია და რენოვაცია|მშენებლობა",
@@ -137,6 +159,17 @@ STRINGS = {
         ),
     },
     "ru": {
+        "projects": "Проекты",
+        "all_projects": "Все проекты",
+        "home": "Главная",
+        "projects_title": "Проекты — Kurdiani Architects, Тбилиси",
+        "projects_desc": "Полное портфолио Kurdiani Architects: дома и виллы, гостиницы, рестораны, офисы, интерьеры и общественные здания в Тбилиси и по всей Грузии.",
+        "cat_residential": "Жильё",
+        "cat_hotel": "Гостиница",
+        "cat_restaurant": "Ресторан",
+        "cat_office": "Офис",
+        "cat_public": "Общественное",
+        "cat_interior": "Интерьер",
         "selected_work": "Избранные проекты",
         "services": "Услуги",
         "service_list": "Архитектура|Дизайн интерьеров|Реконструкция и реновация|Строительство",
@@ -272,6 +305,7 @@ def load_projects():
                 "ka": meta.get("title_ka", ""),
                 "ru": meta.get("title_ru", ""),
             },
+            "category": meta.get("category", ""),
             "year": meta.get("year", ""),
             "order": int(meta.get("order", 9999)),
             "layout": meta.get("layout", ""),
@@ -526,10 +560,10 @@ def lang_switcher(lang, path):
 
 
 def header_nav(lang, active, path=""):
-    work = ' class="active"' if active == "work" else ""
+    projects = ' class="active"' if active in ("projects", "work") else ""
     about = ' class="active"' if active == "about" else ""
     links = (
-        f'<a href="{url_for(lang)}"{work}>{t(lang, "work")}</a>\n      '
+        f'<a href="{url_for(lang, "projects/")}"{projects}>{t(lang, "projects")}</a>\n      '
         f'<a href="{url_for(lang, "about/")}"{about}>{t(lang, "about")}</a>\n      '
         '<span class="nav-cta">' + contact_buttons(lang) + "</span>"
     )
@@ -704,7 +738,7 @@ def render_project_page(p, lang, prev=None, nxt=None):
     if p["year"]:
         work_ld["dateCreated"] = p["year"]
     jsonld = graph(lang, organization_ld(lang), work_ld,
-                   breadcrumb_ld(lang, [(t(lang, "work"), ""), (title, path)]))
+                   breadcrumb_ld(lang, [(t(lang, "projects"), "projects/"), (title, path)]))
 
     # prev/next give crawlers a path through every project and readers a way
     # to keep going without returning to the grid
@@ -722,7 +756,7 @@ def render_project_page(p, lang, prev=None, nxt=None):
 
     page = head(lang, f'{title} — {t(lang, "brand")}', path, og_image,
                 description=description, og_type="article", jsonld=jsonld)
-    page += header_nav(lang, "work", path)
+    page += header_nav(lang, "projects", path)
     page += f"""
       <div class="page-container">
         <article>
@@ -785,38 +819,62 @@ def home_hero(lang):
       <h2 class="section-heading">{html.escape(t(lang, "selected_work"))}</h2>"""
 
 
-def render_work_page(projects, lang, subdir=""):
-    tiles = []
-    listed = []
-    for n, p in enumerate(pp for pp in projects if pp["cover"]):
-        slug = p["slug"]
-        title = title_of(p, lang)
-        outdir = os.path.join(DOCS, "img", slug)
-        w640, _ = derivative(p["cover"], os.path.join(outdir, "cover-640.jpg"), 640)
-        w1280, _ = derivative(p["cover"], os.path.join(outdir, "cover-1280.jpg"), 1280)
-        year = f'<div class="date">{html.escape(p["year"])}</div>' if p["year"] else ""
-        # the top row is the largest-contentful-paint candidate; leaving it
-        # lazy delays the paint for no bandwidth saving
-        eager = n < 4
-        loading = ('loading="eager" fetchpriority="high"' if n == 0
-                   else 'loading="eager"' if eager else 'loading="lazy"')
-        listed.append((p, title))
-        tiles.append(f"""
-        <a class="project-cover" href="{url_for(lang, slug + '/')}">
-          <div class="cover-box">
+def project_tile(p, lang, eager=False, first=False):
+    """One thumbnail with its name and category underneath."""
+    slug = p["slug"]
+    title = title_of(p, lang)
+    outdir = os.path.join(DOCS, "img", slug)
+    w640, _ = derivative(p["cover"], os.path.join(outdir, "cover-640.jpg"), 640)
+    w1280, _ = derivative(p["cover"], os.path.join(outdir, "cover-1280.jpg"), 1280)
+    cat = t(lang, "cat_" + p["category"]) if p["category"] else ""
+    meta = " · ".join(x for x in (cat, p["year"]) if x)
+    loading = ('loading="eager" fetchpriority="high"' if first
+               else 'loading="eager"' if eager else 'loading="lazy"')
+    return f"""
+        <a class="tile" href="{url_for(lang, slug + '/')}">
+          <div class="tile-img">
             <img src="/img/{slug}/cover-640.jpg"
                  srcset="/img/{slug}/cover-640.jpg {w640}w, /img/{slug}/cover-1280.jpg {w1280}w"
-                 sizes="(max-width: 540px) 100vw, (max-width: 932px) 50vw, 400px"
+                 sizes="(max-width: 540px) 100vw, (max-width: 932px) 50vw, 360px"
                  alt="{html.escape(title)}" {loading} decoding="async">
           </div>
-          <div class="details-wrap">
-            <div class="details">
-              <div class="title">{html.escape(title)}</div>
-              {year}
-            </div>
-          </div>
-        </a>""")
+          <div class="tile-name">{html.escape(title)}</div>
+          <div class="tile-meta">{html.escape(meta)}</div>
+        </a>"""
 
+
+def grid_jsonld(projects, lang, path, name):
+    return graph(
+        lang,
+        organization_ld(lang),
+        {
+            "@type": "CollectionPage",
+            "@id": f"{DOMAIN}{url_for(lang, path)}#page",
+            "url": f"{DOMAIN}{url_for(lang, path)}",
+            "name": name,
+            "inLanguage": lang,
+            "isPartOf": {"@id": f"{DOMAIN}/#website"},
+            "mainEntity": {
+                "@type": "ItemList",
+                "numberOfItems": len(projects),
+                "itemListElement": [
+                    {"@type": "ListItem", "position": i,
+                     "url": f"{DOMAIN}{url_for(lang, p['slug'] + '/')}",
+                     "name": title_of(p, lang)}
+                    for i, p in enumerate(projects, start=1)
+                ],
+            },
+        },
+    )
+
+
+HOME_TILES = 9  # a taste of the work; the rest live on /projects/
+
+
+def render_home(projects, lang):
+    shown = [p for p in projects if p["cover"]][:HOME_TILES]
+    tiles = "".join(project_tile(p, lang, eager=(i < 3), first=(i == 0))
+                    for i, p in enumerate(shown))
     jsonld = graph(
         lang,
         organization_ld(lang),
@@ -829,37 +887,37 @@ def render_work_page(projects, lang, subdir=""):
             "inLanguage": lang,
             "publisher": {"@id": f"{DOMAIN}/#organization"},
         },
-        {
-            "@type": "CollectionPage",
-            "@id": f"{DOMAIN}{url_for(lang)}#page",
-            "url": DOMAIN + url_for(lang),
-            "name": t(lang, "home_title"),
-            "inLanguage": lang,
-            "isPartOf": {"@id": f"{DOMAIN}/#website"},
-            "mainEntity": {
-                "@type": "ItemList",
-                "numberOfItems": len(listed),
-                "itemListElement": [
-                    {
-                        "@type": "ListItem",
-                        "position": i,
-                        "url": f"{DOMAIN}{url_for(lang, p['slug'] + '/')}",
-                        "name": title,
-                    }
-                    for i, (p, title) in enumerate(listed, start=1)
-                ],
-            },
-        },
     )
-
     page = head(lang, t(lang, "home_title"), "", jsonld=jsonld)
-    page += header_nav(lang, "work", "")
+    page += header_nav(lang, "home", "")
     page += home_hero(lang)
     page += f"""
-      <div class="project-covers">{"".join(tiles)}
-      </div>"""
+      <div class="tile-grid">{tiles}</div>
+      <p class="grid-more">
+        <a class="more-link" href="{url_for(lang, 'projects/')}">
+          {html.escape(t(lang, "all_projects"))} <span aria-hidden="true">&rarr;</span>
+        </a>
+      </p>"""
     page += footer(lang, back_to_top=False)
-    write(os.path.join(DOCS, *filter(None, [lang_dir(lang), subdir]), "index.html"), page)
+    write(os.path.join(DOCS, *filter(None, [lang_dir(lang)]), "index.html"), page)
+
+
+def render_projects(projects, lang):
+    shown = [p for p in projects if p["cover"]]
+    tiles = "".join(project_tile(p, lang, eager=(i < 6), first=(i == 0))
+                    for i, p in enumerate(shown))
+    path = "projects/"
+    page = head(lang, t(lang, "projects_title"), path,
+                description=t(lang, "projects_desc"),
+                jsonld=grid_jsonld(shown, lang, path, t(lang, "projects_title")))
+    page += header_nav(lang, "projects", path)
+    page += f"""
+      <header class="page-header grid-header">
+        <h1>{html.escape(t(lang, "projects"))}</h1>
+      </header>
+      <div class="tile-grid">{tiles}</div>"""
+    page += footer(lang)
+    write(os.path.join(DOCS, *filter(None, [lang_dir(lang), "projects"]), "index.html"), page)
 
 
 def render_about(lang):
@@ -911,7 +969,7 @@ def render_about(lang):
             },
             "knowsLanguage": ["ka", "ru", "en"],
         },
-        breadcrumb_ld(lang, [(t(lang, "work"), ""), (t(lang, "about"), path)]),
+        breadcrumb_ld(lang, [(t(lang, "projects"), "projects/"), (t(lang, "about"), path)]),
     )
     page = head(
         lang,
@@ -1002,10 +1060,11 @@ def main():
     if not projects:
         sys.exit("no projects found in content/projects/")
 
-    paths = ["", "about/"] + [p["slug"] + "/" for p in projects]
+    paths = ["", "projects/", "about/"] + [p["slug"] + "/" for p in projects]
     for lang_def in LANGS:
         lang = lang_def["code"]
-        render_work_page(projects, lang)
+        render_home(projects, lang)
+        render_projects(projects, lang)
         for i, p in enumerate(projects):
             render_project_page(
                 p, lang,
