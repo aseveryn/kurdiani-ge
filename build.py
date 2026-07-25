@@ -376,7 +376,7 @@ def render_about():
         f"{DOMAIN}/about/",
         og_image=f"{DOMAIN}/img/about/portrait-1200.jpg" if portrait else None,
         description=(
-            "Kurdiani & Kurdiani, an architecture practice in Tbilisi, Georgia, "
+            "Kurdiani Architects, an architecture practice in Tbilisi, Georgia, "
             "led by Paata and Keti Kurdiani."
         ),
     )
