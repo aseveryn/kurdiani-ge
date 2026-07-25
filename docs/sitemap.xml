@@ -1,105 +1,819 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://kurdiani.ge/</loc></url>
-  <url><loc>https://kurdiani.ge/about/</loc></url>
-  <url><loc>https://kurdiani.ge/two-vllas-in-krtsanisi-tbilisi-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/allergy-immunology-polyclinic-tbilisi-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/hotel-wave-project/</loc></url>
-  <url><loc>https://kurdiani.ge/villa-in-tabakhmela-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/hotel-tornado-project/</loc></url>
-  <url><loc>https://kurdiani.ge/condominium-on-aleksidze-str-tbilisi-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/iraki-embassy-tbilisi-project/</loc></url>
-  <url><loc>https://kurdiani.ge/cafe-project-at-eliava-str-in-tbilisi-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/interior-5/</loc></url>
-  <url><loc>https://kurdiani.ge/villa-at-lisi-lake-tbilisi/</loc></url>
-  <url><loc>https://kurdiani.ge/hotel-savaneti-in-ikalto-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/hotel-project/</loc></url>
-  <url><loc>https://kurdiani.ge/interior-4/</loc></url>
-  <url><loc>https://kurdiani.ge/hotel-project-in-bakuriani/</loc></url>
-  <url><loc>https://kurdiani.ge/restaurant-argo-in-zugdidi/</loc></url>
-  <url><loc>https://kurdiani.ge/interior-3/</loc></url>
-  <url><loc>https://kurdiani.ge/yezidi-cultural-center-in-tbilisi/</loc></url>
-  <url><loc>https://kurdiani.ge/interrior/</loc></url>
-  <url><loc>https://kurdiani.ge/condominium-project/</loc></url>
-  <url><loc>https://kurdiani.ge/interior-2/</loc></url>
-  <url><loc>https://kurdiani.ge/condominium/</loc></url>
-  <url><loc>https://kurdiani.ge/cgc-office-in-rustavi-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/old-hotel-renovation-project/</loc></url>
-  <url><loc>https://kurdiani.ge/interior-1/</loc></url>
-  <url><loc>https://kurdiani.ge/center-of-allergy-immunology-tbilisi-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/villa-in-tsavkisi-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/cgc-office-renovation/</loc></url>
-  <url><loc>https://kurdiani.ge/condominium-1/</loc></url>
-  <url><loc>https://kurdiani.ge/restaurant-in-dusheti-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/old-house-reconstruction/</loc></url>
-  <url><loc>https://kurdiani.ge/interior/</loc></url>
-  <url><loc>https://kurdiani.ge/orthodox-curch-project/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/about/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/two-vllas-in-krtsanisi-tbilisi-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/allergy-immunology-polyclinic-tbilisi-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/hotel-wave-project/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/villa-in-tabakhmela-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/hotel-tornado-project/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/condominium-on-aleksidze-str-tbilisi-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/iraki-embassy-tbilisi-project/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/cafe-project-at-eliava-str-in-tbilisi-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/interior-5/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/villa-at-lisi-lake-tbilisi/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/hotel-savaneti-in-ikalto-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/hotel-project/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/interior-4/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/hotel-project-in-bakuriani/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/restaurant-argo-in-zugdidi/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/interior-3/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/yezidi-cultural-center-in-tbilisi/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/interrior/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/condominium-project/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/interior-2/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/condominium/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/cgc-office-in-rustavi-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/old-hotel-renovation-project/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/interior-1/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/center-of-allergy-immunology-tbilisi-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/villa-in-tsavkisi-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/cgc-office-renovation/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/condominium-1/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/restaurant-in-dusheti-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/old-house-reconstruction/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/interior/</loc></url>
-  <url><loc>https://kurdiani.ge/ru/orthodox-curch-project/</loc></url>
-  <url><loc>https://kurdiani.ge/en/</loc></url>
-  <url><loc>https://kurdiani.ge/en/about/</loc></url>
-  <url><loc>https://kurdiani.ge/en/two-vllas-in-krtsanisi-tbilisi-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/en/allergy-immunology-polyclinic-tbilisi-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/en/hotel-wave-project/</loc></url>
-  <url><loc>https://kurdiani.ge/en/villa-in-tabakhmela-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/en/hotel-tornado-project/</loc></url>
-  <url><loc>https://kurdiani.ge/en/condominium-on-aleksidze-str-tbilisi-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/en/iraki-embassy-tbilisi-project/</loc></url>
-  <url><loc>https://kurdiani.ge/en/cafe-project-at-eliava-str-in-tbilisi-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/en/interior-5/</loc></url>
-  <url><loc>https://kurdiani.ge/en/villa-at-lisi-lake-tbilisi/</loc></url>
-  <url><loc>https://kurdiani.ge/en/hotel-savaneti-in-ikalto-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/en/hotel-project/</loc></url>
-  <url><loc>https://kurdiani.ge/en/interior-4/</loc></url>
-  <url><loc>https://kurdiani.ge/en/hotel-project-in-bakuriani/</loc></url>
-  <url><loc>https://kurdiani.ge/en/restaurant-argo-in-zugdidi/</loc></url>
-  <url><loc>https://kurdiani.ge/en/interior-3/</loc></url>
-  <url><loc>https://kurdiani.ge/en/yezidi-cultural-center-in-tbilisi/</loc></url>
-  <url><loc>https://kurdiani.ge/en/interrior/</loc></url>
-  <url><loc>https://kurdiani.ge/en/condominium-project/</loc></url>
-  <url><loc>https://kurdiani.ge/en/interior-2/</loc></url>
-  <url><loc>https://kurdiani.ge/en/condominium/</loc></url>
-  <url><loc>https://kurdiani.ge/en/cgc-office-in-rustavi-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/en/old-hotel-renovation-project/</loc></url>
-  <url><loc>https://kurdiani.ge/en/interior-1/</loc></url>
-  <url><loc>https://kurdiani.ge/en/center-of-allergy-immunology-tbilisi-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/en/villa-in-tsavkisi-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/en/cgc-office-renovation/</loc></url>
-  <url><loc>https://kurdiani.ge/en/condominium-1/</loc></url>
-  <url><loc>https://kurdiani.ge/en/restaurant-in-dusheti-georgia/</loc></url>
-  <url><loc>https://kurdiani.ge/en/old-house-reconstruction/</loc></url>
-  <url><loc>https://kurdiani.ge/en/interior/</loc></url>
-  <url><loc>https://kurdiani.ge/en/orthodox-curch-project/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://kurdiani.ge/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/about/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/about/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/about/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/about/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/about/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/about/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/two-vllas-in-krtsanisi-tbilisi-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/two-vllas-in-krtsanisi-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/two-vllas-in-krtsanisi-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/two-vllas-in-krtsanisi-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/two-vllas-in-krtsanisi-tbilisi-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/two-vllas-in-krtsanisi-tbilisi-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/two-vllas-in-krtsanisi-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/two-vllas-in-krtsanisi-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/two-vllas-in-krtsanisi-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/two-vllas-in-krtsanisi-tbilisi-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/two-vllas-in-krtsanisi-tbilisi-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/two-vllas-in-krtsanisi-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/two-vllas-in-krtsanisi-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/two-vllas-in-krtsanisi-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/two-vllas-in-krtsanisi-tbilisi-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/allergy-immunology-polyclinic-tbilisi-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/allergy-immunology-polyclinic-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/allergy-immunology-polyclinic-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/allergy-immunology-polyclinic-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/allergy-immunology-polyclinic-tbilisi-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/allergy-immunology-polyclinic-tbilisi-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/allergy-immunology-polyclinic-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/allergy-immunology-polyclinic-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/allergy-immunology-polyclinic-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/allergy-immunology-polyclinic-tbilisi-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/allergy-immunology-polyclinic-tbilisi-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/allergy-immunology-polyclinic-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/allergy-immunology-polyclinic-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/allergy-immunology-polyclinic-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/allergy-immunology-polyclinic-tbilisi-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/hotel-wave-project/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/hotel-wave-project/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/hotel-wave-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/hotel-wave-project/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/hotel-wave-project/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/hotel-wave-project/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/hotel-wave-project/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/hotel-wave-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/hotel-wave-project/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/hotel-wave-project/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/hotel-wave-project/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/hotel-wave-project/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/hotel-wave-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/hotel-wave-project/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/hotel-wave-project/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/villa-in-tabakhmela-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/villa-in-tabakhmela-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/villa-in-tabakhmela-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/villa-in-tabakhmela-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/villa-in-tabakhmela-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/villa-in-tabakhmela-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/villa-in-tabakhmela-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/villa-in-tabakhmela-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/villa-in-tabakhmela-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/villa-in-tabakhmela-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/villa-in-tabakhmela-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/villa-in-tabakhmela-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/villa-in-tabakhmela-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/villa-in-tabakhmela-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/villa-in-tabakhmela-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/hotel-tornado-project/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/hotel-tornado-project/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/hotel-tornado-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/hotel-tornado-project/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/hotel-tornado-project/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/hotel-tornado-project/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/hotel-tornado-project/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/hotel-tornado-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/hotel-tornado-project/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/hotel-tornado-project/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/hotel-tornado-project/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/hotel-tornado-project/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/hotel-tornado-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/hotel-tornado-project/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/hotel-tornado-project/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/condominium-on-aleksidze-str-tbilisi-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/condominium-on-aleksidze-str-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/condominium-on-aleksidze-str-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/condominium-on-aleksidze-str-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/condominium-on-aleksidze-str-tbilisi-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/condominium-on-aleksidze-str-tbilisi-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/condominium-on-aleksidze-str-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/condominium-on-aleksidze-str-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/condominium-on-aleksidze-str-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/condominium-on-aleksidze-str-tbilisi-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/condominium-on-aleksidze-str-tbilisi-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/condominium-on-aleksidze-str-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/condominium-on-aleksidze-str-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/condominium-on-aleksidze-str-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/condominium-on-aleksidze-str-tbilisi-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/iraki-embassy-tbilisi-project/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/iraki-embassy-tbilisi-project/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/iraki-embassy-tbilisi-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/iraki-embassy-tbilisi-project/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/iraki-embassy-tbilisi-project/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/iraki-embassy-tbilisi-project/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/iraki-embassy-tbilisi-project/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/iraki-embassy-tbilisi-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/iraki-embassy-tbilisi-project/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/iraki-embassy-tbilisi-project/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/iraki-embassy-tbilisi-project/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/iraki-embassy-tbilisi-project/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/iraki-embassy-tbilisi-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/iraki-embassy-tbilisi-project/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/iraki-embassy-tbilisi-project/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/cafe-project-at-eliava-str-in-tbilisi-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/cafe-project-at-eliava-str-in-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/cafe-project-at-eliava-str-in-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/cafe-project-at-eliava-str-in-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/cafe-project-at-eliava-str-in-tbilisi-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/cafe-project-at-eliava-str-in-tbilisi-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/cafe-project-at-eliava-str-in-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/cafe-project-at-eliava-str-in-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/cafe-project-at-eliava-str-in-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/cafe-project-at-eliava-str-in-tbilisi-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/cafe-project-at-eliava-str-in-tbilisi-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/cafe-project-at-eliava-str-in-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/cafe-project-at-eliava-str-in-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/cafe-project-at-eliava-str-in-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/cafe-project-at-eliava-str-in-tbilisi-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/interior-5/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/interior-5/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/interior-5/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/interior-5/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/interior-5/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/interior-5/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/interior-5/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/interior-5/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/interior-5/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/interior-5/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/interior-5/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/interior-5/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/interior-5/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/interior-5/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/interior-5/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/villa-at-lisi-lake-tbilisi/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/villa-at-lisi-lake-tbilisi/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/villa-at-lisi-lake-tbilisi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/villa-at-lisi-lake-tbilisi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/villa-at-lisi-lake-tbilisi/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/villa-at-lisi-lake-tbilisi/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/villa-at-lisi-lake-tbilisi/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/villa-at-lisi-lake-tbilisi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/villa-at-lisi-lake-tbilisi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/villa-at-lisi-lake-tbilisi/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/villa-at-lisi-lake-tbilisi/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/villa-at-lisi-lake-tbilisi/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/villa-at-lisi-lake-tbilisi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/villa-at-lisi-lake-tbilisi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/villa-at-lisi-lake-tbilisi/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/hotel-savaneti-in-ikalto-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/hotel-savaneti-in-ikalto-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/hotel-savaneti-in-ikalto-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/hotel-savaneti-in-ikalto-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/hotel-savaneti-in-ikalto-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/hotel-savaneti-in-ikalto-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/hotel-savaneti-in-ikalto-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/hotel-savaneti-in-ikalto-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/hotel-savaneti-in-ikalto-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/hotel-savaneti-in-ikalto-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/hotel-savaneti-in-ikalto-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/hotel-savaneti-in-ikalto-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/hotel-savaneti-in-ikalto-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/hotel-savaneti-in-ikalto-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/hotel-savaneti-in-ikalto-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/hotel-project/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/hotel-project/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/hotel-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/hotel-project/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/hotel-project/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/hotel-project/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/hotel-project/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/hotel-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/hotel-project/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/hotel-project/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/hotel-project/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/hotel-project/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/hotel-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/hotel-project/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/hotel-project/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/interior-4/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/interior-4/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/interior-4/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/interior-4/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/interior-4/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/interior-4/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/interior-4/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/interior-4/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/interior-4/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/interior-4/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/interior-4/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/interior-4/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/interior-4/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/interior-4/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/interior-4/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/hotel-project-in-bakuriani/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/hotel-project-in-bakuriani/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/hotel-project-in-bakuriani/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/hotel-project-in-bakuriani/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/hotel-project-in-bakuriani/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/hotel-project-in-bakuriani/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/hotel-project-in-bakuriani/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/hotel-project-in-bakuriani/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/hotel-project-in-bakuriani/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/hotel-project-in-bakuriani/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/hotel-project-in-bakuriani/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/hotel-project-in-bakuriani/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/hotel-project-in-bakuriani/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/hotel-project-in-bakuriani/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/hotel-project-in-bakuriani/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/restaurant-argo-in-zugdidi/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/restaurant-argo-in-zugdidi/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/restaurant-argo-in-zugdidi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/restaurant-argo-in-zugdidi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/restaurant-argo-in-zugdidi/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/restaurant-argo-in-zugdidi/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/restaurant-argo-in-zugdidi/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/restaurant-argo-in-zugdidi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/restaurant-argo-in-zugdidi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/restaurant-argo-in-zugdidi/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/restaurant-argo-in-zugdidi/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/restaurant-argo-in-zugdidi/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/restaurant-argo-in-zugdidi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/restaurant-argo-in-zugdidi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/restaurant-argo-in-zugdidi/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/interior-3/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/interior-3/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/interior-3/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/interior-3/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/interior-3/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/interior-3/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/interior-3/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/interior-3/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/interior-3/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/interior-3/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/interior-3/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/interior-3/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/interior-3/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/interior-3/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/interior-3/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/yezidi-cultural-center-in-tbilisi/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/yezidi-cultural-center-in-tbilisi/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/yezidi-cultural-center-in-tbilisi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/yezidi-cultural-center-in-tbilisi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/yezidi-cultural-center-in-tbilisi/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/yezidi-cultural-center-in-tbilisi/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/yezidi-cultural-center-in-tbilisi/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/yezidi-cultural-center-in-tbilisi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/yezidi-cultural-center-in-tbilisi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/yezidi-cultural-center-in-tbilisi/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/yezidi-cultural-center-in-tbilisi/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/yezidi-cultural-center-in-tbilisi/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/yezidi-cultural-center-in-tbilisi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/yezidi-cultural-center-in-tbilisi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/yezidi-cultural-center-in-tbilisi/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/interrior/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/interrior/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/interrior/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/interrior/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/interrior/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/interrior/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/interrior/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/interrior/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/interrior/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/interrior/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/interrior/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/interrior/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/interrior/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/interrior/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/interrior/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/condominium-project/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/condominium-project/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/condominium-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/condominium-project/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/condominium-project/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/condominium-project/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/condominium-project/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/condominium-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/condominium-project/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/condominium-project/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/condominium-project/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/condominium-project/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/condominium-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/condominium-project/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/condominium-project/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/interior-2/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/interior-2/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/interior-2/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/interior-2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/interior-2/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/interior-2/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/interior-2/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/interior-2/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/interior-2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/interior-2/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/interior-2/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/interior-2/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/interior-2/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/interior-2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/interior-2/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/condominium/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/condominium/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/condominium/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/condominium/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/condominium/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/condominium/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/condominium/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/condominium/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/condominium/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/condominium/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/condominium/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/condominium/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/condominium/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/condominium/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/condominium/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/cgc-office-in-rustavi-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/cgc-office-in-rustavi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/cgc-office-in-rustavi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/cgc-office-in-rustavi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/cgc-office-in-rustavi-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/cgc-office-in-rustavi-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/cgc-office-in-rustavi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/cgc-office-in-rustavi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/cgc-office-in-rustavi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/cgc-office-in-rustavi-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/cgc-office-in-rustavi-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/cgc-office-in-rustavi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/cgc-office-in-rustavi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/cgc-office-in-rustavi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/cgc-office-in-rustavi-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/old-hotel-renovation-project/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/old-hotel-renovation-project/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/old-hotel-renovation-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/old-hotel-renovation-project/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/old-hotel-renovation-project/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/old-hotel-renovation-project/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/old-hotel-renovation-project/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/old-hotel-renovation-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/old-hotel-renovation-project/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/old-hotel-renovation-project/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/old-hotel-renovation-project/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/old-hotel-renovation-project/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/old-hotel-renovation-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/old-hotel-renovation-project/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/old-hotel-renovation-project/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/interior-1/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/interior-1/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/interior-1/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/interior-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/interior-1/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/interior-1/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/interior-1/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/interior-1/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/interior-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/interior-1/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/interior-1/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/interior-1/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/interior-1/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/interior-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/interior-1/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/center-of-allergy-immunology-tbilisi-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/center-of-allergy-immunology-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/center-of-allergy-immunology-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/center-of-allergy-immunology-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/center-of-allergy-immunology-tbilisi-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/center-of-allergy-immunology-tbilisi-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/center-of-allergy-immunology-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/center-of-allergy-immunology-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/center-of-allergy-immunology-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/center-of-allergy-immunology-tbilisi-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/center-of-allergy-immunology-tbilisi-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/center-of-allergy-immunology-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/center-of-allergy-immunology-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/center-of-allergy-immunology-tbilisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/center-of-allergy-immunology-tbilisi-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/villa-in-tsavkisi-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/villa-in-tsavkisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/villa-in-tsavkisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/villa-in-tsavkisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/villa-in-tsavkisi-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/villa-in-tsavkisi-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/villa-in-tsavkisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/villa-in-tsavkisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/villa-in-tsavkisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/villa-in-tsavkisi-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/villa-in-tsavkisi-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/villa-in-tsavkisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/villa-in-tsavkisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/villa-in-tsavkisi-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/villa-in-tsavkisi-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/cgc-office-renovation/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/cgc-office-renovation/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/cgc-office-renovation/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/cgc-office-renovation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/cgc-office-renovation/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/cgc-office-renovation/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/cgc-office-renovation/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/cgc-office-renovation/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/cgc-office-renovation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/cgc-office-renovation/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/cgc-office-renovation/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/cgc-office-renovation/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/cgc-office-renovation/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/cgc-office-renovation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/cgc-office-renovation/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/condominium-1/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/condominium-1/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/condominium-1/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/condominium-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/condominium-1/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/condominium-1/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/condominium-1/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/condominium-1/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/condominium-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/condominium-1/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/condominium-1/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/condominium-1/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/condominium-1/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/condominium-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/condominium-1/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/restaurant-in-dusheti-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/restaurant-in-dusheti-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/restaurant-in-dusheti-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/restaurant-in-dusheti-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/restaurant-in-dusheti-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/restaurant-in-dusheti-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/restaurant-in-dusheti-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/restaurant-in-dusheti-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/restaurant-in-dusheti-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/restaurant-in-dusheti-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/restaurant-in-dusheti-georgia/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/restaurant-in-dusheti-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/restaurant-in-dusheti-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/restaurant-in-dusheti-georgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/restaurant-in-dusheti-georgia/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/old-house-reconstruction/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/old-house-reconstruction/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/old-house-reconstruction/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/old-house-reconstruction/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/old-house-reconstruction/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/old-house-reconstruction/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/old-house-reconstruction/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/old-house-reconstruction/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/old-house-reconstruction/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/old-house-reconstruction/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/old-house-reconstruction/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/old-house-reconstruction/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/old-house-reconstruction/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/old-house-reconstruction/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/old-house-reconstruction/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/interior/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/interior/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/interior/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/interior/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/interior/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/interior/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/interior/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/interior/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/interior/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/interior/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/interior/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/interior/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/interior/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/interior/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/interior/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/orthodox-curch-project/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/orthodox-curch-project/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/orthodox-curch-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/orthodox-curch-project/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/orthodox-curch-project/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/orthodox-curch-project/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/orthodox-curch-project/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/orthodox-curch-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/orthodox-curch-project/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/orthodox-curch-project/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/orthodox-curch-project/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/orthodox-curch-project/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/orthodox-curch-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/orthodox-curch-project/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/orthodox-curch-project/"/>
+    <priority>0.8</priority>
+  </url>
 </urlset>

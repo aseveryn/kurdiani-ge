@@ -28,6 +28,7 @@ Usage: python3 build.py [--clean]
 import argparse
 import hashlib
 import html
+import json
 import os
 import re
 import shutil
@@ -64,6 +65,15 @@ STRINGS = {
         "site_title": "paata kurdiani",
         "not_found": "Page not found",
         "back_to_work": "Back to work",
+        "brand": "Kurdiani Architects",
+        "home_title": "Kurdiani Architects — Architecture Studio in Tbilisi, Georgia",
+        "project_desc": (
+            "{title} — an architecture project by Kurdiani Architects, "
+            "the Tbilisi practice of Paata and Keti Kurdiani."
+        ),
+        "locale": "en_US",
+        "prev": "Previous project",
+        "next": "Next project",
         "site_description": (
             "Kurdiani Architects — architecture portfolio of Paata Kurdiani. "
             "Residential, hotel, restaurant and interior projects in Tbilisi, Georgia."
@@ -82,6 +92,15 @@ STRINGS = {
         "site_title": "პაატა კურდიანი",
         "not_found": "გვერდი ვერ მოიძებნა",
         "back_to_work": "პროექტებზე დაბრუნება",
+        "brand": "კურდიანი არქიტექტორები",
+        "home_title": "კურდიანი არქიტექტორები — არქიტექტურული სტუდია თბილისში",
+        "project_desc": (
+            "{title} — არქიტექტურული პროექტი. კურდიანი არქიტექტორები, "
+            "პაატა და ქეთი კურდიანების სტუდია თბილისში."
+        ),
+        "locale": "ka_GE",
+        "prev": "წინა პროექტი",
+        "next": "შემდეგი პროექტი",
         "site_description": (
             "კურდიანი არქიტექტორები — პაატა კურდიანის არქიტექტურული პორტფოლიო. "
             "საცხოვრებელი სახლები, სასტუმროები, რესტორნები და ინტერიერები თბილისში."
@@ -100,6 +119,15 @@ STRINGS = {
         "site_title": "Паата Курдиани",
         "not_found": "Страница не найдена",
         "back_to_work": "К проектам",
+        "brand": "Kurdiani Architects",
+        "home_title": "Kurdiani Architects — архитектурное бюро в Тбилиси, Грузия",
+        "project_desc": (
+            "{title} — архитектурный проект бюро Kurdiani Architects, "
+            "студии Пааты и Кети Курдиани в Тбилиси."
+        ),
+        "locale": "ru_RU",
+        "prev": "Предыдущий проект",
+        "next": "Следующий проект",
         "site_description": (
             "Kurdiani Architects — архитектурное портфолио Пааты Курдиани. "
             "Жилые дома, гостиницы, рестораны и интерьеры в Тбилиси, Грузия."
@@ -291,16 +319,37 @@ def url_for(lang, path=""):
     return f"{prefix}/{path}"
 
 
-def head(lang, title, path, og_image=None, description=None):
+def head(lang, title, path, og_image=None, description=None, og_type="website",
+         jsonld=None):
     """path is the page path without language prefix ('' = home)."""
-    og = f'\n  <meta property="og:image" content="{og_image}">' if og_image else ""
+    canonical = f"{DOMAIN}{url_for(lang, path)}"
+    desc = description or t(lang, "site_description")
+    image = og_image or f"{DOMAIN}/img/about/portrait-1200.jpg"
+
     alts = "\n".join(
         f'  <link rel="alternate" hreflang="{l["code"]}" '
         f'href="{DOMAIN}{url_for(l["code"], path)}">'
         for l in LANGS
     )
-    alts += f'\n  <link rel="alternate" hreflang="x-default" href="{DOMAIN}{url_for(DEFAULT_LANG, path)}">'
-    desc = description or t(lang, "site_description")
+    alts += (f'\n  <link rel="alternate" hreflang="x-default" '
+             f'href="{DOMAIN}{url_for(DEFAULT_LANG, path)}">')
+
+    other_locales = "\n".join(
+        f'  <meta property="og:locale:alternate" content="{t(l["code"], "locale")}">'
+        for l in LANGS if l["code"] != lang
+    )
+
+    # Preload the face that renders this language's body copy, so the first
+    # paint isn't held up switching from the fallback font.
+    preload_font = ("/fonts/NotoSansGeorgian-georgian-400.woff2" if lang == "ka"
+                    else "/fonts/Montserrat-400.woff2")
+
+    structured = ""
+    if jsonld:
+        structured = ('\n  <script type="application/ld+json">'
+                      + json.dumps(jsonld, ensure_ascii=False, separators=(",", ":"))
+                      + "</script>")
+
     return f"""<!DOCTYPE html>
 <html lang="{lang}">
 <head>
@@ -308,13 +357,78 @@ def head(lang, title, path, og_image=None, description=None):
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{html.escape(title)}</title>
   <meta name="description" content="{html.escape(desc)}">
-  <meta property="og:title" content="{html.escape(title)}">{og}
-  <link rel="canonical" href="{DOMAIN}{url_for(lang, path)}">
+  <meta name="theme-color" content="#222222">
+  <link rel="canonical" href="{canonical}">
 {alts}
-  <link rel="icon" href="{FAVICON}">
-  <link rel="stylesheet" href="/css/main.css?v={ASSET_TAGS['css']}">
+  <meta property="og:type" content="{og_type}">
+  <meta property="og:site_name" content="{html.escape(t(lang, "brand"))}">
+  <meta property="og:title" content="{html.escape(title)}">
+  <meta property="og:description" content="{html.escape(desc)}">
+  <meta property="og:url" content="{canonical}">
+  <meta property="og:image" content="{image}">
+  <meta property="og:locale" content="{t(lang, "locale")}">
+{other_locales}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{html.escape(title)}">
+  <meta name="twitter:description" content="{html.escape(desc)}">
+  <meta name="twitter:image" content="{image}">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" as="font" type="font/woff2" href="{preload_font}" crossorigin>
+  <link rel="stylesheet" href="/css/main.css?v={ASSET_TAGS['css']}">{structured}
 </head>
 <body class="fade">"""
+
+
+def organization_ld(lang):
+    """The practice itself — reused as publisher/creator across page types."""
+    return {
+        "@type": "ArchitecturalService",
+        "@id": f"{DOMAIN}/#organization",
+        "name": t(lang, "brand"),
+        "alternateName": "Kurdiani Architects",
+        "url": DOMAIN + url_for(lang),
+        "image": f"{DOMAIN}/img/about/portrait-1200.jpg",
+        "logo": f"{DOMAIN}/apple-touch-icon.png",
+        "description": t(lang, "site_description"),
+        "telephone": PHONE_NUMBER,
+        "email": "kurdiani.paata@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Aleksidze str. N 6, 52 B",
+            "addressLocality": "Tbilisi",
+            "postalCode": "0193",
+            "addressCountry": "GE",
+        },
+        "areaServed": {"@type": "Country", "name": "Georgia"},
+        "founder": {
+            "@type": "Person",
+            "name": "Paata Kurdiani",
+            "jobTitle": "Chief Architect",
+        },
+        "sameAs": ["https://www.facebook.com/kurdiani.ge"],
+    }
+
+
+def graph(lang, *nodes):
+    return {"@context": "https://schema.org", "@graph": list(nodes)}
+
+
+def breadcrumb_ld(lang, trail):
+    """trail: [(name, path), ...] where path is language-less ('' = home)."""
+    return {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": i,
+                "name": name,
+                "item": f"{DOMAIN}{url_for(lang, path)}",
+            }
+            for i, (name, path) in enumerate(trail, start=1)
+        ],
+    }
 
 
 def contact_buttons(lang, extra_class=""):
@@ -423,7 +537,7 @@ def parse_layout(layout, n_images):
     return modules
 
 
-def render_project_page(p, lang):
+def render_project_page(p, lang, prev=None, nxt=None):
     slug = p["slug"]
     title = title_of(p, lang)
     imgdir = os.path.join(p["dir"], "images")
@@ -473,16 +587,51 @@ def render_project_page(p, lang):
 
     og_image = f"{DOMAIN}/img/{slug}/cover-1280.jpg" if p["cover"] else None
     path = f"{slug}/"
-    page = head(lang, f'{t(lang, "site_title")} - {title}', path, og_image, description=title)
+    description = t(lang, "project_desc").format(title=title)
+
+    work_ld = {
+        "@type": "CreativeWork",
+        "@id": f"{DOMAIN}{url_for(lang, path)}#project",
+        "name": title,
+        "url": f"{DOMAIN}{url_for(lang, path)}",
+        "description": description,
+        "inLanguage": lang,
+        "creator": {"@id": f"{DOMAIN}/#organization"},
+        "image": [f"{DOMAIN}{full}" for _, _, full, _ in built.values()][:8],
+    }
+    if p["year"]:
+        work_ld["dateCreated"] = p["year"]
+    jsonld = graph(lang, organization_ld(lang), work_ld,
+                   breadcrumb_ld(lang, [(t(lang, "work"), ""), (title, path)]))
+
+    # prev/next give crawlers a path through every project and readers a way
+    # to keep going without returning to the grid
+    nav = ""
+    if prev or nxt:
+        left = (f'<a class="pn-prev" href="{url_for(lang, prev["slug"] + "/")}">'
+                f'<span class="pn-label">{t(lang, "prev")}</span>'
+                f'<span class="pn-title">{html.escape(title_of(prev, lang))}</span></a>'
+                if prev else "<span></span>")
+        right = (f'<a class="pn-next" href="{url_for(lang, nxt["slug"] + "/")}">'
+                 f'<span class="pn-label">{t(lang, "next")}</span>'
+                 f'<span class="pn-title">{html.escape(title_of(nxt, lang))}</span></a>'
+                 if nxt else "<span></span>")
+        nav = f'<nav class="project-nav">{left}{right}</nav>'
+
+    page = head(lang, f'{title} — {t(lang, "brand")}', path, og_image,
+                description=description, og_type="article", jsonld=jsonld)
     page += header_nav(lang, "work", path)
     page += f"""
       <div class="page-container">
-        <header class="page-header">
-          <h1>{html.escape(title)}</h1>{desc_html}
-        </header>
-        <div class="modules">
-          {"".join(parts)}
-        </div>
+        <article>
+          <header class="page-header">
+            <h1>{html.escape(title)}</h1>{desc_html}
+          </header>
+          <div class="modules">
+            {"".join(parts)}
+          </div>
+        </article>
+        {nav}
       </div>"""
     page += footer(lang)
     write(os.path.join(DOCS, *filter(None, [lang_dir(lang), slug]), "index.html"), page)
@@ -495,22 +644,27 @@ def lang_dir(lang):
 
 def render_work_page(projects, lang, subdir=""):
     tiles = []
-    for p in projects:
-        if not p["cover"]:
-            continue
+    listed = []
+    for n, p in enumerate(pp for pp in projects if pp["cover"]):
         slug = p["slug"]
         title = title_of(p, lang)
         outdir = os.path.join(DOCS, "img", slug)
         w640, _ = derivative(p["cover"], os.path.join(outdir, "cover-640.jpg"), 640)
         w1280, _ = derivative(p["cover"], os.path.join(outdir, "cover-1280.jpg"), 1280)
         year = f'<div class="date">{html.escape(p["year"])}</div>' if p["year"] else ""
+        # the top row is the largest-contentful-paint candidate; leaving it
+        # lazy delays the paint for no bandwidth saving
+        eager = n < 4
+        loading = ('loading="eager" fetchpriority="high"' if n == 0
+                   else 'loading="eager"' if eager else 'loading="lazy"')
+        listed.append((p, title))
         tiles.append(f"""
         <a class="project-cover" href="{url_for(lang, slug + '/')}">
           <div class="cover-box">
             <img src="/img/{slug}/cover-640.jpg"
                  srcset="/img/{slug}/cover-640.jpg {w640}w, /img/{slug}/cover-1280.jpg {w1280}w"
                  sizes="(max-width: 540px) 100vw, (max-width: 932px) 50vw, 400px"
-                 alt="{html.escape(title)}" loading="lazy">
+                 alt="{html.escape(title)}" {loading} decoding="async">
           </div>
           <div class="details-wrap">
             <div class="details">
@@ -519,9 +673,46 @@ def render_work_page(projects, lang, subdir=""):
             </div>
           </div>
         </a>""")
-    page = head(lang, t(lang, "site_title"), "")
+
+    jsonld = graph(
+        lang,
+        organization_ld(lang),
+        {
+            "@type": "WebSite",
+            "@id": f"{DOMAIN}/#website",
+            "url": DOMAIN + url_for(lang),
+            "name": t(lang, "brand"),
+            "description": t(lang, "site_description"),
+            "inLanguage": lang,
+            "publisher": {"@id": f"{DOMAIN}/#organization"},
+        },
+        {
+            "@type": "CollectionPage",
+            "@id": f"{DOMAIN}{url_for(lang)}#page",
+            "url": DOMAIN + url_for(lang),
+            "name": t(lang, "home_title"),
+            "inLanguage": lang,
+            "isPartOf": {"@id": f"{DOMAIN}/#website"},
+            "mainEntity": {
+                "@type": "ItemList",
+                "numberOfItems": len(listed),
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": i,
+                        "url": f"{DOMAIN}{url_for(lang, p['slug'] + '/')}",
+                        "name": title,
+                    }
+                    for i, (p, title) in enumerate(listed, start=1)
+                ],
+            },
+        },
+    )
+
+    page = head(lang, t(lang, "home_title"), "", jsonld=jsonld)
     page += header_nav(lang, "work", "")
     page += f"""
+      <h1 class="sr-only">{html.escape(t(lang, "home_title"))}</h1>
       <div class="project-covers">{"".join(tiles)}
       </div>"""
     page += footer(lang, back_to_top=False)
@@ -549,12 +740,41 @@ def render_about(lang):
           </figure>"""
 
     path = "about/"
+    jsonld = graph(
+        lang,
+        organization_ld(lang),
+        {
+            "@type": "AboutPage",
+            "@id": f"{DOMAIN}{url_for(lang, path)}#page",
+            "url": f"{DOMAIN}{url_for(lang, path)}",
+            "name": t(lang, "about_title"),
+            "description": t(lang, "about_description"),
+            "inLanguage": lang,
+            "about": {"@id": f"{DOMAIN}/#organization"},
+        },
+        {
+            "@type": "Person",
+            "@id": f"{DOMAIN}/#paata",
+            "name": "Paata Kurdiani",
+            "jobTitle": "Chief Architect",
+            "worksFor": {"@id": f"{DOMAIN}/#organization"},
+            "image": f"{DOMAIN}/img/about/portrait-1200.jpg",
+            "alumniOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "Tbilisi Polytechnic University",
+            },
+            "knowsLanguage": ["ka", "ru", "en"],
+        },
+        breadcrumb_ld(lang, [(t(lang, "work"), ""), (t(lang, "about"), path)]),
+    )
     page = head(
         lang,
-        f'{t(lang, "site_title")} - {t(lang, "about")}',
+        f'{t(lang, "about_title")} — {t(lang, "brand")}',
         path,
         og_image=f"{DOMAIN}/img/about/portrait-1200.jpg" if portrait else None,
         description=t(lang, "about_description"),
+        og_type="profile",
+        jsonld=jsonld,
     )
     page += header_nav(lang, "about", path)
     page += f"""
@@ -626,6 +846,9 @@ def main():
         if os.path.isdir(dst):
             shutil.rmtree(dst)
         shutil.copytree(src, dst)
+    # favicons and friends live at the site root
+    for fname in os.listdir(os.path.join(ASSETS, "static")):
+        shutil.copy2(os.path.join(ASSETS, "static", fname), os.path.join(DOCS, fname))
     ASSET_TAGS["css"] = fingerprint(os.path.join(DOCS, "css", "main.css"))
     ASSET_TAGS["js"] = fingerprint(os.path.join(DOCS, "js", "site.js"))
 
@@ -633,26 +856,44 @@ def main():
     if not projects:
         sys.exit("no projects found in content/projects/")
 
-    urls = []
+    paths = ["", "about/"] + [p["slug"] + "/" for p in projects]
     for lang_def in LANGS:
         lang = lang_def["code"]
         render_work_page(projects, lang)
         render_work_page(projects, lang, subdir="work")
-        for p in projects:
-            render_project_page(p, lang)
+        for i, p in enumerate(projects):
+            render_project_page(
+                p, lang,
+                prev=projects[i - 1] if i > 0 else None,
+                nxt=projects[i + 1] if i + 1 < len(projects) else None,
+            )
         render_about(lang)
-        urls.append(f"{DOMAIN}{url_for(lang)}")
-        urls.append(f"{DOMAIN}{url_for(lang, 'about/')}")
-        urls += [f"{DOMAIN}{url_for(lang, p['slug'] + '/')}" for p in projects]
 
     render_contact_redirect()
     render_404()
 
-    sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'
-    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    sitemap += "".join(f"  <url><loc>{u}</loc></url>\n" for u in urls)
-    sitemap += "</urlset>\n"
-    write(os.path.join(DOCS, "sitemap.xml"), sitemap)
+    # every URL declares its translations, so Google serves the right one
+    sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
+               '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
+               ' xmlns:xhtml="http://www.w3.org/1999/xhtml">']
+    for path in paths:
+        for lang_def in LANGS:
+            lang = lang_def["code"]
+            sitemap.append("  <url>")
+            sitemap.append(f"    <loc>{DOMAIN}{url_for(lang, path)}</loc>")
+            for alt in LANGS:
+                sitemap.append(
+                    f'    <xhtml:link rel="alternate" hreflang="{alt["code"]}"'
+                    f' href="{DOMAIN}{url_for(alt["code"], path)}"/>'
+                )
+            sitemap.append(
+                f'    <xhtml:link rel="alternate" hreflang="x-default"'
+                f' href="{DOMAIN}{url_for(DEFAULT_LANG, path)}"/>'
+            )
+            sitemap.append(f"    <priority>{'1.0' if path == '' else '0.8'}</priority>")
+            sitemap.append("  </url>")
+    sitemap.append("</urlset>")
+    write(os.path.join(DOCS, "sitemap.xml"), "\n".join(sitemap) + "\n")
     write(os.path.join(DOCS, "robots.txt"),
           f"User-agent: *\nAllow: /\nSitemap: {DOMAIN}/sitemap.xml\n")
     write(os.path.join(DOCS, "CNAME"), "kurdiani.ge\n")
