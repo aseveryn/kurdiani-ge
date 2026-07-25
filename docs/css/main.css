@@ -1,91 +1,64 @@
 /* kurdiani.ge — Kurdiani Architects portfolio */
 
+/* Jost carries the text — a geometric sans in the Bauhaus line, which suits a
+   practice that builds. Cormorant Garamond carries the display sizes, where its
+   high stroke contrast gives the names and numbers the weight of a printed
+   monograph rather than a web page. */
+/* Jost is a variable font: one file covers every weight from 100 to 900, so it
+   is declared once as a range. Asking for :wght@400;500;600 as three separate
+   faces made the browser fetch the identical 26 KB file three times. */
 @font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-400.woff2') format('woff2');
-  font-weight: 400;
+  font-family: 'Jost';
+  src: url('/fonts/Jost-variable.woff2') format('woff2-variations'),
+       url('/fonts/Jost-variable.woff2') format('woff2');
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-600.woff2') format('woff2');
+  font-family: 'Cormorant Garamond';
+  src: url('/fonts/CormorantGaramond-600.woff2') format('woff2');
   font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-700.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Roboto Slab';
-  src: url('/fonts/RobotoSlab-700.woff2') format('woff2');
-  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-/* Cyrillic — Montserrat/Roboto Slab ship Latin and Cyrillic as separate
-   subsets; the browser only downloads the range a page actually uses. */
+/* Cyrillic — both families ship Latin and Cyrillic as separate subsets; the
+   browser only downloads the range a page actually uses. */
 @font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-cyrillic-400.woff2') format('woff2');
-  font-weight: 400;
+  font-family: 'Jost';
+  src: url('/fonts/Jost-cyrillic-variable.woff2') format('woff2-variations'),
+       url('/fonts/Jost-cyrillic-variable.woff2') format('woff2');
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
   unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 @font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-cyrillic-600.woff2') format('woff2');
+  font-family: 'Cormorant Garamond';
+  src: url('/fonts/CormorantGaramond-cyrillic-600.woff2') format('woff2');
   font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-cyrillic-700.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-@font-face {
-  font-family: 'Roboto Slab';
-  src: url('/fonts/RobotoSlab-cyrillic-700.woff2') format('woff2');
-  font-weight: 700;
   font-style: normal;
   font-display: swap;
   unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
-/* Georgian — neither Montserrat nor Roboto Slab covers Mkhedruli, so these
-   sit next in the font stack and the browser picks them per glyph. */
+/* Georgian — neither Jost nor Cormorant covers Mkhedruli, so these sit next in
+   the font stack and the browser picks them per glyph. */
+/* also variable, and this one matters most: Georgian is the default language,
+   so its 41 KB was being fetched three times on the pages most visitors see.
+   The unicode-range is load-bearing rather than an optimisation: without it the
+   English and Russian pages pulled this file down too, because Jost has no
+   glyph for the → and ↑ arrows and the browser walked to the next font in the
+   stack to find one. */
 @font-face {
   font-family: 'Noto Sans Georgian';
-  src: url('/fonts/NotoSansGeorgian-georgian-400.woff2') format('woff2');
-  font-weight: 400;
+  src: url('/fonts/NotoSansGeorgian-georgian-variable.woff2') format('woff2-variations'),
+       url('/fonts/NotoSansGeorgian-georgian-variable.woff2') format('woff2');
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
-}
-@font-face {
-  font-family: 'Noto Sans Georgian';
-  src: url('/fonts/NotoSansGeorgian-georgian-600.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Noto Sans Georgian';
-  src: url('/fonts/NotoSansGeorgian-georgian-700.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+  unicode-range: U+10A0-10FF, U+1C90-1CBF, U+2D00-2D2F;
 }
 @font-face {
   font-family: 'Noto Serif Georgian';
@@ -93,15 +66,24 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+10A0-10FF, U+1C90-1CBF, U+2D00-2D2F;
 }
 
+/* Warm ink rather than neutral grey: the photographs are full of brick, timber
+   and Tbilisi stone, and a cold background fought them. Brass is the only
+   colour on the site — reserved for small marks, never for large areas. */
 :root {
-  --bg: #222;
-  --fg: #eee;
-  --muted: #9a9a9a;   /* 5.65:1 on #222 — AA for normal text */
-  --dim: #8a8a8a;    /* 4.61:1 — de-emphasised labels, still AA */
-  --sans: 'Montserrat', 'Noto Sans Georgian', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --serif: 'Roboto Slab', 'Noto Serif Georgian', 'Rockwell', Georgia, serif;
+  --bg: #171613;
+  --raise: #1e1c18;   /* header and other surfaces lifted off the page */
+  --fg: #f2eee4;      /* bone — 15.6:1 on the background */
+  --muted: #a9a296;   /* 7.1:1 — body copy */
+  --dim: #8d877b;     /* 5.1:1 — de-emphasised labels, still AA */
+  --accent: #c08f4f;  /* brass — 6.3:1, so it is safe even at small sizes */
+  --rule: rgba(242, 238, 228, 0.11);
+  --rule-strong: rgba(242, 238, 228, 0.2);
+  --sans: 'Jost', 'Noto Sans Georgian', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --serif: 'Cormorant Garamond', 'Noto Serif Georgian', Georgia, 'Times New Roman', serif;
+  --header-h: 74px;
 }
 
 * { box-sizing: border-box; }
@@ -110,6 +92,23 @@ html {
   background-color: var(--bg);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  scroll-padding-top: calc(var(--header-h) + 16px);
+}
+
+/* A film of grain over everything. Flat #hex fields are what made the page read
+   as a screen; this is the tooth of paper, at an opacity you notice only when
+   it is removed. Fixed, so it does not travel with the scroll. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+@media (prefers-reduced-transparency: reduce) {
+  body::before { display: none; }
 }
 html, body { min-height: 100%; }
 body {
@@ -162,40 +161,91 @@ video:focus-visible {
 
 /* ---------- header ---------- */
 
-.site-header { position: relative; }
-.site-header:after { content: ''; display: table; clear: both; }
-.logo-wrap { float: left; padding: 36px 0 36px 1.8%; max-width: 100%; }
+/* The old header was the same flat colour as the page with nothing to separate
+   it, so it read as part of the background. It is now its own plane: frosted,
+   edged with a hairline, and pinned so the work scrolls underneath it. */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background-color: rgba(23, 22, 19, 0.72);
+  border-bottom: 1px solid var(--rule);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+  .site-header {
+    -webkit-backdrop-filter: saturate(150%) blur(16px);
+    backdrop-filter: saturate(150%) blur(16px);
+  }
+}
+/* once the page has moved, firm the plane up so photographs passing behind it
+   never wash the navigation out */
+.site-header.scrolled {
+  background-color: rgba(23, 22, 19, 0.9);
+  border-bottom-color: var(--rule-strong);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  max-width: 1600px;
+  margin: 0 auto;
+  min-height: var(--header-h);
+  padding: 0 2%;
+}
 .logo {
-  font-size: 22px;
+  font-size: 17px;
   line-height: 22px;
 }
 .logo a {
   font-family: var(--sans);
-  font-weight: 600;
+  font-weight: 500;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--fg);
   white-space: pre-wrap;
-}
-.site-header nav { float: right; padding: 36px 2.1% 30px 0; text-align: right; }
-.site-header nav a {
-  display: inline-block;
-  font-size: 14px;
-  line-height: 28px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: var(--muted);
-  padding: 0 10px;
   transition: color 0.2s ease;
 }
-.site-header nav a:last-child { padding-right: 0; }
+.logo a:hover { color: var(--accent); }
+.site-header nav { margin-left: auto; text-align: right; }
+.site-header nav a {
+  position: relative;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 28px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 0 12px;
+  transition: color 0.2s ease;
+}
 .site-header nav a:hover, .site-header nav a.active { color: var(--fg); }
+/* a brass tick under the current section — the only mark that says where you
+   are, and it draws itself in on hover */
+.site-header nav > a::after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 2px;
+  height: 1px;
+  background-color: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+.site-header nav > a:hover::after, .site-header nav > a.active::after { transform: scaleX(1); }
+@media (prefers-reduced-motion: reduce) {
+  .site-header nav > a::after { transition: none; }
+}
 
 /* WhatsApp button (header + footer) */
 .wa-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid var(--rule-strong);
   border-radius: 999px;
   color: var(--fg);
   transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
@@ -211,9 +261,10 @@ video:focus-visible {
    display:inline-block and collapse the flex layout */
 .site-header nav a.wa-btn {
   display: inline-flex;
-  padding: 5px 14px;
+  padding: 6px 15px;
   line-height: 20px;
-  letter-spacing: 0.03em;
+  font-size: 11px;
+  letter-spacing: 0.1em;
 }
 .wa-btn:hover {
   border-color: #25d366;
@@ -230,10 +281,10 @@ video:focus-visible {
 .msgr-btn:hover .wa-icon { fill: #0084ff; }
 
 .call-btn:hover {
-  border-color: var(--fg);
-  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent);
+  background-color: rgba(192, 143, 79, 0.14);
 }
-.call-btn:hover .wa-icon { fill: var(--fg); }
+.call-btn:hover .wa-icon { fill: var(--accent); }
 
 /* language switcher */
 .lang-switch {
@@ -249,28 +300,28 @@ video:focus-visible {
   line-height: 20px;
   color: var(--dim);
 }
-.site-header nav .lang-switch a + a { border-left: 1px solid rgba(255, 255, 255, 0.18); }
+.site-header nav .lang-switch a + a { border-left: 1px solid var(--rule-strong); }
 .site-header nav .lang-switch a:hover { color: var(--fg); }
 .site-header nav .lang-switch a.active { color: var(--fg); }
 
 /* hamburger (mobile) */
 .hamburger {
   display: none;
-  position: absolute;
-  right: 5%;
-  top: 40px;
+  margin-left: auto;
   width: 26px;
-  height: 21px;
+  height: 18px;
+  padding: 0;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
 .hamburger i {
   display: block;
   width: 100%;
-  height: 3px;
+  height: 2px;
   margin-bottom: 6px;
   background-color: var(--fg);
 }
+.hamburger i:last-child { margin-bottom: 0; width: 68%; margin-left: auto; }
 
 .responsive-nav {
   display: none;
@@ -381,7 +432,7 @@ body.nav-open { overflow: hidden; }
   font-family: var(--serif);
   font-size: 30px;
   line-height: 34px;
-  font-weight: 700;
+  font-weight: 600;
   padding-bottom: 15px;
 }
 .details-wrap .date {
@@ -403,9 +454,19 @@ body.nav-open { overflow: hidden; }
   padding: 0 0 20px;
   color: var(--fg);
   font-family: var(--serif);
-  font-size: 60px;
-  line-height: 70px;
-  font-weight: 700;
+  font-size: clamp(40px, 5vw, 62px);
+  line-height: 1.08;
+  font-weight: 600;
+}
+/* the same brass rule that opens the landing page, so About, Projects and each
+   project all announce themselves the same way */
+.page-header h1::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin-bottom: 24px;
+  background-color: var(--accent);
 }
 .page-header .description {
   margin: 20px 0 0;
@@ -420,7 +481,7 @@ body.nav-open { overflow: hidden; }
 .site-footer {
   margin-top: 40px;
   padding: 44px 0 60px;
-  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  border-top: 1px solid var(--rule);
 }
 .footer-inner {
   display: flex;
@@ -516,7 +577,7 @@ body.nav-open { overflow: hidden; }
   font-family: var(--serif);
   font-size: 27px;
   line-height: 34px;
-  font-weight: 700;
+  font-weight: 600;
 }
 .about-text .role {
   margin: 0 0 20px;
@@ -533,7 +594,7 @@ body.nav-open { overflow: hidden; }
   color: var(--fg);
   font-size: 16px;
   font-weight: 600;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid var(--rule-strong);
   padding-bottom: 3px;
   transition: border-color 0.2s ease;
 }
@@ -545,11 +606,11 @@ body.nav-open { overflow: hidden; }
   display: flex;
   gap: 20px;
   padding: 10px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  border-top: 1px solid var(--rule);
   font-size: 15px;
   line-height: 22px;
 }
-.worklist li:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0.09); }
+.worklist li:last-child { border-bottom: 1px solid var(--rule); }
 .worklist .year {
   flex: none;
   width: 104px;
@@ -580,7 +641,7 @@ body.nav-open { overflow: hidden; }
   max-width: 1120px;
   margin: 50px auto 0;
   padding: 26px 16px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  border-top: 1px solid var(--rule);
 }
 .project-nav a { max-width: 46%; }
 .project-nav .pn-next { text-align: right; }
@@ -742,8 +803,8 @@ body.lightbox-open { overflow: hidden; }
 /* ---------- responsive ---------- */
 
 @media (max-width: 932px) {
-  .site-header { padding: 40px 5%; }
-  .logo-wrap { float: none; width: 100%; padding: 0 39px 0 0; }
+  :root { --header-h: 62px; }
+  .header-inner { padding: 0 5%; }
   .site-header nav { display: none; }
   .hamburger { display: block; }
 
@@ -777,9 +838,8 @@ body.lightbox-open { overflow: hidden; }
 }
 
 @media (max-width: 540px) {
-  .site-header { padding-top: 30px; padding-bottom: 30px; }
-  .hamburger { top: 30px; }
-  .logo a { font-size: 21px; line-height: 21px; }
+  .logo { font-size: 14px; }
+  .logo a { letter-spacing: 0.12em; }
 
   .project-cover { width: 100%; }
   .details-wrap .title { font-size: 19px; line-height: 22px; padding-bottom: 10px; }
@@ -796,15 +856,7 @@ body.lightbox-open { overflow: hidden; }
 .about-services {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 64px 16px 0;
-}
-.about-services h2 {
-  margin: 0 0 6px;
-  color: var(--fg);
-  font-family: var(--serif);
-  font-size: 27px;
-  line-height: 34px;
-  font-weight: 700;
+  padding: 76px 16px 0;
 }
 .about-services .services { color: var(--muted); }
 /* two-by-two boxes divided by hairlines; the 01..04 marks are generated so
@@ -816,40 +868,41 @@ body.lightbox-open { overflow: hidden; }
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin: 0;
   padding: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  border-top: 1px solid var(--rule);
 }
 .services li {
   counter-increment: svc;
-  padding: 30px 0 34px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  padding: 34px 0 38px;
+  border-bottom: 1px solid var(--rule);
 }
 .services li:nth-child(odd) {
-  border-right: 1px solid rgba(255, 255, 255, 0.09);
-  padding-right: 44px;
+  border-right: 1px solid var(--rule);
+  padding-right: 48px;
 }
-.services li:nth-child(even) { padding-left: 44px; }
+.services li:nth-child(even) { padding-left: 48px; }
 .services li::before {
   content: counter(svc, decimal-leading-zero);
   display: block;
-  margin-bottom: 16px;
-  color: var(--dim);
-  font-size: 12px;
+  margin-bottom: 18px;
+  color: var(--accent);
+  font-size: 11px;
   line-height: 16px;
-  letter-spacing: 0.18em;
+  font-weight: 500;
+  letter-spacing: 0.22em;
 }
 .svc-name {
   display: block;
   color: var(--fg);
   font-family: var(--serif);
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 700;
+  font-size: 27px;
+  line-height: 34px;
+  font-weight: 600;
 }
 .svc-note {
   display: block;
   margin-top: 10px;
   font-size: 15px;
-  line-height: 25px;
+  line-height: 26px;
 }
 
 @media (max-width: 700px) {
@@ -857,24 +910,38 @@ body.lightbox-open { overflow: hidden; }
   .services li,
   .services li:nth-child(odd),
   .services li:nth-child(even) {
-    padding: 24px 0 26px;
+    padding: 26px 0 28px;
     border-right: 0;
   }
-  .svc-name { font-size: 21px; line-height: 29px; }
+  .svc-name { font-size: 23px; line-height: 31px; }
 }
 
 /* ---------- home hero ---------- */
 
 .hero {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 440px) minmax(0, 1fr);
-  gap: 56px;
+  gap: 64px;
   align-items: center;
   max-width: 1120px;
   margin: 0 auto;
-  padding: 70px 16px 60px;
+  padding: 84px 16px 72px;
 }
-.hero-portrait { margin: 0; }
+/* a low warm light spilling from behind the portrait, so the top of the page
+   has depth instead of sitting on one flat field */
+.hero::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: -18%;
+  right: 12%;
+  top: -8%;
+  height: 620px;
+  pointer-events: none;
+  background: radial-gradient(52% 62% at 34% 34%, rgba(192, 143, 79, 0.13), rgba(192, 143, 79, 0) 68%);
+}
+.hero-portrait { position: relative; margin: 0; }
 /* the source is a full-length 3:4 studio shot; squaring it off keeps the
    hero from pushing the bio and the work below the fold */
 .hero-portrait img {
@@ -884,89 +951,152 @@ body.lightbox-open { overflow: hidden; }
   object-fit: cover;
   object-position: 50% 30%;
 }
+/* a brass rule opens the page — the one mark that sets the whole palette */
+.hero-text::before {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 2px;
+  margin-bottom: 30px;
+  background-color: var(--accent);
+}
 .hero-text h1 {
-  margin: 0 0 22px;
+  margin: 0 0 24px;
   color: var(--fg);
   font-family: var(--serif);
-  font-size: 46px;
-  line-height: 54px;
-  font-weight: 700;
+  font-size: clamp(42px, 5.4vw, 72px);
+  line-height: 1.04;
+  letter-spacing: -0.005em;
+  font-weight: 600;
 }
-.hero-intro { color: var(--muted); font-size: 18px; line-height: 30px; }
-.hero-intro p { margin: 0 0 14px; }
-.hero-intro p:first-child { color: #ccc; font-size: 21px; line-height: 33px; }
-.hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
-.hero-cta .wa-btn { padding: 9px 18px; font-size: 14px; line-height: 20px; }
+.hero-intro { color: var(--muted); font-size: 17px; line-height: 29px; }
+.hero-intro p { margin: 0 0 16px; }
+.hero-intro p:first-child {
+  color: var(--fg);
+  font-size: 21px;
+  line-height: 34px;
+  font-weight: 400;
+}
+.hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+.hero-cta .wa-btn {
+  padding: 10px 20px;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* the hero arrives in sequence rather than all at once — portrait, rule, name,
+   text, buttons — which reads as deliberate instead of merely loaded */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+.hero-portrait, .hero-text::before, .hero-text h1, .hero-intro, .hero-cta {
+  animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.3, 1) backwards;
+}
+.hero-portrait { animation-delay: 0.05s; }
+.hero-text::before { animation-delay: 0.14s; }
+.hero-text h1 { animation-delay: 0.2s; }
+.hero-intro { animation-delay: 0.3s; }
+.hero-cta { animation-delay: 0.4s; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-portrait, .hero-text::before, .hero-text h1, .hero-intro, .hero-cta {
+    animation: none;
+  }
+}
 
 /* ---------- numbers ---------- */
 
 .stats-band {
-  border-top: 1px solid rgba(255, 255, 255, 0.09);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
   margin: 0 auto;
   max-width: 1120px;
 }
+/* hairline-divided cells that share the band evenly, the way a monograph sets
+   its endpapers — laid out as a grid so two figures do not leave half the rule
+   hanging over empty space */
 .stats {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px 80px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
   margin: 0;
-  padding: 40px 16px;
+  padding: 0 16px;
 }
+.stats li { padding: 44px 0 46px; padding-right: 64px; }
+.stats li + li { padding-left: 64px; border-left: 1px solid var(--rule); }
 .stat-num {
   display: block;
-  color: var(--fg);
+  color: var(--accent);
   font-family: var(--serif);
-  font-size: 62px;
-  line-height: 68px;
-  font-weight: 700;
+  font-size: clamp(54px, 6.4vw, 78px);
+  line-height: 1;
+  font-weight: 600;
+  font-variant-numeric: lining-nums;
 }
 .stat-label {
   display: block;
-  margin-top: 4px;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 20px;
+  margin-top: 12px;
+  color: var(--dim);
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.2em;
 }
 
-.home-services { max-width: 1120px; margin: 0 auto; padding: 56px 16px 10px; }
-.home-services h2 {
-  margin: 0 0 6px;
-  color: var(--fg);
-  font-family: var(--serif);
-  font-size: 27px;
-  line-height: 34px;
-  font-weight: 700;
-}
+.home-services { max-width: 1120px; margin: 0 auto; padding: 76px 16px 10px; }
 .home-services .services { color: var(--muted); }
 
-.section-heading {
+/* One treatment for every section title on the site, so "What we do" and
+   "Selected work" read as the same rank: a short brass rule, then the name in
+   the display face. */
+.section-heading,
+.home-services > h2,
+.about-services > h2 {
   max-width: 1120px;
-  margin: 56px auto 22px;
-  padding: 0 16px;
+  margin: 0 0 26px;
   color: var(--fg);
   font-family: var(--serif);
-  font-size: 27px;
-  line-height: 34px;
-  font-weight: 700;
+  font-size: clamp(30px, 3.2vw, 40px);
+  line-height: 1.12;
+  font-weight: 600;
+}
+.section-heading { margin: 84px auto 30px; padding: 0 16px; }
+.section-heading::before,
+.home-services > h2::before,
+.about-services > h2::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin-bottom: 22px;
+  background-color: var(--accent);
 }
 
 @media (max-width: 932px) {
   .hero {
     grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 40px 5% 40px;
+    gap: 34px;
+    padding: 48px 5% 44px;
   }
   .hero-portrait img { max-width: 420px; aspect-ratio: 4 / 3; }
-  .hero-text h1 { font-size: 34px; line-height: 42px; }
   .hero-intro { font-size: 16px; line-height: 27px; }
-  .hero-intro p:first-child { font-size: 19px; line-height: 30px; }
-  .stats { padding: 30px 5%; gap: 22px 50px; }
-  .stat-num { font-size: 48px; line-height: 54px; }
+  .hero-intro p:first-child { font-size: 19px; line-height: 31px; }
+  .stats { padding: 0 5%; }
+  .stats li { padding: 32px 0 34px; padding-right: 40px; }
+  .stats li + li { padding-left: 40px; }
   .home-services, .about-services, .section-heading { padding-left: 5%; padding-right: 5%; }
+  .section-heading { margin-top: 62px; }
+}
+@media (max-width: 540px) {
+  /* the cells stay side by side on a phone — two short figures read better as a
+     pair than stacked — so only the gutter narrows */
+  .stats li { padding: 26px 0 28px; padding-right: 20px; }
+  .stats li + li { padding-left: 20px; }
 }
 
 /* ---------- project tiles (home selection + projects page) ---------- */
@@ -984,7 +1114,7 @@ body.lightbox-open { overflow: hidden; }
   position: relative;
   overflow: hidden;
   padding-bottom: 70%;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(242, 238, 228, 0.04);
 }
 .tile-img img {
   position: absolute;
@@ -992,23 +1122,48 @@ body.lightbox-open { overflow: hidden; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease, opacity 0.3s ease;
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1), filter 0.4s ease;
 }
-.tile:hover .tile-img img { transform: scale(1.04); opacity: 0.85; }
+/* the photograph warms and steps forward rather than dimming — the old hover
+   faded the work, which is the one thing the page is selling */
+.tile:hover .tile-img img { transform: scale(1.045); filter: saturate(112%) brightness(1.06); }
 .tile-name {
-  margin-top: 14px;
+  position: relative;
+  display: inline-block;
+  margin-top: 16px;
+  padding-bottom: 3px;
   color: var(--fg);
-  font-size: 15px;
-  line-height: 22px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: color 0.25s ease;
 }
+.tile-name::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+.tile:hover .tile-name { color: var(--accent); }
+.tile:hover .tile-name::after { transform: scaleX(1); }
 .tile-meta {
-  margin-top: 2px;
+  margin-top: 5px;
   color: var(--dim);
-  font-size: 13px;
-  line-height: 19px;
-  font-style: italic;
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tile-img img, .tile-name, .tile-name::after { transition: none; }
 }
 .grid-more {
   max-width: 1120px;

@@ -431,8 +431,8 @@ def head(lang, title, path, og_image=None, description=None, og_type="website",
 
     # Preload the face that renders this language's body copy, so the first
     # paint isn't held up switching from the fallback font.
-    preload_font = ("/fonts/NotoSansGeorgian-georgian-400.woff2" if lang == "ka"
-                    else "/fonts/Montserrat-400.woff2")
+    preload_font = ("/fonts/NotoSansGeorgian-georgian-variable.woff2" if lang == "ka"
+                    else "/fonts/Jost-variable.woff2")
 
     structured = ""
     if jsonld:
@@ -583,11 +583,9 @@ def header_nav(lang, active, path=""):
       {switcher}
     </nav>
   </div>
-  <div class="site-container">
-    <header class="site-header">
-      <div class="logo-wrap"><div class="logo">
-        <a href="{url_for(lang)}">{SITE_NAME}</a>
-      </div></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo"><a href="{url_for(lang)}">{SITE_NAME}</a></div>
       <nav aria-label="{html.escape(t(lang, "menu_primary"))}">
       {links}
       {switcher}
@@ -595,7 +593,9 @@ def header_nav(lang, active, path=""):
       <button class="hamburger" type="button" aria-expanded="false"
               aria-controls="mobile-nav"
               aria-label="{html.escape(t(lang, "open_menu"))}"><i></i><i></i><i></i></button>
-    </header>
+    </div>
+  </header>
+  <div class="site-container">
     <main id="main">"""
 
 

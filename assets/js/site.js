@@ -39,6 +39,17 @@
     });
   }
 
+  // ----- header: firm up the frosted bar once the page has moved, so
+  // photographs scrolling underneath never wash out the navigation -----
+  var header = document.querySelector('.site-header');
+  if (header) {
+    var onHeaderScroll = function () {
+      header.classList.toggle('scrolled', window.scrollY > 12);
+    };
+    window.addEventListener('scroll', onHeaderScroll, { passive: true });
+    onHeaderScroll();
+  }
+
   // ----- fixed back-to-top -----
   var btt = document.querySelector('.btt-fixed');
   if (btt) {
