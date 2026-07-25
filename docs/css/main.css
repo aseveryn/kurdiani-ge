@@ -74,7 +74,6 @@
    colour on the site — reserved for small marks, never for large areas. */
 :root {
   --bg: #171613;
-  --raise: #1e1c18;   /* header and other surfaces lifted off the page */
   --fg: #f2eee4;      /* bone — 15.6:1 on the background */
   --muted: #a9a296;   /* 7.1:1 — body copy */
   --dim: #8d877b;     /* 5.1:1 — de-emphasised labels, still AA */
@@ -385,63 +384,6 @@ video:focus-visible {
 .responsive-nav .close-nav:after { transform: rotate(-45deg); }
 body.nav-open { overflow: hidden; }
 
-/* ---------- work grid (covers) ---------- */
-
-.project-covers { display: flex; flex-wrap: wrap; }
-.project-cover {
-  display: block;
-  position: relative;
-  width: 25%;
-}
-.cover-box {
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 78.2178%; /* 202:158 cover aspect */
-}
-.cover-box img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-}
-.cover-box:after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: #000;
-  opacity: 0;
-  transition: background-color 0.2s ease, opacity 0.2s ease;
-}
-.project-cover:hover .cover-box:after { opacity: 0.5; }
-.details-wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 7% 8% 0;
-  opacity: 0;
-  transition: opacity 0.15s ease;
-}
-.project-cover:hover .details-wrap { opacity: 1; }
-.details-wrap .title {
-  color: #fff;
-  font-family: var(--serif);
-  font-size: 30px;
-  line-height: 34px;
-  font-weight: 600;
-  padding-bottom: 15px;
-}
-.details-wrap .date {
-  color: #fff;
-  font-size: 13px;
-  line-height: 17px;
-  font-weight: 600;
-}
-
 /* ---------- project page ---------- */
 
 .page-header {
@@ -530,7 +472,7 @@ body.nav-open { overflow: hidden; }
 .module-video video {
   width: 100%;
   max-width: 512px;
-  background-color: #191919;
+  background-color: var(--bg);
   display: block;
 }
 
@@ -567,7 +509,7 @@ body.nav-open { overflow: hidden; }
 .about-text p { margin: 0 0 18px; }
 .about-text p:last-child { margin-bottom: 0; }
 .about-text .lead {
-  color: #ccc;
+  color: var(--fg);
   font-size: 21px;
   line-height: 33px;
 }
@@ -601,36 +543,7 @@ body.nav-open { overflow: hidden; }
 .more-link:hover { border-color: var(--fg); }
 .more-link span { display: inline-block; margin-left: 6px; }
 
-.worklist { list-style: none; margin: 0; padding: 0; }
-.worklist li {
-  display: flex;
-  gap: 20px;
-  padding: 10px 0;
-  border-top: 1px solid var(--rule);
-  font-size: 15px;
-  line-height: 22px;
-}
-.worklist li:last-child { border-bottom: 1px solid var(--rule); }
-.worklist .year {
-  flex: none;
-  width: 104px;
-  color: var(--dim);
-  font-size: 13px;
-  line-height: 22px;
-}
-
 /* visible to screen readers and crawlers, not on screen */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
 
 /* ---------- prev / next between projects ---------- */
 
@@ -808,9 +721,6 @@ body.lightbox-open { overflow: hidden; }
   .site-header nav { display: none; }
   .hamburger { display: block; }
 
-  .project-cover { width: 50%; }
-  .details-wrap .title { font-size: 22px; line-height: 25px; padding-bottom: 11px; }
-
   .page-header { padding: 60px 5% 40px; }
   .page-header h1 { font-size: 42px; line-height: 50px; }
   .footer-inner { padding: 0 5%; gap: 26px 40px; }
@@ -841,14 +751,9 @@ body.lightbox-open { overflow: hidden; }
   .logo { font-size: 14px; }
   .logo a { letter-spacing: 0.12em; }
 
-  .project-cover { width: 100%; }
-  .details-wrap .title { font-size: 19px; line-height: 22px; padding-bottom: 10px; }
-
   .page-header h1 { font-size: 28px; line-height: 34px; }
 
   .about-text h2 { font-size: 23px; line-height: 29px; }
-  .worklist li { flex-direction: column; gap: 2px; padding: 12px 0; }
-  .worklist .year { width: auto; }
 }
 
 /* ---------- services ---------- */
@@ -930,10 +835,13 @@ body.lightbox-open { overflow: hidden; }
 }
 /* a low warm light spilling from behind the portrait, so the top of the page
    has depth instead of sitting on one flat field */
+/* the glow sits at z-index 0 and the content is lifted to 1, rather than
+   pushing the glow to -1 — at -1 it would only stay visible for as long as
+   nobody gives `body` a background-color, which is too quiet a trap to leave */
 .hero::before {
   content: '';
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   left: -18%;
   right: 12%;
   top: -8%;
@@ -941,7 +849,8 @@ body.lightbox-open { overflow: hidden; }
   pointer-events: none;
   background: radial-gradient(52% 62% at 34% 34%, rgba(192, 143, 79, 0.13), rgba(192, 143, 79, 0) 68%);
 }
-.hero-portrait { position: relative; margin: 0; }
+.hero-portrait, .hero-text { position: relative; z-index: 1; }
+.hero-portrait { margin: 0; }
 /* the source is a full-length 3:4 studio shot; squaring it off keeps the
    hero from pushing the bio and the work below the fold */
 .hero-portrait img {

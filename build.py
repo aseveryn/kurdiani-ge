@@ -361,7 +361,7 @@ def derivative(src, dest, max_width, quality=85):
     with Image.open(src) as im:
         im = ImageOps.exif_transpose(im)
         if im.mode not in ("RGB", "L"):
-            background = Image.new("RGB", im.size, "#222222")
+            background = Image.new("RGB", im.size, "#171613")
             im = im.convert("RGBA")
             background.paste(im, mask=im.split()[-1])
             im = background
@@ -447,7 +447,7 @@ def head(lang, title, path, og_image=None, description=None, og_type="website",
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{html.escape(title)}</title>
   <meta name="description" content="{html.escape(desc)}">
-  <meta name="theme-color" content="#222222">
+  <meta name="theme-color" content="#171613">
   <link rel="canonical" href="{canonical}">
 {alts}
   <meta property="og:type" content="{og_type}">
@@ -596,7 +596,7 @@ def header_nav(lang, active, path=""):
     </div>
   </header>
   <div class="site-container">
-    <main id="main">"""
+    <main id="main" tabindex="-1">"""
 
 
 BTT_SVG = (
