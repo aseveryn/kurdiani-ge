@@ -236,10 +236,12 @@ def load_projects():
             "year": meta.get("year", ""),
             "order": int(meta.get("order", 9999)),
             "layout": meta.get("layout", ""),
+            # frontmatter is line-based, so a literal \n marks a paragraph break
             "descs": {
-                "en": meta.get("desc", "") or body,
-                "ka": meta.get("desc_ka", ""),
-                "ru": meta.get("desc_ru", ""),
+                code: (meta.get(key, "") or fallback).replace("\\n", "\n")
+                for code, key, fallback in (
+                    ("en", "desc", body), ("ka", "desc_ka", ""), ("ru", "desc_ru", "")
+                )
             },
             "images": images,
             "videos": videos,
