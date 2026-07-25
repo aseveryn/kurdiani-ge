@@ -57,6 +57,16 @@ DEFAULT_LANG = "ka"
 
 STRINGS = {
     "en": {
+        "skip_to_content": "Skip to content",
+        "open_menu": "Open menu",
+        "close_menu": "Close menu",
+        "menu_primary": "Primary",
+        "menu_mobile": "Mobile menu",
+        "view_image": "View larger",
+        "lightbox": "Image viewer",
+        "prev_image": "Previous image",
+        "next_image": "Next image",
+        "close": "Close",
         "work": "Work",
         "about": "About",
         "call": "Call",
@@ -84,6 +94,16 @@ STRINGS = {
         ),
     },
     "ka": {
+        "skip_to_content": "შიგთავსზე გადასვლა",
+        "open_menu": "მენიუს გახსნა",
+        "close_menu": "მენიუს დახურვა",
+        "menu_primary": "მთავარი",
+        "menu_mobile": "მობილური მენიუ",
+        "view_image": "გადიდება",
+        "lightbox": "სურათების დათვალიერება",
+        "prev_image": "წინა სურათი",
+        "next_image": "შემდეგი სურათი",
+        "close": "დახურვა",
         "work": "პროექტები",
         "about": "ჩვენ შესახებ",
         "call": "დარეკვა",
@@ -111,6 +131,16 @@ STRINGS = {
         ),
     },
     "ru": {
+        "skip_to_content": "Перейти к содержанию",
+        "open_menu": "Открыть меню",
+        "close_menu": "Закрыть меню",
+        "menu_primary": "Основное",
+        "menu_mobile": "Мобильное меню",
+        "view_image": "Увеличить",
+        "lightbox": "Просмотр изображений",
+        "prev_image": "Предыдущее изображение",
+        "next_image": "Следующее изображение",
+        "close": "Закрыть",
         "work": "Проекты",
         "about": "О нас",
         "call": "Позвонить",
@@ -330,19 +360,23 @@ def url_for(lang, path=""):
 
 
 def head(lang, title, path, og_image=None, description=None, og_type="website",
-         jsonld=None):
+         jsonld=None, alternates=True):
     """path is the page path without language prefix ('' = home)."""
     canonical = f"{DOMAIN}{url_for(lang, path)}"
     desc = description or t(lang, "site_description")
     image = og_image or f"{DOMAIN}/img/about/portrait-1200.jpg"
 
-    alts = "\n".join(
-        f'  <link rel="alternate" hreflang="{l["code"]}" '
-        f'href="{DOMAIN}{url_for(l["code"], path)}">'
-        for l in LANGS
-    )
-    alts += (f'\n  <link rel="alternate" hreflang="x-default" '
-             f'href="{DOMAIN}{url_for(DEFAULT_LANG, path)}">')
+    # only pages that genuinely exist in every language may advertise
+    # alternates — the 404 page is served from the root only
+    alts = ""
+    if alternates:
+        alts = "\n".join(
+            f'  <link rel="alternate" hreflang="{l["code"]}" '
+            f'href="{DOMAIN}{url_for(l["code"], path)}">'
+            for l in LANGS
+        )
+        alts += (f'\n  <link rel="alternate" hreflang="x-default" '
+                 f'href="{DOMAIN}{url_for(DEFAULT_LANG, path)}">')
 
     other_locales = "\n".join(
         f'  <meta property="og:locale:alternate" content="{t(l["code"], "locale")}">'
@@ -477,9 +511,11 @@ def header_nav(lang, active, path=""):
     )
     switcher = lang_switcher(lang, path)
     return f"""
-  <div class="responsive-nav">
-    <div class="close-nav"></div>
-    <nav>
+  <a class="skip-link" href="#main">{html.escape(t(lang, "skip_to_content"))}</a>
+  <div class="responsive-nav" id="mobile-nav">
+    <button class="close-nav" type="button"
+            aria-label="{html.escape(t(lang, "close_menu"))}"></button>
+    <nav aria-label="{html.escape(t(lang, "menu_mobile"))}">
       {links}
       {switcher}
     </nav>
@@ -489,13 +525,15 @@ def header_nav(lang, active, path=""):
       <div class="logo-wrap"><div class="logo">
         <a href="{url_for(lang)}">{SITE_NAME}</a>
       </div></div>
-      <nav>
+      <nav aria-label="{html.escape(t(lang, "menu_primary"))}">
       {links}
       {switcher}
       </nav>
-      <div class="hamburger"><i></i><i></i><i></i></div>
+      <button class="hamburger" type="button" aria-expanded="false"
+              aria-controls="mobile-nav"
+              aria-label="{html.escape(t(lang, "open_menu"))}"><i></i><i></i><i></i></button>
     </header>
-    <main>"""
+    <main id="main">"""
 
 
 BTT_SVG = (
@@ -508,10 +546,19 @@ def footer(lang, back_to_top=True):
     if back_to_top:
         btt = f"""
       <section class="back-to-top">
-        <a href="#"><span class="arrow">&uarr;</span>{t(lang, "back_to_top")}</a>
+        <a href="#"><span class="arrow" aria-hidden="true">&uarr;</span>{t(lang, "back_to_top")}</a>
       </section>
-      <a class="btt-fixed" href="#">{BTT_SVG}</a>"""
+      <a class="btt-fixed" href="#"
+         aria-label="{html.escape(t(lang, "back_to_top"))}">{BTT_SVG}</a>"""
     contact = read_lang_file(CONTENT, "footer", lang)
+    # labels the lightbox needs at runtime, in the page's language
+    i18n = json.dumps(
+        {k: t(lang, v) for k, v in (
+            ("lightbox", "lightbox"), ("prev", "prev_image"),
+            ("next", "next_image"), ("close", "close"),
+        )},
+        ensure_ascii=False,
+    )
     return f"""{btt}
     </main>
     <footer class="site-footer">
@@ -523,6 +570,7 @@ def footer(lang, back_to_top=True):
       </div>
     </footer>
   </div>
+  <script>window.__i18n={i18n};</script>
   <script src="/js/site.js?v={ASSET_TAGS['js']}"></script>
 </body>
 </html>"""
@@ -566,7 +614,9 @@ def render_project_page(p, lang, prev=None, nxt=None):
                     f'flex-grow:{ar * GRID_BASE:.1f}">'
                     f'<span class="fill" style="padding-bottom:{100 / ar:.4f}%"></span>'
                     f'<img src="{full}" srcset="{srcset}" sizes="100vw" '
-                    f'data-lightbox="{full}" alt="{html.escape(title)}" loading="lazy">'
+                    f'data-lightbox="{full}" role="button" tabindex="0" '
+                    f'aria-label="{html.escape(title)} — {html.escape(t(lang, "view_image"))} ({i})" '
+                    f'alt="{html.escape(title)} ({i})" loading="lazy" decoding="async">'
                     f"</div>"
                 )
             parts.append('<div class="pgrid">' + "".join(items) + "</div>")
@@ -575,7 +625,9 @@ def render_project_page(p, lang, prev=None, nxt=None):
             parts.append(
                 f'<div class="module-full">'
                 f'<img src="{full}" srcset="{srcset}" sizes="100vw" '
-                f'data-lightbox="{full}" alt="{html.escape(title)}" loading="lazy">'
+                f'data-lightbox="{full}" role="button" tabindex="0" '
+                f'aria-label="{html.escape(title)} — {html.escape(t(lang, "view_image"))}" '
+                f'alt="{html.escape(title)} ({payload})" loading="lazy" decoding="async">'
                 f"</div>"
             )
         elif kind == "video":
@@ -585,9 +637,14 @@ def render_project_page(p, lang, prev=None, nxt=None):
             os.makedirs(os.path.dirname(vdest), exist_ok=True)
             if not os.path.exists(vdest) or os.path.getmtime(vdest) < os.path.getmtime(vsrc):
                 shutil.copy2(vsrc, vdest)
+            # a poster keeps the player from showing a black rectangle while
+            # the file loads, and gives something to look at if it never does
+            poster = f' poster="{built[1][2]}"' if built else ""
             parts.append(
                 f'<div class="module-video">'
-                f'<video src="/video/{slug}/{fname}" controls preload="metadata" playsinline></video>'
+                f'<video src="/video/{slug}/{fname}" controls preload="metadata" '
+                f'playsinline{poster} '
+                f'aria-label="{html.escape(title)}"></video>'
                 f"</div>"
             )
 
@@ -815,7 +872,8 @@ def render_about(lang):
 
 def render_404():
     lang = DEFAULT_LANG
-    page = head(lang, f'{t(lang, "site_title")} - {t(lang, "not_found")}', "404.html")
+    page = head(lang, f'{t(lang, "site_title")} - {t(lang, "not_found")}', "404.html",
+                alternates=False)
     page += header_nav(lang, "", "")
     page += f"""
       <div class="notfound">

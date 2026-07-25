@@ -28,13 +28,15 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="/fonts/NotoSansGeorgian-georgian-400.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/main.css?v=c7d29317">
+  <link rel="stylesheet" href="/css/main.css?v=ab8b0d95">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ArchitecturalService","@id":"https://kurdiani.ge/#organization","name":"ქურდიანი არქიტექტორები","alternateName":"Kurdiani Architects","url":"https://kurdiani.ge/","image":"https://kurdiani.ge/img/about/portrait-1200.jpg","logo":"https://kurdiani.ge/apple-touch-icon.png","description":"ქურდიანი არქიტექტორები — პაატა ქურდიანის არქიტექტურული პორტფოლიო. საცხოვრებელი სახლები, სასტუმროები, რესტორნები და ინტერიერები თბილისში.","telephone":"+995599505971","email":"kurdiani.paata@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Aleksidze str. N 6, 52 B","addressLocality":"Tbilisi","postalCode":"0193","addressCountry":"GE"},"areaServed":{"@type":"Country","name":"Georgia"},"founder":{"@type":"Person","name":"Paata Kurdiani","jobTitle":"Chief Architect"},"sameAs":["https://www.facebook.com/kurdiani.ge"]},{"@type":"CreativeWork","@id":"https://kurdiani.ge/cgc-office-in-rustavi-georgia/#project","name":"CGC-ის ოფისი, რუსთავი","url":"https://kurdiani.ge/cgc-office-in-rustavi-georgia/","description":"CGC-ის საოფისე შენობა რუსთავში. მოცულობა თეთრი ლითონისა და მინის სამკუთხა წახნაგებადაა დაკეცილი და ზემოთ სახურავის ტერასისკენ ვიწროვდება; შესასვლელთან გარე კიბეა, გვერდით კი გრძელი ტენტი ავტოსადგომს ფარავს.","inLanguage":"ka","creator":{"@id":"https://kurdiani.ge/#organization"},"image":["https://kurdiani.ge/img/cgc-office-in-rustavi-georgia/01-1920.jpg","https://kurdiani.ge/img/cgc-office-in-rustavi-georgia/02-1920.jpg","https://kurdiani.ge/img/cgc-office-in-rustavi-georgia/03-1920.jpg","https://kurdiani.ge/img/cgc-office-in-rustavi-georgia/04-1920.jpg","https://kurdiani.ge/img/cgc-office-in-rustavi-georgia/05-800.jpg","https://kurdiani.ge/img/cgc-office-in-rustavi-georgia/06-800.jpg","https://kurdiani.ge/img/cgc-office-in-rustavi-georgia/07-800.jpg"],"dateCreated":"2022"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"პროექტები","item":"https://kurdiani.ge/"},{"@type":"ListItem","position":2,"name":"CGC-ის ოფისი, რუსთავი","item":"https://kurdiani.ge/cgc-office-in-rustavi-georgia/"}]}]}</script>
 </head>
 <body class="fade">
-  <div class="responsive-nav">
-    <div class="close-nav"></div>
-    <nav>
+  <a class="skip-link" href="#main">შიგთავსზე გადასვლა</a>
+  <div class="responsive-nav" id="mobile-nav">
+    <button class="close-nav" type="button"
+            aria-label="მენიუს დახურვა"></button>
+    <nav aria-label="მობილური მენიუ">
       <a href="/" class="active">პროექტები</a>
       <a href="/about/">ჩვენ შესახებ</a>
       <span class="nav-cta"><a class="wa-btn call-btn " href="tel:+995599505971" aria-label="დარეკვა" title="დარეკვა"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.28.67-.36 1.02-.251.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-170-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg><span>დარეკვა</span></a>
@@ -48,7 +50,7 @@
       <div class="logo-wrap"><div class="logo">
         <a href="/">kurdiani architects</a>
       </div></div>
-      <nav>
+      <nav aria-label="მთავარი">
       <a href="/" class="active">პროექტები</a>
       <a href="/about/">ჩვენ შესახებ</a>
       <span class="nav-cta"><a class="wa-btn call-btn " href="tel:+995599505971" aria-label="დარეკვა" title="დარეკვა"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.28.67-.36 1.02-.251.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-170-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg><span>დარეკვა</span></a>
@@ -56,9 +58,11 @@
       <a class="wa-btn msgr-btn " href="https://m.me/kurdiani.ge" target="_blank" rel="noopener" aria-label="Messenger" title="Messenger"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.19 5.44 3.14 7.17.16.15.26.35.27.57l.05 1.78c.02.57.6.94 1.12.71l1.98-.87c.17-.07.36-.09.54-.04 1.09.3 2.25.46 3.4.465.64 0 10-4.13 10-9.7S17.64 2 12 2zm6 7.46l-2.94 4.66c-.47.74-1.47.93-2.18.4l-2.34-1.75a.6.6 0 0 0-.72 0l-3.16 2.4c-.42.32-.97-.18-.69-.63l2.94-4.66c.47-.74 1.47-.93 2.18-.4l2.34 1.75a.6.6 0 0 0 .72 0l3.16-2.4c.42-.32.97.18.69.63z"/></svg><span>Messenger</span></a></span>
       <div class="lang-switch"><a href="/cgc-office-in-rustavi-georgia/" class="active" hreflang="ka">GE</a><a href="/ru/cgc-office-in-rustavi-georgia/" hreflang="ru">RU</a><a href="/en/cgc-office-in-rustavi-georgia/" hreflang="en">EN</a></div>
       </nav>
-      <div class="hamburger"><i></i><i></i><i></i></div>
+      <button class="hamburger" type="button" aria-expanded="false"
+              aria-controls="mobile-nav"
+              aria-label="მენიუს გახსნა"><i></i><i></i><i></i></button>
     </header>
-    <main>
+    <main id="main">
       <div class="page-container">
         <article>
           <header class="page-header">
@@ -66,15 +70,16 @@
             <div class="description"><p>CGC-ის საოფისე შენობა რუსთავში. მოცულობა თეთრი ლითონისა და მინის სამკუთხა წახნაგებადაა დაკეცილი და ზემოთ სახურავის ტერასისკენ ვიწროვდება; შესასვლელთან გარე კიბეა, გვერდით კი გრძელი ტენტი ავტოსადგომს ფარავს.</p></div>
           </header>
           <div class="modules">
-            <div class="module-video"><video src="/video/cgc-office-in-rustavi-georgia/01.mp4" controls preload="metadata" playsinline></video></div><div class="pgrid"><div class="it" style="width:29.356%;flex-grow:462.7"><span class="fill" style="padding-bottom:56.1979%"></span><img src="/img/cgc-office-in-rustavi-georgia/01-1920.jpg" srcset="/img/cgc-office-in-rustavi-georgia/01-600.jpg 600w, /img/cgc-office-in-rustavi-georgia/01-1200.jpg 1200w, /img/cgc-office-in-rustavi-georgia/01-1920.jpg 1920w" sizes="100vw" data-lightbox="/img/cgc-office-in-rustavi-georgia/01-1920.jpg" alt="CGC-ის ოფისი, რუსთავი" loading="lazy"></div><div class="it" style="width:29.356%;flex-grow:462.7"><span class="fill" style="padding-bottom:56.1979%"></span><img src="/img/cgc-office-in-rustavi-georgia/02-1920.jpg" srcset="/img/cgc-office-in-rustavi-georgia/02-600.jpg 600w, /img/cgc-office-in-rustavi-georgia/02-1200.jpg 1200w, /img/cgc-office-in-rustavi-georgia/02-1920.jpg 1920w" sizes="100vw" data-lightbox="/img/cgc-office-in-rustavi-georgia/02-1920.jpg" alt="CGC-ის ოფისი, რუსთავი" loading="lazy"></div><div class="it" style="width:29.356%;flex-grow:462.7"><span class="fill" style="padding-bottom:56.1979%"></span><img src="/img/cgc-office-in-rustavi-georgia/03-1920.jpg" srcset="/img/cgc-office-in-rustavi-georgia/03-600.jpg 600w, /img/cgc-office-in-rustavi-georgia/03-1200.jpg 1200w, /img/cgc-office-in-rustavi-georgia/03-1920.jpg 1920w" sizes="100vw" data-lightbox="/img/cgc-office-in-rustavi-georgia/03-1920.jpg" alt="CGC-ის ოფისი, რუსთავი" loading="lazy"></div><div class="it" style="width:29.356%;flex-grow:462.7"><span class="fill" style="padding-bottom:56.1979%"></span><img src="/img/cgc-office-in-rustavi-georgia/04-1920.jpg" srcset="/img/cgc-office-in-rustavi-georgia/04-600.jpg 600w, /img/cgc-office-in-rustavi-georgia/04-1200.jpg 1200w, /img/cgc-office-in-rustavi-georgia/04-1920.jpg 1920w" sizes="100vw" data-lightbox="/img/cgc-office-in-rustavi-georgia/04-1920.jpg" alt="CGC-ის ოფისი, რუსთავი" loading="lazy"></div><div class="it" style="width:24.762%;flex-grow:390.2"><span class="fill" style="padding-bottom:66.6250%"></span><img src="/img/cgc-office-in-rustavi-georgia/05-800.jpg" srcset="/img/cgc-office-in-rustavi-georgia/05-600.jpg 600w, /img/cgc-office-in-rustavi-georgia/05-800.jpg 800w" sizes="100vw" data-lightbox="/img/cgc-office-in-rustavi-georgia/05-800.jpg" alt="CGC-ის ოფისი, რუსთავი" loading="lazy"></div><div class="it" style="width:24.762%;flex-grow:390.2"><span class="fill" style="padding-bottom:66.6250%"></span><img src="/img/cgc-office-in-rustavi-georgia/06-800.jpg" srcset="/img/cgc-office-in-rustavi-georgia/06-600.jpg 600w, /img/cgc-office-in-rustavi-georgia/06-800.jpg 800w" sizes="100vw" data-lightbox="/img/cgc-office-in-rustavi-georgia/06-800.jpg" alt="CGC-ის ოფისი, რუსთავი" loading="lazy"></div><div class="it" style="width:24.762%;flex-grow:390.2"><span class="fill" style="padding-bottom:66.6250%"></span><img src="/img/cgc-office-in-rustavi-georgia/07-800.jpg" srcset="/img/cgc-office-in-rustavi-georgia/07-600.jpg 600w, /img/cgc-office-in-rustavi-georgia/07-800.jpg 800w" sizes="100vw" data-lightbox="/img/cgc-office-in-rustavi-georgia/07-800.jpg" alt="CGC-ის ოფისი, რუსთავი" loading="lazy"></div></div>
+            <div class="module-video"><video src="/video/cgc-office-in-rustavi-georgia/01.mp4" controls preload="metadata" playsinline poster="/img/cgc-office-in-rustavi-georgia/01-1920.jpg" aria-label="CGC-ის ოფისი, რუსთავი"></video></div><div class="pgrid"><div class="it" style="width:29.356%;flex-grow:462.7"><span class="fill" style="padding-bottom:56.1979%"></span><img src="/img/cgc-office-in-rustavi-georgia/01-1920.jpg" srcset="/img/cgc-office-in-rustavi-georgia/01-600.jpg 600w, /img/cgc-office-in-rustavi-georgia/01-1200.jpg 1200w, /img/cgc-office-in-rustavi-georgia/01-1920.jpg 1920w" sizes="100vw" data-lightbox="/img/cgc-office-in-rustavi-georgia/01-1920.jpg" role="button" tabindex="0" aria-label="CGC-ის ოფისი, რუსთავი — გადიდება (1)" alt="CGC-ის ოფისი, რუსთავი (1)" loading="lazy" decoding="async"></div><div class="it" style="width:29.356%;flex-grow:462.7"><span class="fill" style="padding-bottom:56.1979%"></span><img src="/img/cgc-office-in-rustavi-georgia/02-1920.jpg" srcset="/img/cgc-office-in-rustavi-georgia/02-600.jpg 600w, /img/cgc-office-in-rustavi-georgia/02-1200.jpg 1200w, /img/cgc-office-in-rustavi-georgia/02-1920.jpg 1920w" sizes="100vw" data-lightbox="/img/cgc-office-in-rustavi-georgia/02-1920.jpg" role="button" tabindex="0" aria-label="CGC-ის ოფისი, რუსთავი — გადიდება (2)" alt="CGC-ის ოფისი, რუსთავი (2)" loading="lazy" decoding="async"></div><div class="it" style="width:29.356%;flex-grow:462.7"><span class="fill" style="padding-bottom:56.1979%"></span><img src="/img/cgc-office-in-rustavi-georgia/03-1920.jpg" srcset="/img/cgc-office-in-rustavi-georgia/03-600.jpg 600w, /img/cgc-office-in-rustavi-georgia/03-1200.jpg 1200w, /img/cgc-office-in-rustavi-georgia/03-1920.jpg 1920w" sizes="100vw" data-lightbox="/img/cgc-office-in-rustavi-georgia/03-1920.jpg" role="button" tabindex="0" aria-label="CGC-ის ოფისი, რუსთავი — გადიდება (3)" alt="CGC-ის ოფისი, რუსთავი (3)" loading="lazy" decoding="async"></div><div class="it" style="width:29.356%;flex-grow:462.7"><span class="fill" style="padding-bottom:56.1979%"></span><img src="/img/cgc-office-in-rustavi-georgia/04-1920.jpg" srcset="/img/cgc-office-in-rustavi-georgia/04-600.jpg 600w, /img/cgc-office-in-rustavi-georgia/04-1200.jpg 1200w, /img/cgc-office-in-rustavi-georgia/04-1920.jpg 1920w" sizes="100vw" data-lightbox="/img/cgc-office-in-rustavi-georgia/04-1920.jpg" role="button" tabindex="0" aria-label="CGC-ის ოფისი, რუსთავი — გადიდება (4)" alt="CGC-ის ოფისი, რუსთავი (4)" loading="lazy" decoding="async"></div><div class="it" style="width:24.762%;flex-grow:390.2"><span class="fill" style="padding-bottom:66.6250%"></span><img src="/img/cgc-office-in-rustavi-georgia/05-800.jpg" srcset="/img/cgc-office-in-rustavi-georgia/05-600.jpg 600w, /img/cgc-office-in-rustavi-georgia/05-800.jpg 800w" sizes="100vw" data-lightbox="/img/cgc-office-in-rustavi-georgia/05-800.jpg" role="button" tabindex="0" aria-label="CGC-ის ოფისი, რუსთავი — გადიდება (5)" alt="CGC-ის ოფისი, რუსთავი (5)" loading="lazy" decoding="async"></div><div class="it" style="width:24.762%;flex-grow:390.2"><span class="fill" style="padding-bottom:66.6250%"></span><img src="/img/cgc-office-in-rustavi-georgia/06-800.jpg" srcset="/img/cgc-office-in-rustavi-georgia/06-600.jpg 600w, /img/cgc-office-in-rustavi-georgia/06-800.jpg 800w" sizes="100vw" data-lightbox="/img/cgc-office-in-rustavi-georgia/06-800.jpg" role="button" tabindex="0" aria-label="CGC-ის ოფისი, რუსთავი — გადიდება (6)" alt="CGC-ის ოფისი, რუსთავი (6)" loading="lazy" decoding="async"></div><div class="it" style="width:24.762%;flex-grow:390.2"><span class="fill" style="padding-bottom:66.6250%"></span><img src="/img/cgc-office-in-rustavi-georgia/07-800.jpg" srcset="/img/cgc-office-in-rustavi-georgia/07-600.jpg 600w, /img/cgc-office-in-rustavi-georgia/07-800.jpg 800w" sizes="100vw" data-lightbox="/img/cgc-office-in-rustavi-georgia/07-800.jpg" role="button" tabindex="0" aria-label="CGC-ის ოფისი, რუსთავი — გადიდება (7)" alt="CGC-ის ოფისი, რუსთავი (7)" loading="lazy" decoding="async"></div></div>
           </div>
         </article>
         <nav class="project-nav"><a class="pn-prev" href="/condominium/"><span class="pn-label">წინა პროექტი</span><span class="pn-title">მრავალბინიანი საცხოვრებელი სახლი</span></a><a class="pn-next" href="/old-hotel-renovation-project/"><span class="pn-label">შემდეგი პროექტი</span><span class="pn-title">ძველი სასტუმროს რეკონსტრუქციის პროექტი</span></a></nav>
       </div>
       <section class="back-to-top">
-        <a href="#"><span class="arrow">&uarr;</span>ზემოთ</a>
+        <a href="#"><span class="arrow" aria-hidden="true">&uarr;</span>ზემოთ</a>
       </section>
-      <a class="btt-fixed" href="#"><svg viewBox="0 0 26 26"><path d="M13 2 4 11l1.5 1.5L12 6v18h2V6l6.5 6.5L22 11z"/></svg></a>
+      <a class="btt-fixed" href="#"
+         aria-label="ზემოთ"><svg viewBox="0 0 26 26"><path d="M13 2 4 11l1.5 1.5L12 6v18h2V6l6.5 6.5L22 11z"/></svg></a>
     </main>
     <footer class="site-footer">
       <div class="footer-inner">
@@ -100,6 +105,7 @@
       </div>
     </footer>
   </div>
-  <script src="/js/site.js?v=227216a9"></script>
+  <script>window.__i18n={"lightbox": "სურათების დათვალიერება", "prev": "წინა სურათი", "next": "შემდეგი სურათი", "close": "დახურვა"};</script>
+  <script src="/js/site.js?v=7054bfdf"></script>
 </body>
 </html>

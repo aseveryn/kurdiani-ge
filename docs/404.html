@@ -7,10 +7,7 @@
   <meta name="description" content="ქურდიანი არქიტექტორები — პაატა ქურდიანის არქიტექტურული პორტფოლიო. საცხოვრებელი სახლები, სასტუმროები, რესტორნები და ინტერიერები თბილისში.">
   <meta name="theme-color" content="#222222">
   <link rel="canonical" href="https://kurdiani.ge/404.html">
-  <link rel="alternate" hreflang="ka" href="https://kurdiani.ge/404.html">
-  <link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/404.html">
-  <link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/404.html">
-  <link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/404.html">
+
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ქურდიანი არქიტექტორები">
   <meta property="og:title" content="პაატა ქურდიანი - გვერდი ვერ მოიძებნა">
@@ -28,12 +25,14 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="/fonts/NotoSansGeorgian-georgian-400.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/main.css?v=c7d29317">
+  <link rel="stylesheet" href="/css/main.css?v=ab8b0d95">
 </head>
 <body class="fade">
-  <div class="responsive-nav">
-    <div class="close-nav"></div>
-    <nav>
+  <a class="skip-link" href="#main">შიგთავსზე გადასვლა</a>
+  <div class="responsive-nav" id="mobile-nav">
+    <button class="close-nav" type="button"
+            aria-label="მენიუს დახურვა"></button>
+    <nav aria-label="მობილური მენიუ">
       <a href="/">პროექტები</a>
       <a href="/about/">ჩვენ შესახებ</a>
       <span class="nav-cta"><a class="wa-btn call-btn " href="tel:+995599505971" aria-label="დარეკვა" title="დარეკვა"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.28.67-.36 1.02-.251.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-170-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg><span>დარეკვა</span></a>
@@ -47,7 +46,7 @@
       <div class="logo-wrap"><div class="logo">
         <a href="/">kurdiani architects</a>
       </div></div>
-      <nav>
+      <nav aria-label="მთავარი">
       <a href="/">პროექტები</a>
       <a href="/about/">ჩვენ შესახებ</a>
       <span class="nav-cta"><a class="wa-btn call-btn " href="tel:+995599505971" aria-label="დარეკვა" title="დარეკვა"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.28.67-.36 1.02-.251.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-170-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg><span>დარეკვა</span></a>
@@ -55,9 +54,11 @@
       <a class="wa-btn msgr-btn " href="https://m.me/kurdiani.ge" target="_blank" rel="noopener" aria-label="Messenger" title="Messenger"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.19 5.44 3.14 7.17.16.15.26.35.27.57l.05 1.78c.02.57.6.94 1.12.71l1.98-.87c.17-.07.36-.09.54-.04 1.09.3 2.25.46 3.4.465.64 0 10-4.13 10-9.7S17.64 2 12 2zm6 7.46l-2.94 4.66c-.47.74-1.47.93-2.18.4l-2.34-1.75a.6.6 0 0 0-.72 0l-3.16 2.4c-.42.32-.97-.18-.69-.63l2.94-4.66c.47-.74 1.47-.93 2.18-.4l2.34 1.75a.6.6 0 0 0 .72 0l3.16-2.4c.42-.32.97.18.69.63z"/></svg><span>Messenger</span></a></span>
       <div class="lang-switch"><a href="/" class="active" hreflang="ka">GE</a><a href="/ru/" hreflang="ru">RU</a><a href="/en/" hreflang="en">EN</a></div>
       </nav>
-      <div class="hamburger"><i></i><i></i><i></i></div>
+      <button class="hamburger" type="button" aria-expanded="false"
+              aria-controls="mobile-nav"
+              aria-label="მენიუს გახსნა"><i></i><i></i><i></i></button>
     </header>
-    <main>
+    <main id="main">
       <div class="notfound">
         <h1>404</h1>
         <p>გვერდი ვერ მოიძებნა</p>
@@ -88,6 +89,7 @@
       </div>
     </footer>
   </div>
-  <script src="/js/site.js?v=227216a9"></script>
+  <script>window.__i18n={"lightbox": "სურათების დათვალიერება", "prev": "წინა სურათი", "next": "შემდეგი სურათი", "close": "დახურვა"};</script>
+  <script src="/js/site.js?v=7054bfdf"></script>
 </body>
 </html>
