@@ -57,7 +57,7 @@ DEFAULT_LANG = "ka"
 
 STRINGS = {
     "en": {
-        "studio_alt": "Paata and Keti Kurdiani at work in the studio",
+        "studio_alt": "Kurdiani Architects at work in the Tbilisi studio",
         "projects": "Projects",
         "all_projects": "All projects",
         "home": "Home",
@@ -109,7 +109,7 @@ STRINGS = {
         ),
     },
     "ka": {
-        "studio_alt": "პაატა და ქეთი ქურდიანი სამუშაო პროცესში სტუდიაში",
+        "studio_alt": "ქურდიანი არქიტექტორები მუშაობის პროცესში თბილისის სტუდიაში",
         "projects": "პროექტები",
         "all_projects": "ყველა პროექტი",
         "home": "მთავარი",
@@ -161,7 +161,7 @@ STRINGS = {
         ),
     },
     "ru": {
-        "studio_alt": "Паата и Кети Курдиани за работой в студии",
+        "studio_alt": "Kurdiani Architects за работой в тбилисской студии",
         "projects": "Проекты",
         "all_projects": "Все проекты",
         "home": "Главная",
@@ -783,6 +783,34 @@ def lang_dir(lang):
     return next(l["prefix"] for l in LANGS if l["code"] == lang).lstrip("/")
 
 
+def studio_band(lang, dirname):
+    """Wide photographs of the practice at work, from content/<dir>/studio/.
+    Drop more images in and they join the band in filename order."""
+    sdir = os.path.join(CONTENT, dirname, "studio")
+    if not os.path.isdir(sdir):
+        return ""
+    shots = []
+    for fname in sorted(f for f in os.listdir(sdir)
+                        if f.lower().endswith((".jpg", ".jpeg", ".png"))):
+        stem = os.path.splitext(fname)[0]
+        outdir = os.path.join(DOCS, "img", "studio")
+        entries = []
+        for width in (600, 1200, 1800):
+            w, _ = derivative(os.path.join(sdir, fname),
+                              os.path.join(outdir, f"{stem}-{width}.jpg"), width)
+            entries.append((w, f"/img/studio/{stem}-{width}.jpg"))
+        srcset = ", ".join(f"{u} {w}w" for w, u in entries)
+        shots.append(
+            f'<figure class="studio-shot">'
+            f'<img src="{entries[1][1]}" srcset="{srcset}" '
+            f'sizes="(max-width: 932px) 100vw, 540px" '
+            f'alt="{html.escape(t(lang, "studio_alt"))}" '
+            f'loading="lazy" decoding="async">'
+            f"</figure>"
+        )
+    return f'<section class="studio">{"".join(shots)}</section>' if shots else ""
+
+
 def home_hero(lang):
     """Portrait, short bio, services and the numbers — the landing block."""
     hdir = os.path.join(CONTENT, "home")
@@ -810,30 +838,6 @@ def home_hero(lang):
 
     stats_block = f'<div class="stats-band">{stats}</div>' if stats else ""
 
-    # any images dropped into content/home/studio/ become a band of the
-    # practice at work, in filename order
-    sdir = os.path.join(hdir, "studio")
-    shots = []
-    if os.path.isdir(sdir):
-        for fname in sorted(f for f in os.listdir(sdir)
-                            if f.lower().endswith((".jpg", ".jpeg", ".png"))):
-            stem = os.path.splitext(fname)[0]
-            outdir = os.path.join(DOCS, "img", "studio")
-            entries = []
-            for width in (600, 1200, 1800):
-                w, _ = derivative(os.path.join(sdir, fname),
-                                  os.path.join(outdir, f"{stem}-{width}.jpg"), width)
-                entries.append((w, f"/img/studio/{stem}-{width}.jpg"))
-            srcset = ", ".join(f"{u} {w}w" for w, u in entries)
-            shots.append(
-                f'<figure class="studio-shot">'
-                f'<img src="{entries[1][1]}" srcset="{srcset}" '
-                f'sizes="(max-width: 932px) 100vw, 540px" '
-                f'alt="{html.escape(t(lang, "studio_alt"))}" '
-                f'loading="lazy" decoding="async">'
-                f"</figure>"
-            )
-    studio_block = f'<section class="studio">{"".join(shots)}</section>' if shots else ""
     return f"""
       <section class="hero">{portrait}
         <div class="hero-text">
@@ -845,7 +849,6 @@ def home_hero(lang):
         </div>
       </section>
       {stats_block}
-      {studio_block}
       <section class="home-services">{services}</section>
       <h2 class="section-heading">{html.escape(t(lang, "selected_work"))}</h2>"""
 
@@ -975,6 +978,7 @@ def render_about(lang):
           </figure>"""
 
     path = "about/"
+    studio = studio_band(lang, "about")
     jsonld = graph(
         lang,
         organization_ld(lang),
@@ -1022,6 +1026,7 @@ def render_about(lang):
             {body}
           </div>
         </div>
+        {studio}
       </div>"""
     page += footer(lang)
     write(os.path.join(DOCS, *filter(None, [lang_dir(lang), "about"]), "index.html"), page)
