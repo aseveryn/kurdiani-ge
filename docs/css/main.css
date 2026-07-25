@@ -29,12 +29,78 @@
   font-display: swap;
 }
 
+/* Cyrillic — Montserrat/Roboto Slab ship Latin and Cyrillic as separate
+   subsets; the browser only downloads the range a page actually uses. */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-cyrillic-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-cyrillic-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-cyrillic-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('/fonts/RobotoSlab-cyrillic-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* Georgian — neither Montserrat nor Roboto Slab covers Mkhedruli, so these
+   sit next in the font stack and the browser picks them per glyph. */
+@font-face {
+  font-family: 'Noto Sans Georgian';
+  src: url('/fonts/NotoSansGeorgian-georgian-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Sans Georgian';
+  src: url('/fonts/NotoSansGeorgian-georgian-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Sans Georgian';
+  src: url('/fonts/NotoSansGeorgian-georgian-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Serif Georgian';
+  src: url('/fonts/NotoSerifGeorgian-georgian-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --bg: #222;
   --fg: #eee;
   --muted: #888;
-  --sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --serif: 'Roboto Slab', 'Rockwell', Georgia, serif;
+  --sans: 'Montserrat', 'Noto Sans Georgian', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --serif: 'Roboto Slab', 'Noto Serif Georgian', 'Rockwell', Georgia, serif;
 }
 
 * { box-sizing: border-box; }
@@ -137,6 +203,24 @@ img { border: 0; }
 }
 .call-btn:hover .wa-icon { fill: var(--fg); }
 
+/* language switcher */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 18px;
+  vertical-align: middle;
+}
+.site-header nav .lang-switch a {
+  padding: 0 6px;
+  font-size: 13px;
+  line-height: 20px;
+  color: #6f6f6f;
+}
+.site-header nav .lang-switch a + a { border-left: 1px solid rgba(255, 255, 255, 0.18); }
+.site-header nav .lang-switch a:hover { color: var(--fg); }
+.site-header nav .lang-switch a.active { color: var(--fg); }
+
 /* hamburger (mobile) */
 .hamburger {
   display: none;
@@ -185,6 +269,18 @@ img { border: 0; }
   line-height: 26px;
 }
 .responsive-nav nav a.wa-btn .wa-icon { width: 19px; height: 19px; }
+.responsive-nav nav .lang-switch {
+  display: flex;
+  justify-content: center;
+  margin: 34px 0 0;
+}
+.responsive-nav nav .lang-switch a {
+  padding: 0 14px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #6f6f6f;
+}
+.responsive-nav nav .lang-switch a.active { color: var(--fg); }
 .responsive-nav .close-nav {
   position: fixed;
   right: 5%;

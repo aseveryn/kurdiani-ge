@@ -2,23 +2,46 @@
 
 Portfolio site for **Kurdiani Architects** (architect Paata Kurdiani),
 hosted on GitHub Pages at `kurdiani.ge`. Dark-theme portfolio: a Work grid
-of project covers, one page per project, and a Contact page.
+of project covers, one page per project, and an About page. Contact details
+sit in a site-wide footer; Call / WhatsApp / Messenger buttons in the header.
 
 ## Repo layout
 
 ```
 content/
   projects/<slug>/
-    project.md      # frontmatter: title, year, order, layout (optional); body = description
+    project.md      # frontmatter: title, title_ka, title_ru, year, order, layout
     cover.jpg       # cover image for the Work grid (shown cropped to 202:158)
     images/NN.jpg   # project photos, displayed in filename order
     videos/NN.mp4   # optional videos
-  contact.html      # contact page body fragment
+  about/
+    about.<lang>.html   # About page copy, one file per language
+    portrait.jpg        # studio portrait
+  footer.<lang>.html    # footer contact block, one file per language
 assets/             # css / js / fonts, copied verbatim into the build
 build.py            # static site generator (Python 3 + Pillow), writes docs/
-scrape.py           # one-time importer used to populate content/ (kept for reference)
 docs/               # GENERATED output, served by GitHub Pages — do not edit by hand
 ```
+
+## Languages
+
+Three: **Georgian (`ka`) is the default and is served at `/`**, Russian at
+`/ru/`, English at `/en/`. Add one by extending `LANGS` and `STRINGS` in
+build.py plus the matching `content/**/*.<lang>.html` files.
+
+Anything untranslated **falls back to English** — a project with no
+`title_ka` shows its English title rather than breaking the build. UI
+strings live in `STRINGS` in build.py; page copy lives in the per-language
+content files.
+
+The Georgian and Russian text was drafted during the build and has not yet
+been reviewed by a native speaker — if the user reports awkward wording,
+edit the content files rather than assuming the build is wrong.
+
+Fonts: Montserrat and Roboto Slab cover Latin and Cyrillic as separate
+subsets loaded per `unicode-range`. Neither covers Georgian, so Noto Sans
+Georgian and Noto Serif Georgian sit next in the `:root` stacks and the
+browser picks them per glyph. Preserve that ordering.
 
 ## How to add a new project (the common request)
 

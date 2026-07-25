@@ -1,5 +1,7 @@
 ---
 title: Interior
+title_ka: ინტერიერი
+title_ru: Интерьер
 year: 2022
 order: 31
 layout: grid:1-4 full:5 full:6 full:7 full:8

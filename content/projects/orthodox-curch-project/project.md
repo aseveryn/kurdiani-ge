@@ -1,5 +1,7 @@
 ---
-title: Orthodox Curch Project
+title: Orthodox Church Project
+title_ka: მართლმადიდებლური ტაძრის პროექტი
+title_ru: Проект православного храма
 year: 2022
 order: 32
 ---
