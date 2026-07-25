@@ -81,4 +81,21 @@
     else if (e.key === 'ArrowLeft') show(idx - 1);
     else if (e.key === 'ArrowRight') show(idx + 1);
   });
+
+  // swipe to move between images on touch devices
+  var touchX = null, touchY = null;
+  lb.addEventListener('touchstart', function (e) {
+    if (e.changedTouches.length !== 1) return;
+    touchX = e.changedTouches[0].clientX;
+    touchY = e.changedTouches[0].clientY;
+  }, { passive: true });
+  lb.addEventListener('touchend', function (e) {
+    if (touchX === null || idx < 0) return;
+    var dx = e.changedTouches[0].clientX - touchX;
+    var dy = e.changedTouches[0].clientY - touchY;
+    touchX = touchY = null;
+    // ignore mostly-vertical drags so scrolling gestures don't page around
+    if (Math.abs(dx) < 45 || Math.abs(dx) < Math.abs(dy)) return;
+    show(dx < 0 ? idx + 1 : idx - 1);
+  }, { passive: true });
 })();

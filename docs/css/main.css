@@ -623,13 +623,15 @@ body.lightbox-open { overflow: hidden; }
   max-height: 100vh;
   user-select: none;
 }
+/* Always visible: these used to be opacity:0 until :hover, which left them
+   permanently invisible on touch devices — there is no hover to trigger. */
 .lightbox .lb-prev, .lightbox .lb-next {
   position: absolute;
   top: 0;
   height: 100%;
   width: 30vw;
   cursor: pointer;
-  opacity: 0;
+  opacity: 0.8;
   transition: opacity 0.15s ease;
 }
 .lightbox .lb-prev:hover, .lightbox .lb-next:hover { opacity: 1; }
@@ -643,8 +645,14 @@ body.lightbox-open { overflow: hidden; }
 }
 .lightbox .lb-prev svg { left: 20px; }
 .lightbox .lb-next svg { right: 20px; }
-.lightbox .lb-arrow-bg { fill: #696969; opacity: 0.2; }
-.lightbox .lb-prev:hover .lb-arrow-bg, .lightbox .lb-next:hover .lb-arrow-bg { opacity: 0.4; }
+.lightbox .lb-arrow-bg { fill: #696969; opacity: 0.32; transition: opacity 0.15s ease; }
+.lightbox .lb-prev:hover .lb-arrow-bg, .lightbox .lb-next:hover .lb-arrow-bg { opacity: 0.55; }
+
+@media (max-width: 540px) {
+  .lightbox .lb-prev svg, .lightbox .lb-next svg { width: 44px; height: 44px; }
+  .lightbox .lb-prev svg { left: 10px; }
+  .lightbox .lb-next svg { right: 10px; }
+}
 .lightbox .lb-arrow { fill: #fff; }
 .lightbox .lb-close {
   position: fixed;
