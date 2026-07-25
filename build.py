@@ -562,7 +562,9 @@ def lang_switcher(lang, path):
 def header_nav(lang, active, path=""):
     projects = ' class="active"' if active in ("projects", "work") else ""
     about = ' class="active"' if active == "about" else ""
+    home = ' class="active"' if active == "home" else ""
     links = (
+        f'<a href="{url_for(lang)}"{home}>{t(lang, "home")}</a>\n      '
         f'<a href="{url_for(lang, "projects/")}"{projects}>{t(lang, "projects")}</a>\n      '
         f'<a href="{url_for(lang, "about/")}"{about}>{t(lang, "about")}</a>\n      '
         '<span class="nav-cta">' + contact_buttons(lang) + "</span>"
