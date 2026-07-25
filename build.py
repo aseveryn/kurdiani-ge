@@ -849,8 +849,13 @@ def home_hero(lang):
         </div>
       </section>
       {stats_block}
-      <section class="home-services">{services}</section>
       <h2 class="section-heading">{html.escape(t(lang, "selected_work"))}</h2>"""
+
+
+def home_services(lang):
+    """Kept separate from the hero so the work can come first on the page."""
+    services = read_lang_file(os.path.join(CONTENT, "about"), "services", lang)
+    return f'<section class="home-services">{services}</section>' if services else ""
 
 
 def project_tile(p, lang, eager=False, first=False):
@@ -925,13 +930,17 @@ def render_home(projects, lang):
     page = head(lang, t(lang, "home_title"), "", jsonld=jsonld)
     page += header_nav(lang, "home", "")
     page += home_hero(lang)
+    # the work sits above "what we do": every competing practice puts a building
+    # in front of you before it explains itself, and the services read better as
+    # a summary of what you have just looked at than as a preamble to it
     page += f"""
       <div class="tile-grid">{tiles}</div>
       <p class="grid-more">
         <a class="more-link" href="{url_for(lang, 'projects/')}">
           {html.escape(t(lang, "all_projects"))} <span aria-hidden="true">&rarr;</span>
         </a>
-      </p>"""
+      </p>
+      {home_services(lang)}"""
     page += footer(lang, back_to_top=False)
     write(os.path.join(DOCS, *filter(None, [lang_dir(lang)]), "index.html"), page)
 
