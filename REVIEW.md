@@ -221,7 +221,6 @@ _Shown in large type under the introduction._
 ```
 40+Years of practice
 100+Projects completed
-3Embassies in Tbilisi
 6Hotel projects
 ```
 
@@ -230,7 +229,6 @@ _Shown in large type under the introduction._
 ```
 40+წლის გამოცდილება
 100+დასრულებული პროექტი
-3საელჩო თბილისში
 6სასტუმროს პროექტი
 ```
 
@@ -239,7 +237,6 @@ _Shown in large type under the introduction._
 ```
 40+лет практики
 100+завершённых проектов
-3посольства в Тбилиси
 6гостиничных проектов
 ```
 

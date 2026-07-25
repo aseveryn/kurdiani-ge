@@ -204,7 +204,7 @@ video:focus-visible {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--fg);
-  white-space: pre-wrap;
+  white-space: nowrap;
   transition: color 0.2s ease;
 }
 .logo a:hover { color: var(--accent); }
@@ -254,19 +254,20 @@ video:focus-visible {
 .nav-cta {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  margin-left: 16px;
+  gap: 8px;
+  margin-left: 14px;
   vertical-align: middle;
 }
 /* needs to outrank `.site-header nav a`, which would otherwise force
    display:inline-block and collapse the flex layout */
 .site-header nav a.wa-btn {
   display: inline-flex;
-  padding: 7px 16px;
-  line-height: 20px;
-  font-size: 12px;
-  letter-spacing: 0.05em;
+  padding: 9px;
+  line-height: 0;
+  font-size: 0;
 }
+.site-header nav a.wa-btn > span { display: none; }
+.site-header nav a.wa-btn .wa-icon { width: 17px; height: 17px; }
 .wa-btn:hover {
   border-color: #25d366;
   background-color: rgba(37, 211, 102, 0.12);
@@ -957,7 +958,7 @@ body.lightbox-open { overflow: hidden; }
 .stats {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 0;
   padding: 0 16px;
 }
@@ -1021,20 +1022,22 @@ body.lightbox-open { overflow: hidden; }
   .hero-portrait img { max-width: 420px; aspect-ratio: 4 / 3; }
   .hero-intro { font-size: 16px; line-height: 27px; }
   .hero-intro p:first-child { font-size: 19px; line-height: 31px; }
-  .stats { padding: 0 5%; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .stats li { padding: 30px 0 32px; padding-right: 28px; }
-  /* in a 2x2 the divider belongs between the columns, not before every cell */
-  .stats li + li { padding-left: 0; border-left: 0; }
-  .stats li:nth-child(even) { padding-left: 28px; border-left: 1px solid var(--rule); }
-  .stats li:nth-child(n+3) { border-top: 1px solid var(--rule); }
+  .stats { padding: 0 5%; }
+  .stats li { padding: 30px 0 32px; padding-right: 24px; }
+  .stats li + li { padding-left: 24px; }
   .home-services, .about-services, .section-heading { padding-left: 5%; padding-right: 5%; }
   .section-heading { margin-top: 62px; }
 }
 @media (max-width: 540px) {
   /* the cells stay side by side on a phone — two short figures read better as a
      pair than stacked — so only the gutter narrows */
-  .stats li { padding: 24px 0 26px; padding-right: 16px; }
-  .stats li:nth-child(even) { padding-left: 16px; }
+  /* three cells will not fit a phone, so the dividers turn horizontal */
+  .stats { grid-template-columns: 1fr; }
+  .stats li, .stats li + li {
+    padding: 22px 0 24px;
+    border-left: 0;
+  }
+  .stats li + li { border-top: 1px solid var(--rule); }
 }
 
 /* ---------- project tiles (home selection + projects page) ---------- */
