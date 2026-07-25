@@ -108,6 +108,10 @@ def main():
     out.write("\n---\n\n## 3. Home page — introduction and numbers\n")
     out.write(
         "\n_The short introduction beside the photograph on the landing page._\n"
+        "\n_**This was rewritten to ask for the enquiry rather than just describe "
+        "the practice**, so the last line is a direct offer and the Call button "
+        "sits right under it. Please check you are happy making that offer, and "
+        "that the wording sounds like you rather than like an advert._\n"
     )
     texts = {}
     for code in ("en", "ka", "ru"):
@@ -117,12 +121,22 @@ def main():
     multiline_block(out, "Introduction", "Two short paragraphs.", texts)
 
     out.write(
-        "\n_**The two numbers below need checking.** '40+ years of practice' is "
-        "taken from the CV — Paata graduated in 1984 and began at the Cultural "
-        "Heritage office the same year. **'100+ projects completed' could not be "
-        "verified from anything I have**: the CV lists roughly forty-five and says "
-        "it is not the complete list. Please confirm the real figure, or say what "
-        "it should be replaced with._\n"
+        "\n_**All four numbers below need checking — none came from you.**_\n\n"
+        "- **40+ years of practice** — from the CV: Paata graduated in 1984 and "
+        "began at the Cultural Heritage office the same year.\n"
+        "- **100+ projects completed** — **could not be verified from anything I "
+        "have.** The CV lists roughly forty-five and says it is not the complete "
+        "list. Please give the real figure or say what should replace it.\n"
+        "- **3 embassies in Tbilisi** — counted from the CV, which names the "
+        "European Union, Great Britain and Greece. It does not count the "
+        "ambassadors' residences or the office at the United States Embassy, so "
+        "the honest number may well be higher. What is it?\n"
+        "- **6 building types** — counted from the six categories the site sorts "
+        "the work into (residential, hotel, restaurant, office, public, interior). "
+        "True of the website, but say if it undersells what you do.\n\n"
+        "_If you would rather show different figures entirely, write them here and "
+        "they will replace these. Four is what the layout is built for; two or "
+        "three also work._\n"
     )
     texts = {}
     for code in ("en", "ka", "ru"):

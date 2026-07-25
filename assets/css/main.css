@@ -82,7 +82,9 @@
   --rule-strong: rgba(242, 238, 228, 0.2);
   --sans: 'Jost', 'Noto Sans Georgian', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   --serif: 'Cormorant Garamond', 'Noto Serif Georgian', Georgia, 'Times New Roman', serif;
-  --header-h: 74px;
+  --header-h: 68px;
+  --col: 1120px;      /* the content column every block aligns to */
+  --gut: 16px;
 }
 
 * { box-sizing: border-box; }
@@ -186,20 +188,20 @@ video:focus-visible {
 .header-inner {
   display: flex;
   align-items: center;
-  gap: 28px;
-  max-width: 1600px;
+  gap: 22px;
+  max-width: var(--col);
   margin: 0 auto;
   min-height: var(--header-h);
-  padding: 0 2%;
+  padding: 0 var(--gut);
 }
 .logo {
-  font-size: 17px;
-  line-height: 22px;
+  font-size: 19px;
+  line-height: 24px;
 }
 .logo a {
   font-family: var(--sans);
   font-weight: 500;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--fg);
   white-space: pre-wrap;
@@ -210,10 +212,10 @@ video:focus-visible {
 .site-header nav a {
   position: relative;
   display: inline-block;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 28px;
   font-weight: 500;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
   padding: 0 12px;
@@ -260,10 +262,10 @@ video:focus-visible {
    display:inline-block and collapse the flex layout */
 .site-header nav a.wa-btn {
   display: inline-flex;
-  padding: 6px 15px;
+  padding: 7px 16px;
   line-height: 20px;
-  font-size: 11px;
-  letter-spacing: 0.1em;
+  font-size: 12px;
+  letter-spacing: 0.05em;
 }
 .wa-btn:hover {
   border-color: #25d366;
@@ -294,8 +296,8 @@ video:focus-visible {
   vertical-align: middle;
 }
 .site-header nav .lang-switch a {
-  padding: 0 6px;
-  font-size: 13px;
+  padding: 0 7px;
+  font-size: 14px;
   line-height: 20px;
   color: var(--dim);
 }
@@ -387,9 +389,9 @@ body.nav-open { overflow: hidden; }
 /* ---------- project page ---------- */
 
 .page-header {
-  max-width: 800px;
+  max-width: var(--col);
   margin: 0 auto;
-  padding: 90px 0 60px;
+  padding: 72px var(--gut) 52px;
 }
 .page-header h1 {
   margin: 0;
@@ -399,6 +401,7 @@ body.nav-open { overflow: hidden; }
   font-size: clamp(40px, 5vw, 62px);
   line-height: 1.08;
   font-weight: 600;
+  max-width: 15em;
 }
 /* the same brass rule that opens the landing page, so About, Projects and each
    project all announce themselves the same way */
@@ -412,6 +415,7 @@ body.nav-open { overflow: hidden; }
 }
 .page-header .description {
   margin: 20px 0 0;
+  max-width: 46em;
   color: var(--muted);
   font-size: 20px;
   line-height: 26px;
@@ -430,7 +434,9 @@ body.nav-open { overflow: hidden; }
   flex-wrap: wrap;
   gap: 32px 56px;
   align-items: start;
-  padding: 0 6%;
+  max-width: var(--col);
+  margin: 0 auto;
+  padding: 0 var(--gut);
   color: var(--muted);
   font-size: 14px;
   line-height: 24px;
@@ -448,7 +454,7 @@ body.nav-open { overflow: hidden; }
 .footer-cta .wa-btn { padding: 9px 18px; font-size: 14px; line-height: 20px; }
 .footer-cta .wa-btn:hover { color: #fff; }
 
-.modules { padding: 0 16px; }
+.modules { max-width: var(--col); margin: 0 auto; padding: 0 var(--gut); }
 .pgrid { display: flex; flex-wrap: wrap; margin: 0 -4px; }
 .pgrid .it { position: relative; padding: 4px; }
 .pgrid .it .fill { display: block; }
@@ -479,7 +485,7 @@ body.nav-open { overflow: hidden; }
 /* ---------- about ---------- */
 
 .page-header.about-header {
-  max-width: 1120px;
+  max-width: var(--col);
   padding-bottom: 50px;
 }
 .about {
@@ -487,7 +493,7 @@ body.nav-open { overflow: hidden; }
   grid-template-columns: minmax(0, 440px) minmax(0, 1fr);
   gap: 60px;
   align-items: start;
-  max-width: 1120px;
+  max-width: var(--col);
   margin: 0 auto;
   padding: 0 0 30px;
 }
@@ -551,7 +557,7 @@ body.nav-open { overflow: hidden; }
   display: flex;
   justify-content: space-between;
   gap: 24px;
-  max-width: 1120px;
+  max-width: var(--col);
   margin: 50px auto 0;
   padding: 26px 16px 0;
   border-top: 1px solid var(--rule);
@@ -759,9 +765,9 @@ body.lightbox-open { overflow: hidden; }
 /* ---------- services ---------- */
 
 .about-services {
-  max-width: 1120px;
+  max-width: var(--col);
   margin: 0 auto;
-  padding: 76px 16px 0;
+  padding: 60px 16px 0;
 }
 .about-services .services { color: var(--muted); }
 /* two-by-two boxes divided by hairlines; the 01..04 marks are generated so
@@ -829,9 +835,9 @@ body.lightbox-open { overflow: hidden; }
   grid-template-columns: minmax(0, 440px) minmax(0, 1fr);
   gap: 64px;
   align-items: center;
-  max-width: 1120px;
+  max-width: var(--col);
   margin: 0 auto;
-  padding: 84px 16px 72px;
+  padding: 60px 16px 56px;
 }
 /* a low warm light spilling from behind the portrait, so the top of the page
    has depth instead of sitting on one flat field */
@@ -886,15 +892,36 @@ body.lightbox-open { overflow: hidden; }
   line-height: 34px;
   font-weight: 400;
 }
-.hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+/* the closing line of the intro is the ask, so it carries the weight of the
+   lead rather than trailing off in body grey */
+.hero-intro .cta-line {
+  margin-top: 22px;
+  color: var(--fg);
+  font-size: 18px;
+  line-height: 30px;
+}
+.hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
 .hero-cta .wa-btn {
-  padding: 10px 20px;
-  font-size: 12px;
+  padding: 12px 22px;
+  font-size: 13px;
   line-height: 20px;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+/* one filled button so there is a single obvious action, not three equal ones */
+.hero-cta .wa-btn:first-child {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #171613;
+}
+.hero-cta .wa-btn:first-child .wa-icon { fill: #171613; }
+.hero-cta .wa-btn:first-child:hover {
+  background-color: #d3a163;
+  border-color: #d3a163;
+  color: #171613;
+}
+.hero-cta .wa-btn:first-child:hover .wa-icon { fill: #171613; }
 
 /* the hero arrives in sequence rather than all at once — portrait, rule, name,
    text, buttons — which reads as deliberate instead of merely loaded */
@@ -922,7 +949,7 @@ body.lightbox-open { overflow: hidden; }
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
   margin: 0 auto;
-  max-width: 1120px;
+  max-width: var(--col);
 }
 /* hairline-divided cells that share the band evenly, the way a monograph sets
    its endpapers — laid out as a grid so two figures do not leave half the rule
@@ -930,18 +957,17 @@ body.lightbox-open { overflow: hidden; }
 .stats {
   list-style: none;
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin: 0;
   padding: 0 16px;
 }
-.stats li { padding: 44px 0 46px; padding-right: 64px; }
-.stats li + li { padding-left: 64px; border-left: 1px solid var(--rule); }
+.stats li { padding: 38px 0 40px; padding-right: 34px; }
+.stats li + li { padding-left: 34px; border-left: 1px solid var(--rule); }
 .stat-num {
   display: block;
   color: var(--accent);
   font-family: var(--serif);
-  font-size: clamp(54px, 6.4vw, 78px);
+  font-size: clamp(46px, 5vw, 64px);
   line-height: 1;
   font-weight: 600;
   font-variant-numeric: lining-nums;
@@ -957,7 +983,7 @@ body.lightbox-open { overflow: hidden; }
   letter-spacing: 0.2em;
 }
 
-.home-services { max-width: 1120px; margin: 0 auto; padding: 76px 16px 10px; }
+.home-services { max-width: var(--col); margin: 0 auto; padding: 60px 16px 10px; }
 .home-services .services { color: var(--muted); }
 
 /* One treatment for every section title on the site, so "What we do" and
@@ -966,15 +992,15 @@ body.lightbox-open { overflow: hidden; }
 .section-heading,
 .home-services > h2,
 .about-services > h2 {
-  max-width: 1120px;
-  margin: 0 0 26px;
+  max-width: var(--col);
+  margin: 0 0 22px;
   color: var(--fg);
   font-family: var(--serif);
   font-size: clamp(30px, 3.2vw, 40px);
   line-height: 1.12;
   font-weight: 600;
 }
-.section-heading { margin: 84px auto 30px; padding: 0 16px; }
+.section-heading { margin: 64px auto 26px; padding: 0 16px; }
 .section-heading::before,
 .home-services > h2::before,
 .about-services > h2::before {
@@ -995,17 +1021,20 @@ body.lightbox-open { overflow: hidden; }
   .hero-portrait img { max-width: 420px; aspect-ratio: 4 / 3; }
   .hero-intro { font-size: 16px; line-height: 27px; }
   .hero-intro p:first-child { font-size: 19px; line-height: 31px; }
-  .stats { padding: 0 5%; }
-  .stats li { padding: 32px 0 34px; padding-right: 40px; }
-  .stats li + li { padding-left: 40px; }
+  .stats { padding: 0 5%; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stats li { padding: 30px 0 32px; padding-right: 28px; }
+  /* in a 2x2 the divider belongs between the columns, not before every cell */
+  .stats li + li { padding-left: 0; border-left: 0; }
+  .stats li:nth-child(even) { padding-left: 28px; border-left: 1px solid var(--rule); }
+  .stats li:nth-child(n+3) { border-top: 1px solid var(--rule); }
   .home-services, .about-services, .section-heading { padding-left: 5%; padding-right: 5%; }
   .section-heading { margin-top: 62px; }
 }
 @media (max-width: 540px) {
   /* the cells stay side by side on a phone — two short figures read better as a
      pair than stacked — so only the gutter narrows */
-  .stats li { padding: 26px 0 28px; padding-right: 20px; }
-  .stats li + li { padding-left: 20px; }
+  .stats li { padding: 24px 0 26px; padding-right: 16px; }
+  .stats li:nth-child(even) { padding-left: 16px; }
 }
 
 /* ---------- project tiles (home selection + projects page) ---------- */
@@ -1014,7 +1043,7 @@ body.lightbox-open { overflow: hidden; }
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 44px 30px;
-  max-width: 1120px;
+  max-width: var(--col);
   margin: 0 auto;
   padding: 0 16px 10px;
 }
@@ -1031,11 +1060,23 @@ body.lightbox-open { overflow: hidden; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1), filter 0.4s ease;
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1), filter 0.5s ease;
 }
-/* the photograph warms and steps forward rather than dimming — the old hover
-   faded the work, which is the one thing the page is selling */
-.tile:hover .tile-img img { transform: scale(1.045); filter: saturate(112%) brightness(1.06); }
+/* The grid rests in near-monochrome and the photograph returns to full colour
+   under the cursor, which gives the whole page one quiet surface and makes the
+   thing you are pointing at the only thing in colour.
+   Guarded on hover capability: on a touch screen there is no pointer to bring
+   the colour back, so phones and tablets get the photographs as they are. */
+@media (hover: hover) and (pointer: fine) {
+  .tile-img img { filter: grayscale(0.82) contrast(1.04); }
+  .tile:hover .tile-img img {
+    transform: scale(1.045);
+    filter: grayscale(0) saturate(106%);
+  }
+}
+@media not all and (hover: hover) {
+  .tile:active .tile-img img { transform: scale(1.02); }
+}
 .tile-name {
   position: relative;
   display: inline-block;
@@ -1075,11 +1116,11 @@ body.lightbox-open { overflow: hidden; }
   .tile-img img, .tile-name, .tile-name::after { transition: none; }
 }
 .grid-more {
-  max-width: 1120px;
+  max-width: var(--col);
   margin: 34px auto 0;
   padding: 0 16px;
 }
-.page-header.grid-header { max-width: 1120px; padding: 60px 16px 34px; }
+.page-header.grid-header { max-width: var(--col); padding: 60px 16px 34px; }
 
 @media (max-width: 932px) {
   .tile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 20px; padding: 0 5% 10px; }

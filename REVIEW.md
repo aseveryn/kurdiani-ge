@@ -173,6 +173,8 @@ Kurdiani Architects — архитектурная практика в Тбил�
 
 _The short introduction beside the photograph on the landing page._
 
+_**This was rewritten to ask for the enquiry rather than just describe the practice**, so the last line is a direct offer and the Call button sits right under it. Please check you are happy making that offer, and that the wording sounds like you rather than like an advert._
+
 ### Introduction
 _Two short paragraphs._
 
@@ -180,25 +182,35 @@ _Two short paragraphs._
 **EN**
 
 ```
-Kurdiani Architects is the Tbilisi practice of Paata and Keti Kurdiani.
-Over four decades we have designed and built private houses and villas, hotels and restaurants, embassies, cultural buildings and residential complexes — almost all of it in Georgia.
+Architecture, interiors and construction in Tbilisi — from the first sketch through to the finished building.
+For more than forty years Paata and Keti Kurdiani have designed and built private houses and villas, hotels and restaurants, embassies and residential complexes across Georgia.
+Tell us about your site or your building, and we will tell you what can be done with it.
 ```
 
 **GE**
 
 ```
-ქურდიანი არქიტექტორები — პაატა და ქეთი ქურდიანების არქიტექტურული სტუდია თბილისში.
-ოთხი ათწლეულის განმავლობაში ჩვენ დავაპროექტეთ და ავაშენეთ კერძო სახლები და ვილები, სასტუმროები და რესტორნები, საელჩოები, კულტურული დანიშნულების შენობები და საცხოვრებელი კომპლექსები — თითქმის ყველა მათგანი საქართველოში.
+არქიტექტურა, ინტერიერები და მშენებლობა თბილისში — პირველი ესკიზიდან დასრულებულ შენობამდე.
+ორმოც წელზე მეტია პაატა და ქეთი ქურდიანები აპროექტებენ და აშენებენ კერძო სახლებსა და ვილებს, სასტუმროებსა და რესტორნებს, საელჩოებსა და საცხოვრებელ კომპლექსებს მთელს საქართველოში.
+მოგვიყევით თქვენი ნაკვეთის ან შენობის შესახებ და გეტყვით, რა შეიძლება მასზე გაკეთდეს.
 ```
 
 **RU**
 
 ```
-Kurdiani Architects — архитектурная студия Пааты и Кети Курдиани в Тбилиси.
-За четыре десятилетия мы спроектировали и построили частные дома и виллы, гостиницы и рестораны, посольства, культурные здания и жилые комплексы — почти всё это в Грузии.
+Архитектура, интерьеры и строительство в Тбилиси — от первого эскиза до готового здания.
+Более сорока лет Паата и Кети Курдиани проектируют и строят частные дома и виллы, гостиницы и рестораны, посольства и жилые комплексы по всей Грузии.
+Расскажите о своём участке или здании — и мы скажем, что на нём можно сделать.
 ```
 
-_**The two numbers below need checking.** '40+ years of practice' is taken from the CV — Paata graduated in 1984 and began at the Cultural Heritage office the same year. **'100+ projects completed' could not be verified from anything I have**: the CV lists roughly forty-five and says it is not the complete list. Please confirm the real figure, or say what it should be replaced with._
+_**All four numbers below need checking — none came from you.**_
+
+- **40+ years of practice** — from the CV: Paata graduated in 1984 and began at the Cultural Heritage office the same year.
+- **100+ projects completed** — **could not be verified from anything I have.** The CV lists roughly forty-five and says it is not the complete list. Please give the real figure or say what should replace it.
+- **3 embassies in Tbilisi** — counted from the CV, which names the European Union, Great Britain and Greece. It does not count the ambassadors' residences or the office at the United States Embassy, so the honest number may well be higher. What is it?
+- **6 building types** — counted from the six categories the site sorts the work into (residential, hotel, restaurant, office, public, interior). True of the website, but say if it undersells what you do.
+
+_If you would rather show different figures entirely, write them here and they will replace these. Four is what the layout is built for; two or three also work._
 
 ### The numbers
 _Shown in large type under the introduction._
@@ -209,6 +221,8 @@ _Shown in large type under the introduction._
 ```
 40+Years of practice
 100+Projects completed
+3Embassies in Tbilisi
+6Building types
 ```
 
 **GE**
@@ -216,6 +230,8 @@ _Shown in large type under the introduction._
 ```
 40+წლის გამოცდილება
 100+დასრულებული პროექტი
+3საელჩო თბილისში
+6შენობის ტიპი
 ```
 
 **RU**
@@ -223,6 +239,8 @@ _Shown in large type under the introduction._
 ```
 40+лет практики
 100+завершённых проектов
+3посольства в Тбилиси
+6типа зданий
 ```
 
 ---
