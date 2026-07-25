@@ -208,7 +208,7 @@ _**All four numbers below need checking — none came from you.**_
 - **40+ years of practice** — from the CV: Paata graduated in 1984 and began at the Cultural Heritage office the same year.
 - **100+ projects completed** — **could not be verified from anything I have.** The CV lists roughly forty-five and says it is not the complete list. Please give the real figure or say what should replace it.
 - **3 embassies in Tbilisi** — counted from the CV, which names the European Union, Great Britain and Greece. It does not count the ambassadors' residences or the office at the United States Embassy, so the honest number may well be higher. What is it?
-- **6 building types** — counted from the six categories the site sorts the work into (residential, hotel, restaurant, office, public, interior). True of the website, but say if it undersells what you do.
+- **6 hotel projects** — counted from the six hotels on the site. It says **projects** deliberately: five of the six are titled 'Project', so they read as designs rather than finished hotels, and saying '6 hotels' would claim more than the site shows. If they were built, say so and the label becomes '6 hotels'. The count also leaves out the Hotel 'Sachveno' interior, which the site files under interiors. **How many hotels have you actually designed, and how many were built?** Over forty years it is very likely more than six.
 
 _If you would rather show different figures entirely, write them here and they will replace these. Four is what the layout is built for; two or three also work._
 
@@ -222,7 +222,7 @@ _Shown in large type under the introduction._
 40+Years of practice
 100+Projects completed
 3Embassies in Tbilisi
-6Building types
+6Hotel projects
 ```
 
 **GE**
@@ -231,7 +231,7 @@ _Shown in large type under the introduction._
 40+წლის გამოცდილება
 100+დასრულებული პროექტი
 3საელჩო თბილისში
-6შენობის ტიპი
+6სასტუმროს პროექტი
 ```
 
 **RU**
@@ -240,7 +240,7 @@ _Shown in large type under the introduction._
 40+лет практики
 100+завершённых проектов
 3посольства в Тбилиси
-6типа зданий
+6гостиничных проектов
 ```
 
 ---
