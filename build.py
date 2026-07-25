@@ -236,7 +236,11 @@ def load_projects():
             "year": meta.get("year", ""),
             "order": int(meta.get("order", 9999)),
             "layout": meta.get("layout", ""),
-            "description": body,
+            "descs": {
+                "en": meta.get("desc", "") or body,
+                "ka": meta.get("desc_ka", ""),
+                "ru": meta.get("desc_ru", ""),
+            },
             "images": images,
             "videos": videos,
             "cover": cover if os.path.exists(cover) else None,
@@ -247,6 +251,10 @@ def load_projects():
 
 def title_of(project, lang):
     return project["titles"].get(lang) or project["titles"]["en"]
+
+
+def desc_of(project, lang):
+    return project["descs"].get(lang) or project["descs"]["en"]
 
 
 def read_lang_file(directory, stem, lang):
@@ -581,13 +589,24 @@ def render_project_page(p, lang, prev=None, nxt=None):
                 f"</div>"
             )
 
+    body_text = desc_of(p, lang)
     desc_html = ""
-    if p["description"] and lang == "en":
-        desc_html = f'\n        <p class="description">{html.escape(p["description"])}</p>'
+    if body_text:
+        paras = "".join(
+            f"<p>{html.escape(para.strip())}</p>"
+            for para in body_text.split("\n") if para.strip()
+        )
+        desc_html = f'\n            <div class="description">{paras}</div>'
 
     og_image = f"{DOMAIN}/img/{slug}/cover-1280.jpg" if p["cover"] else None
     path = f"{slug}/"
-    description = t(lang, "project_desc").format(title=title)
+    # a written description makes a far better search snippet than the
+    # generic template, so prefer it when there is one
+    if body_text:
+        flat = " ".join(body_text.split())
+        description = flat if len(flat) <= 300 else flat[:297].rsplit(" ", 1)[0] + "…"
+    else:
+        description = t(lang, "project_desc").format(title=title)
 
     work_ld = {
         "@type": "CreativeWork",
