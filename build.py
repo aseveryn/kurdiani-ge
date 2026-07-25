@@ -19,6 +19,7 @@ Missing layout -> one grid of all images.
 Usage: python3 build.py [--clean]
 """
 import argparse
+import hashlib
 import html
 import os
 import re
@@ -46,6 +47,16 @@ FAVICON = (
 )
 
 GRID_BASE = 260  # justified grid: item width = aspect * GRID_BASE px
+
+# Content fingerprints appended to /css and /js URLs. GitHub Pages serves
+# assets with max-age=600, so without these a returning visitor keeps the
+# stale stylesheet for ten minutes after a deploy. Set in main().
+ASSET_TAGS = {"css": "", "js": ""}
+
+
+def fingerprint(path):
+    with open(path, "rb") as f:
+        return hashlib.md5(f.read()).hexdigest()[:8]
 
 
 # ---------------------------------------------------------------- content
@@ -169,7 +180,7 @@ def head(title, canonical, og_image=None, description=SITE_DESCRIPTION):
   <meta property="og:title" content="{html.escape(title)}">{og}
   <link rel="canonical" href="{canonical}">
   <link rel="icon" href="{FAVICON}">
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/main.css?v={ASSET_TAGS['css']}">
 </head>
 <body class="fade">"""
 
@@ -215,7 +226,7 @@ def footer(back_to_top=True):
     return f"""{btt}
     </main>
   </div>
-  <script src="/js/site.js"></script>
+  <script src="/js/site.js?v={ASSET_TAGS['js']}"></script>
 </body>
 </html>"""
 
@@ -438,6 +449,8 @@ def main():
         if os.path.isdir(dst):
             shutil.rmtree(dst)
         shutil.copytree(src, dst)
+    ASSET_TAGS["css"] = fingerprint(os.path.join(DOCS, "css", "main.css"))
+    ASSET_TAGS["js"] = fingerprint(os.path.join(DOCS, "js", "site.js"))
 
     projects = load_projects()
     if not projects:
