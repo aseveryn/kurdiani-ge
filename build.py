@@ -57,6 +57,7 @@ DEFAULT_LANG = "ka"
 
 STRINGS = {
     "en": {
+        "selected_work": "Selected work",
         "services": "Services",
         "service_list": "Architecture|Interior design|Reconstruction and renovation|Construction",
         "skip_to_content": "Skip to content",
@@ -96,6 +97,7 @@ STRINGS = {
         ),
     },
     "ka": {
+        "selected_work": "შერჩეული პროექტები",
         "services": "მომსახურება",
         "service_list": "არქიტექტურა|ინტერიერის დიზაინი|რეკონსტრუქცია და რენოვაცია|მშენებლობა",
         "skip_to_content": "შიგთავსზე გადასვლა",
@@ -135,6 +137,7 @@ STRINGS = {
         ),
     },
     "ru": {
+        "selected_work": "Избранные проекты",
         "services": "Услуги",
         "service_list": "Архитектура|Дизайн интерьеров|Реконструкция и реновация|Строительство",
         "skip_to_content": "Перейти к содержанию",
@@ -741,6 +744,47 @@ def lang_dir(lang):
     return next(l["prefix"] for l in LANGS if l["code"] == lang).lstrip("/")
 
 
+def home_hero(lang):
+    """Portrait, short bio, services and the numbers — the landing block."""
+    hdir = os.path.join(CONTENT, "home")
+    intro = read_lang_file(hdir, "intro", lang)
+    stats = read_lang_file(hdir, "stats", lang)
+    services = read_lang_file(os.path.join(CONTENT, "about"), "services", lang)
+
+    portrait = ""
+    src = os.path.join(CONTENT, "about", "portrait.jpg")
+    if os.path.exists(src):
+        outdir = os.path.join(DOCS, "img", "about")
+        entries = []
+        for width in (600, 1200):
+            w, _ = derivative(src, os.path.join(outdir, f"portrait-{width}.jpg"), width)
+            entries.append((w, f"/img/about/portrait-{width}.jpg"))
+        srcset = ", ".join(f"{u} {w}w" for w, u in entries)
+        # this is the largest thing above the fold, so it loads eagerly
+        portrait = f"""
+          <figure class="hero-portrait">
+            <img src="{entries[0][1]}" srcset="{srcset}"
+                 sizes="(max-width: 932px) 100vw, 440px"
+                 alt="{html.escape(t(lang, 'about_title'))}"
+                 loading="eager" fetchpriority="high" decoding="async">
+          </figure>"""
+
+    stats_block = f'<div class="stats-band">{stats}</div>' if stats else ""
+    return f"""
+      <section class="hero">{portrait}
+        <div class="hero-text">
+          <h1>{html.escape(t(lang, "about_title"))}</h1>
+          <div class="hero-intro">{intro}</div>
+          <div class="hero-cta">
+            {contact_buttons(lang)}
+          </div>
+        </div>
+      </section>
+      {stats_block}
+      <section class="home-services">{services}</section>
+      <h2 class="section-heading">{html.escape(t(lang, "selected_work"))}</h2>"""
+
+
 def render_work_page(projects, lang, subdir=""):
     tiles = []
     listed = []
@@ -810,8 +854,8 @@ def render_work_page(projects, lang, subdir=""):
 
     page = head(lang, t(lang, "home_title"), "", jsonld=jsonld)
     page += header_nav(lang, "work", "")
+    page += home_hero(lang)
     page += f"""
-      <h1 class="sr-only">{html.escape(t(lang, "home_title"))}</h1>
       <div class="project-covers">{"".join(tiles)}
       </div>"""
     page += footer(lang, back_to_top=False)
@@ -909,10 +953,9 @@ def render_404():
     write(os.path.join(DOCS, "404.html"), page)
 
 
-def render_contact_redirect():
-    """The Contact page is gone; keep /contact/ pointing home so old links
-    (the previous site had it indexed for years) don't dead-end."""
-    write(os.path.join(DOCS, "contact", "index.html"), f"""<!DOCTYPE html>
+def render_redirect(path, note=""):
+    """Keep a retired URL working by bouncing it to the home page."""
+    write(os.path.join(DOCS, path, "index.html"), f"""<!DOCTYPE html>
 <html lang="{DEFAULT_LANG}">
 <head>
   <meta charset="utf-8">
@@ -963,7 +1006,6 @@ def main():
     for lang_def in LANGS:
         lang = lang_def["code"]
         render_work_page(projects, lang)
-        render_work_page(projects, lang, subdir="work")
         for i, p in enumerate(projects):
             render_project_page(
                 p, lang,
@@ -972,7 +1014,8 @@ def main():
             )
         render_about(lang)
 
-    render_contact_redirect()
+    render_redirect("contact")   # indexed for years on the previous site
+    render_redirect("work")      # used to duplicate the home page
     render_404()
 
     # every URL declares its translations, so Google serves the right one

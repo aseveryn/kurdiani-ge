@@ -169,7 +169,65 @@ Kurdiani Architects — архитектурная практика в Тбил�
 
 ---
 
-## 3. Services
+## 3. Home page — introduction and numbers
+
+_The short introduction beside the photograph on the landing page._
+
+### Introduction
+_Two short paragraphs._
+
+
+**EN**
+
+```
+Kurdiani Architects is the Tbilisi practice of Paata and Keti Kurdiani.
+Over four decades we have designed and built private houses and villas, hotels and restaurants, embassies, cultural buildings and residential complexes — almost all of it in Georgia.
+```
+
+**GE**
+
+```
+ქურდიანი არქიტექტორები — პაატა და ქეთი ქურდიანების არქიტექტურული სტუდია თბილისში.
+ოთხი ათწლეულის განმავლობაში ჩვენ დავაპროექტეთ და ავაშენეთ კერძო სახლები და ვილები, სასტუმროები და რესტორნები, საელჩოები, კულტურული დანიშნულების შენობები და საცხოვრებელი კომპლექსები — თითქმის ყველა მათგანი საქართველოში.
+```
+
+**RU**
+
+```
+Kurdiani Architects — архитектурная студия Пааты и Кети Курдиани в Тбилиси.
+За четыре десятилетия мы спроектировали и построили частные дома и виллы, гостиницы и рестораны, посольства, культурные здания и жилые комплексы — почти всё это в Грузии.
+```
+
+_**The two numbers below need checking.** '40+ years of practice' is taken from the CV — Paata graduated in 1984 and began at the Cultural Heritage office the same year. **'100+ projects completed' could not be verified from anything I have**: the CV lists roughly forty-five and says it is not the complete list. Please confirm the real figure, or say what it should be replaced with._
+
+### The numbers
+_Shown in large type under the introduction._
+
+
+**EN**
+
+```
+40+Years of practice
+100+Projects completed
+```
+
+**GE**
+
+```
+40+წლის გამოცდილება
+100+დასრულებული პროექტი
+```
+
+**RU**
+
+```
+40+лет практики
+100+завершённых проектов
+```
+
+---
+
+## 4. Services
 
 _**Please check this list carefully — it was inferred, not supplied.** It was drafted from the CV and the projects on the site, so it may be missing services you offer, or list something you would rather not advertise. Add, remove or reword freely._
 
@@ -221,7 +279,7 @@ Carrying a design through construction to a finished building.
 
 ---
 
-## 4. Footer
+## 5. Footer
 
 ### Footer
 _Practice name, address and contacts._
@@ -265,7 +323,7 @@ kurdiani.paata@gmail.com
 
 ---
 
-## 5. Project names
+## 6. Project names
 
 _One block per project, in the order they appear on the site._
 
@@ -495,7 +553,7 @@ _Year shown on the site: —_
 
 ---
 
-## 6. Project descriptions
+## 7. Project descriptions
 
 _A short paragraph shown under each project title, and used as the Google search snippet. These were written from the photographs, so please correct anything factually wrong — materials, purpose, location, dates._
 
@@ -1214,7 +1272,7 @@ A study model for an Orthodox church: twisting ribbed fins rise and converge int
 
 ---
 
-## 7. Project years
+## 8. Project years
 
 _The old site showed **2022** against every project, which was the date it was migrated rather than when anything was built. Seven years below were read straight off the CV and are already on the site. The rest are blank — the site shows no date at all rather than a wrong one. Please fill in what you can; a single year or a range like 2014–2018 both work._
 
@@ -1325,7 +1383,7 @@ _The old site showed **2022** against every project, which was the date it was m
 
 ---
 
-## 8. Projects sharing the same name
+## 9. Projects sharing the same name
 
 _These appear identically in the grid and in search results, so nobody can tell them apart. A distinguishing name would help — the district, the building type, or the year._
 
