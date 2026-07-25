@@ -783,9 +783,9 @@ def lang_dir(lang):
     return next(l["prefix"] for l in LANGS if l["code"] == lang).lstrip("/")
 
 
-def studio_band(lang, dirname):
+def studio_shots(lang, dirname):
     """Wide photographs of the practice at work, from content/<dir>/studio/.
-    Drop more images in and they join the band in filename order."""
+    Drop more images in and they join the column in filename order."""
     sdir = os.path.join(CONTENT, dirname, "studio")
     if not os.path.isdir(sdir):
         return ""
@@ -801,14 +801,14 @@ def studio_band(lang, dirname):
             entries.append((w, f"/img/studio/{stem}-{width}.jpg"))
         srcset = ", ".join(f"{u} {w}w" for w, u in entries)
         shots.append(
-            f'<figure class="studio-shot">'
+            f'<figure class="about-shot">'
             f'<img src="{entries[1][1]}" srcset="{srcset}" '
-            f'sizes="(max-width: 932px) 100vw, 540px" '
+            f'sizes="(max-width: 932px) 100vw, 440px" '
             f'alt="{html.escape(t(lang, "studio_alt"))}" '
             f'loading="lazy" decoding="async">'
             f"</figure>"
         )
-    return f'<section class="studio">{"".join(shots)}</section>' if shots else ""
+    return "".join(shots)
 
 
 def home_hero(lang):
@@ -961,7 +961,7 @@ def render_about(lang):
     if services:
         body += '\n<section class="services-block">' + services + "</section>"
 
-    portrait = ""
+    shots = []
     src = os.path.join(adir, "portrait.jpg")
     if os.path.exists(src):
         outdir = os.path.join(DOCS, "img", "about")
@@ -970,15 +970,17 @@ def render_about(lang):
             w, _ = derivative(src, os.path.join(outdir, f"portrait-{width}.jpg"), width)
             entries.append((w, f"/img/about/portrait-{width}.jpg"))
         srcset = ", ".join(f"{u} {w}w" for w, u in entries)
-        portrait = f"""
-          <figure class="about-portrait">
-            <img src="{entries[0][1]}" srcset="{srcset}"
-                 sizes="(max-width: 932px) 100vw, 420px"
-                 alt="{html.escape(t(lang, 'about_title'))}">
-          </figure>"""
+        shots.append(
+            f'<figure class="about-shot">'
+            f'<img src="{entries[0][1]}" srcset="{srcset}" '
+            f'sizes="(max-width: 932px) 100vw, 440px" '
+            f'alt="{html.escape(t(lang, "about_title"))}" decoding="async">'
+            f"</figure>"
+        )
+    shots.append(studio_shots(lang, "about"))
+    portrait = f'<div class="about-images">{"".join(shots)}</div>'
 
     path = "about/"
-    studio = studio_band(lang, "about")
     jsonld = graph(
         lang,
         organization_ld(lang),
@@ -1026,7 +1028,6 @@ def render_about(lang):
             {body}
           </div>
         </div>
-        {studio}
       </div>"""
     page += footer(lang)
     write(os.path.join(DOCS, *filter(None, [lang_dir(lang), "about"]), "index.html"), page)
