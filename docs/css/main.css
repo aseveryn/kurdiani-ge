@@ -283,6 +283,73 @@ body.nav-open { overflow: hidden; }
   display: block;
 }
 
+/* ---------- about ---------- */
+
+.page-header.about-header {
+  max-width: 1120px;
+  padding-bottom: 50px;
+}
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 400px) minmax(0, 1fr);
+  gap: 60px;
+  align-items: start;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 0 30px;
+}
+.about-portrait { margin: 0; }
+.about-portrait img { display: block; width: 100%; height: auto; }
+
+.about-text {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 29px;
+}
+.about-text section + section { margin-top: 48px; }
+.about-text p { margin: 0 0 18px; }
+.about-text p:last-child { margin-bottom: 0; }
+.about-text .lead {
+  color: #ccc;
+  font-size: 21px;
+  line-height: 33px;
+}
+.about-text h2 {
+  margin: 0 0 4px;
+  color: var(--fg);
+  font-family: var(--serif);
+  font-size: 27px;
+  line-height: 34px;
+  font-weight: 700;
+}
+.about-text .role {
+  margin: 0 0 20px;
+  color: #6f6f6f;
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.worklist { list-style: none; margin: 0; padding: 0; }
+.worklist li {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  font-size: 15px;
+  line-height: 22px;
+}
+.worklist li:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0.09); }
+.worklist .year {
+  flex: none;
+  width: 104px;
+  color: #6f6f6f;
+  font-size: 13px;
+  line-height: 22px;
+}
+
 /* ---------- back to top ---------- */
 
 .back-to-top {
@@ -407,6 +474,11 @@ body.lightbox-open { overflow: hidden; }
   .contact-body { padding: 0 5%; }
   .page-header h1 { font-size: 42px; line-height: 50px; }
   .back-to-top a { font-size: 14px; line-height: 14px; }
+
+  .about { grid-template-columns: 1fr; gap: 34px; padding: 0 5% 20px; }
+  .about-portrait img { max-width: 420px; }
+  .about-text { font-size: 16px; line-height: 27px; }
+  .about-text .lead { font-size: 19px; line-height: 30px; }
 }
 
 @media (max-width: 540px) {
@@ -418,4 +490,8 @@ body.lightbox-open { overflow: hidden; }
   .details-wrap .title { font-size: 19px; line-height: 22px; padding-bottom: 10px; }
 
   .page-header h1 { font-size: 28px; line-height: 34px; }
+
+  .about-text h2 { font-size: 23px; line-height: 29px; }
+  .worklist li { flex-direction: column; gap: 2px; padding: 12px 0; }
+  .worklist .year { width: auto; }
 }

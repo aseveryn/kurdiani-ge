@@ -1,3 +1,7 @@
 .DS_Store
 __pycache__/
 *.pyc
+
+# personal source documents — not for the public repo
+KURDIANI PAATA CV.pdf
+paata_foto.jpeg

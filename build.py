@@ -176,21 +176,23 @@ def head(title, canonical, og_image=None, description=SITE_DESCRIPTION):
 
 def header_nav(active):
     work = ' class="active"' if active == "work" else ""
+    about = ' class="active"' if active == "about" else ""
     contact = ' class="active"' if active == "contact" else ""
+    links = (f'<a href="/"{work}>Work</a>\n      '
+             f'<a href="/about/"{about}>About</a>\n      '
+             f'<a href="/contact/"{contact}>Contact</a>')
     return f"""
   <div class="responsive-nav">
     <div class="close-nav"></div>
     <nav>
-      <a href="/"{work}>Work</a>
-      <a href="/contact/"{contact}>Contact</a>
+      {links}
     </nav>
   </div>
   <div class="site-container">
     <header class="site-header">
       <div class="logo-wrap"><div class="logo"><a href="/">{SITE_NAME}</a></div></div>
       <nav>
-        <a href="/"{work}>Work</a>
-        <a href="/contact/"{contact}>Contact</a>
+      {links}
       </nav>
       <div class="hamburger"><i></i><i></i><i></i></div>
     </header>
@@ -337,6 +339,52 @@ def render_work_page(projects, path, canonical):
     write(path, page)
 
 
+def render_about():
+    """About page: studio portrait alongside the practice/bio text."""
+    adir = os.path.join(CONTENT, "about")
+    body = open(os.path.join(adir, "about.html"), encoding="utf-8").read()
+
+    portrait = ""
+    src = os.path.join(adir, "portrait.jpg")
+    if os.path.exists(src):
+        outdir = os.path.join(DOCS, "img", "about")
+        entries = []
+        for width in (600, 1200):
+            w, _ = derivative(src, os.path.join(outdir, f"portrait-{width}.jpg"), width)
+            entries.append((w, f"/img/about/portrait-{width}.jpg"))
+        srcset = ", ".join(f"{u} {w}w" for w, u in entries)
+        portrait = f"""
+          <figure class="about-portrait">
+            <img src="{entries[0][1]}" srcset="{srcset}"
+                 sizes="(max-width: 932px) 100vw, 420px"
+                 alt="Paata and Keti Kurdiani in the studio in Tbilisi">
+          </figure>"""
+
+    page = head(
+        f"{SITE_TITLE_PREFIX} - About",
+        f"{DOMAIN}/about/",
+        og_image=f"{DOMAIN}/img/about/portrait-1200.jpg" if portrait else None,
+        description=(
+            "Kurdiani & Kurdiani, an architecture practice in Tbilisi, Georgia, "
+            "led by Paata and Keti Kurdiani."
+        ),
+    )
+    page += header_nav("about")
+    page += f"""
+      <div class="page-container">
+        <header class="page-header about-header">
+          <h1>Kurdiani &amp; Kurdiani</h1>
+        </header>
+        <div class="about">{portrait}
+          <div class="about-text">
+            {body}
+          </div>
+        </div>
+      </div>"""
+    page += footer()
+    write(os.path.join(DOCS, "about", "index.html"), page)
+
+
 def render_contact():
     body = open(os.path.join(CONTENT, "contact.html"), encoding="utf-8").read()
     page = head(f"{SITE_TITLE_PREFIX} - Contact", f"{DOMAIN}/contact/")
@@ -399,10 +447,12 @@ def main():
     render_work_page(projects, os.path.join(DOCS, "work", "index.html"), f"{DOMAIN}/")
     for p in projects:
         render_project_page(p)
+    render_about()
     render_contact()
     render_404()
 
-    urls = [f"{DOMAIN}/", f"{DOMAIN}/contact/"] + [f"{DOMAIN}/{p['slug']}/" for p in projects]
+    urls = ([f"{DOMAIN}/", f"{DOMAIN}/about/", f"{DOMAIN}/contact/"]
+            + [f"{DOMAIN}/{p['slug']}/" for p in projects])
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'
     sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     sitemap += "".join(f"  <url><loc>{u}</loc></url>\n" for u in urls)
