@@ -37,6 +37,15 @@ SITE_NAME = "kurdiani architects"
 SITE_TITLE_PREFIX = "paata kurdiani"
 DOMAIN = "https://kurdiani.ge"
 WHATSAPP_NUMBER = "995599505971"  # Paata, digits only — wa.me link format
+PHONE_NUMBER = "+995599505971"  # Paata — same line as WhatsApp
+PHONE_ICON = (
+    '<svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true">'
+    '<path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.28.67-.36 1.02-.25'
+    '1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17'
+    '0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02'
+    'l-2.2 2.2z"/>'
+    "</svg>"
+)
 MESSENGER_URL = "https://m.me/kurdiani.ge"  # facebook.com/kurdiani.ge
 MESSENGER_ICON = (
     '<svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true">'
@@ -206,6 +215,9 @@ def header_nav(active):
     about = ' class="active"' if active == "about" else ""
     links = (f'<a href="/"{work}>Work</a>\n      '
              f'<a href="/about/"{about}>About</a>\n      '
+             f'<a class="wa-btn call-btn" href="tel:{PHONE_NUMBER}" '
+             f'aria-label="Call the studio" title="Call the studio">'
+             f'{PHONE_ICON}<span>Call</span></a>\n      '
              f'<a class="wa-btn" href="https://wa.me/{WHATSAPP_NUMBER}" '
              f'target="_blank" rel="noopener" aria-label="Message on WhatsApp" '
              f'title="Message on WhatsApp">{WA_ICON}<span>WhatsApp</span></a>\n      '
@@ -250,6 +262,7 @@ def footer(back_to_top=True):
       <div class="footer-inner">
         {contact}
         <div class="footer-col footer-cta">
+          <a class="wa-btn call-btn" href="tel:{PHONE_NUMBER}">{PHONE_ICON}<span>Call</span></a>
           <a class="wa-btn" href="https://wa.me/{WHATSAPP_NUMBER}"
              target="_blank" rel="noopener">{WA_ICON}<span>WhatsApp</span></a>
           <a class="wa-btn msgr-btn" href="{MESSENGER_URL}"

@@ -131,6 +131,12 @@ img { border: 0; }
 }
 .msgr-btn:hover .wa-icon { fill: #0084ff; }
 
+.call-btn:hover {
+  border-color: var(--fg);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.call-btn:hover .wa-icon { fill: var(--fg); }
+
 /* hamburger (mobile) */
 .hamburger {
   display: none;
