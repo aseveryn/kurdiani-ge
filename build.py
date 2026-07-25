@@ -36,6 +36,12 @@ DOCS = os.path.join(ROOT, "docs")
 SITE_NAME = "kurdiani architects"
 SITE_TITLE_PREFIX = "paata kurdiani"
 DOMAIN = "https://kurdiani.ge"
+WHATSAPP_NUMBER = "995599505971"  # Paata, digits only — wa.me link format
+WA_ICON = (
+    '<svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true">'
+    '<path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.06s.89 2.39 1.01 2.56c.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.28z"/>'
+    "</svg>"
+)
 SITE_DESCRIPTION = (
     "Kurdiani Architects — architecture portfolio of Paata Kurdiani. "
     "Residential, hotel, restaurant and interior projects in Tbilisi, Georgia."
@@ -188,10 +194,10 @@ def head(title, canonical, og_image=None, description=SITE_DESCRIPTION):
 def header_nav(active):
     work = ' class="active"' if active == "work" else ""
     about = ' class="active"' if active == "about" else ""
-    contact = ' class="active"' if active == "contact" else ""
     links = (f'<a href="/"{work}>Work</a>\n      '
              f'<a href="/about/"{about}>About</a>\n      '
-             f'<a href="/contact/"{contact}>Contact</a>')
+             f'<a class="wa-btn" href="https://wa.me/{WHATSAPP_NUMBER}" '
+             f'target="_blank" rel="noopener">{WA_ICON}WhatsApp</a>')
     return f"""
   <div class="responsive-nav">
     <div class="close-nav"></div>
@@ -223,8 +229,18 @@ def footer(back_to_top=True):
         <a href="#"><span class="arrow">&uarr;</span>Back to Top</a>
       </section>
       <a class="btt-fixed" href="#">{BTT_SVG}</a>"""
+    contact = open(os.path.join(CONTENT, "footer.html"), encoding="utf-8").read()
     return f"""{btt}
     </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        {contact}
+        <div class="footer-col footer-cta">
+          <a class="wa-btn" href="https://wa.me/{WHATSAPP_NUMBER}"
+             target="_blank" rel="noopener">{WA_ICON}Message on WhatsApp</a>
+        </div>
+      </div>
+    </footer>
   </div>
   <script src="/js/site.js?v={ASSET_TAGS['js']}"></script>
 </body>
@@ -396,21 +412,21 @@ def render_about():
     write(os.path.join(DOCS, "about", "index.html"), page)
 
 
-def render_contact():
-    body = open(os.path.join(CONTENT, "contact.html"), encoding="utf-8").read()
-    page = head(f"{SITE_TITLE_PREFIX} - Contact", f"{DOMAIN}/contact/")
-    page += header_nav("contact")
-    page += f"""
-      <div class="page-container">
-        <header class="page-header contact-header">
-          <h1>Contact</h1>
-        </header>
-        <div class="contact-body">
-          {body}
-        </div>
-      </div>"""
-    page += footer()
-    write(os.path.join(DOCS, "contact", "index.html"), page)
+def render_contact_redirect():
+    """The Contact page is gone; keep /contact/ pointing home so old links
+    (the previous site had it indexed for years) don't dead-end."""
+    write(os.path.join(DOCS, "contact", "index.html"), f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0; url=/">
+  <link rel="canonical" href="{DOMAIN}/">
+  <meta name="robots" content="noindex">
+  <title>{SITE_TITLE_PREFIX}</title>
+</head>
+<body><p><a href="/">Continue to kurdiani.ge</a></p></body>
+</html>
+""")
 
 
 def render_404():
@@ -461,10 +477,10 @@ def main():
     for p in projects:
         render_project_page(p)
     render_about()
-    render_contact()
+    render_contact_redirect()
     render_404()
 
-    urls = ([f"{DOMAIN}/", f"{DOMAIN}/about/", f"{DOMAIN}/contact/"]
+    urls = ([f"{DOMAIN}/", f"{DOMAIN}/about/"]
             + [f"{DOMAIN}/{p['slug']}/" for p in projects])
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'
     sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

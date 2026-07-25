@@ -97,6 +97,33 @@ img { border: 0; }
 .site-header nav a:last-child { padding-right: 0; }
 .site-header nav a:hover, .site-header nav a.active { color: var(--fg); }
 
+/* WhatsApp button (header + footer) */
+.wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  color: var(--fg);
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+/* needs to outrank `.site-header nav a`, which would otherwise force
+   display:inline-block and collapse the flex layout */
+.site-header nav a.wa-btn {
+  display: inline-flex;
+  margin-left: 16px;
+  padding: 5px 15px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+}
+.wa-btn:hover {
+  border-color: #25d366;
+  background-color: rgba(37, 211, 102, 0.12);
+  color: #fff;
+}
+.wa-icon { width: 15px; height: 15px; fill: currentColor; flex: none; }
+.wa-btn:hover .wa-icon { fill: #25d366; }
+
 /* hamburger (mobile) */
 .hamburger {
   display: none;
@@ -138,6 +165,13 @@ img { border: 0; }
   padding: 0 0 30px;
 }
 .responsive-nav nav a.active { color: var(--fg); }
+.responsive-nav nav a.wa-btn {
+  display: inline-flex;
+  padding: 10px 22px;
+  font-size: 18px;
+  line-height: 26px;
+}
+.responsive-nav nav a.wa-btn .wa-icon { width: 19px; height: 19px; }
 .responsive-nav .close-nav {
   position: fixed;
   right: 5%;
@@ -240,20 +274,35 @@ body.nav-open { overflow: hidden; }
   white-space: pre-line;
 }
 
-/* contact page replicates the original offset title block */
-.page-header.contact-header { margin: 0; padding: 0; max-width: none; }
-.page-header.contact-header h1 { margin-left: 49%; max-width: 800px; }
-.contact-body {
-  max-width: 800px;
-  margin: 20px auto 0;
+/* ---------- site footer ---------- */
+
+.site-footer {
+  margin-top: 40px;
+  padding: 44px 0 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
 }
-.rich-text {
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 56px;
+  align-items: start;
+  padding: 0 6%;
   color: var(--muted);
-  font-size: 20px;
+  font-size: 14px;
+  line-height: 24px;
 }
-.rich-text > div { line-height: 22px; margin-bottom: 20px; }
-.rich-text .lh-24 { line-height: 24px; }
-.rich-text a:hover { color: var(--fg); }
+.footer-col { min-width: 0; }
+.footer-name {
+  color: var(--fg);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.footer-inner a { color: var(--muted); transition: color 0.2s ease; }
+.footer-inner a:hover { color: var(--fg); }
+.footer-cta { margin-left: auto; }
+.footer-cta .wa-btn { padding: 9px 18px; font-size: 14px; line-height: 20px; }
+.footer-cta .wa-btn:hover { color: #fff; }
 
 .modules { padding: 0 16px; }
 .pgrid { display: flex; flex-wrap: wrap; margin: 0 -4px; }
@@ -331,6 +380,18 @@ body.nav-open { overflow: hidden; }
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
+
+.more-link {
+  display: inline-block;
+  color: var(--fg);
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 3px;
+  transition: border-color 0.2s ease;
+}
+.more-link:hover { border-color: var(--fg); }
+.more-link span { display: inline-block; margin-left: 6px; }
 
 .worklist { list-style: none; margin: 0; padding: 0; }
 .worklist li {
@@ -470,9 +531,9 @@ body.lightbox-open { overflow: hidden; }
   .details-wrap .title { font-size: 22px; line-height: 25px; padding-bottom: 11px; }
 
   .page-header { padding: 60px 5% 40px; }
-  .page-header.contact-header h1 { margin-left: 5%; }
-  .contact-body { padding: 0 5%; }
   .page-header h1 { font-size: 42px; line-height: 50px; }
+  .footer-inner { padding: 0 5%; gap: 26px 40px; }
+  .footer-cta { margin-left: 0; width: 100%; }
   .back-to-top a { font-size: 14px; line-height: 14px; }
 
   .about { grid-template-columns: 1fr; gap: 34px; padding: 0 5% 20px; }
