@@ -218,224 +218,224 @@ kurdiani.paata@gmail.com
 _One block per project, in the order they appear on the site._
 
 ### 1. two-vllas-in-krtsanisi-tbilisi-georgia
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Two Villas in Krtsanisi, Tbilisi, Georgia.
 - GE: ორი ვილა კრწანისში, თბილისი
 - RU: Две виллы в Крцаниси, Тбилиси
 
 ### 2. allergy-immunology-polyclinic-tbilisi-georgia
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Allergy & Immunology Polyclinic, Tbilisi, Georgia.
 - GE: ალერგოლოგიისა და იმუნოლოგიის პოლიკლინიკა, თბილისი
 - RU: Поликлиника аллергологии и иммунологии, Тбилиси
 
 ### 3. hotel-wave-project
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Hotel "Wave" Project
 - GE: სასტუმრო „ტალღის“ პროექტი
 - RU: Проект гостиницы «Волна»
 
 ### 4. villa-in-tabakhmela-georgia
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Villa in Tabakhmela, Georgia.
 - GE: ვილა ტაბახმელაში
 - RU: Вилла в Табахмела
 
 ### 5. hotel-tornado-project
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Hotel "Tornado" Project
 - GE: სასტუმრო „ტორნადოს“ პროექტი
 - RU: Проект гостиницы «Торнадо»
 
 ### 6. condominium-on-aleksidze-str-tbilisi-georgia
-_Year shown on the site: 2022_
+_Year shown on the site: 2015–2018_
 
 - EN: Condominium on Aleksidze str. Tbilisi, Georgia.
 - GE: საცხოვრებელი სახლი ალექსიძის ქუჩაზე, თბილისი
 - RU: Жилой дом на улице Алексидзе, Тбилиси
 
 ### 7. iraki-embassy-tbilisi-project
-_Year shown on the site: 2022_
+_Year shown on the site: 2014_
 
 - EN: Embassy of Iraq, Tbilisi — Project
 - GE: ერაყის საელჩოს პროექტი, თბილისი
 - RU: Проект посольства Ирака, Тбилиси
 
 ### 8. cafe-project-at-eliava-str-in-tbilisi-georgia
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Cafe Project at Eliava str. in Tbilisi, Georgia.
 - GE: კაფის პროექტი ელიავას ქუჩაზე, თბილისი
 - RU: Проект кафе на улице Элиава, Тбилиси
 
 ### 9. interior-5
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Interior
 - GE: ინტერიერი
 - RU: Интерьер
 
 ### 10. villa-at-lisi-lake-tbilisi
-_Year shown on the site: 2022_
+_Year shown on the site: 2011_
 
 - EN: Villa at Lisi Lake, Tbilisi, Georgia.
 - GE: ვილა ლისის ტბასთან, თბილისი
 - RU: Вилла у озера Лиси, Тбилиси
 
 ### 11. hotel-savaneti-in-ikalto-georgia
-_Year shown on the site: 2022_
+_Year shown on the site: 2014–2018_
 
 - EN: Hotel "Savaneti" in Ikalto, Georgia.
 - GE: სასტუმრო „სავანეთი“, იყალთო
 - RU: Гостиница «Саванети», Икалто
 
 ### 12. hotel-project
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Hotel Project
 - GE: სასტუმროს პროექტი
 - RU: Проект гостиницы
 
 ### 13. interior-4
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Hotel "Sachveno" Interior, Tbilisi, Georgia.
 - GE: სასტუმრო „საჩვენოს“ ინტერიერი, თბილისი
 - RU: Интерьер гостиницы «Сачвено», Тбилиси
 
 ### 14. hotel-project-in-bakuriani
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Hotel Project in Bakuriani
 - GE: სასტუმროს პროექტი, ბაკურიანი
 - RU: Проект гостиницы, Бакуриани
 
 ### 15. restaurant-argo-in-zugdidi
-_Year shown on the site: 2022_
+_Year shown on the site: 2015_
 
 - EN: Restaurant "Argo" in Zugdidi, Georgia.
 - GE: რესტორანი „არგო“, ზუგდიდი
 - RU: Ресторан «Арго», Зугдиди
 
 ### 16. interior-3
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Interior
 - GE: ინტერიერი
 - RU: Интерьер
 
 ### 17. yezidi-cultural-center-in-tbilisi
-_Year shown on the site: 2022_
+_Year shown on the site: 2014–2015_
 
 - EN: Yezidi Cultural Center in Tbilisi, Georgia.
 - GE: ეზიდების კულტურული ცენტრი, თბილისი
 - RU: Езидский культурный центр, Тбилиси
 
 ### 18. interrior
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Interior
 - GE: ინტერიერი
 - RU: Интерьер
 
 ### 19. condominium-project
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Condominium Project
 - GE: საცხოვრებელი კომპლექსის პროექტი
 - RU: Проект жилого комплекса
 
 ### 20. interior-2
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Interior
 - GE: ინტერიერი
 - RU: Интерьер
 
 ### 21. condominium
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Condominium
 - GE: მრავალბინიანი საცხოვრებელი სახლი
 - RU: Жилой комплекс
 
 ### 22. cgc-office-in-rustavi-georgia
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: CGC Office in Rustavi, Georgia.
 - GE: CGC-ის ოფისი, რუსთავი
 - RU: Офис CGC, Рустави
 
 ### 23. old-hotel-renovation-project
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Old Hotel Renovation Project
 - GE: ძველი სასტუმროს რეკონსტრუქციის პროექტი
 - RU: Проект реконструкции старой гостиницы
 
 ### 24. interior-1
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Interior
 - GE: ინტერიერი
 - RU: Интерьер
 
 ### 25. center-of-allergy-immunology-tbilisi-georgia
-_Year shown on the site: 2022_
+_Year shown on the site: 2014_
 
 - EN: Center of Allergy & Immunology, Tbilisi, Georgia.
 - GE: ალერგოლოგიისა და იმუნოლოგიის ცენტრი, თბილისი
 - RU: Центр аллергологии и иммунологии, Тбилиси
 
 ### 26. villa-in-tsavkisi-georgia
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Villa in Tsavkisi, Georgia.
 - GE: ვილა წავკისში
 - RU: Вилла в Цавкиси
 
 ### 27. cgc-office-renovation
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: CGC Office Reconstruction
 - GE: CGC-ის ოფისის რეკონსტრუქცია
 - RU: Реконструкция офиса CGC
 
 ### 28. condominium-1
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Condominium in Tbilisi, Georgia.
 - GE: მრავალბინიანი საცხოვრებელი სახლი, თბილისი
 - RU: Жилой комплекс, Тбилиси
 
 ### 29. restaurant-in-dusheti-georgia
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Restaurant in Dusheti, Georgia.
 - GE: რესტორანი, დუშეთი
 - RU: Ресторан, Душети
 
 ### 30. old-house-reconstruction
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Old House Reconstruction in Saguramo, Georgia.
 - GE: ძველი სახლის რეკონსტრუქცია, საგურამო
 - RU: Реконструкция старого дома, Сагурамо
 
 ### 31. interior
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Interior
 - GE: ინტერიერი
 - RU: Интерьер
 
 ### 32. orthodox-curch-project
-_Year shown on the site: 2022_
+_Year shown on the site: —_
 
 - EN: Orthodox Church Project
 - GE: მართლმადიდებლური ტაძრის პროექტი
@@ -1159,3 +1159,130 @@ A study model for an Orthodox church: twisting ribbed fins rise and converge int
 Архитектура должна создаваться самыми передовыми технологиями своего века; каждое здание должно быть свидетельством своего времени.
 Макет православного храма: закрученные рёбра поднимаются и сходятся в корону под крестом, а между ними оставлены узкие вертикальные щели, пропускающие свет.
 ```
+
+---
+
+## 6. Project years
+
+_The old site showed **2022** against every project, which was the date it was migrated rather than when anything was built. Seven years below were read straight off the CV and are already on the site. The rest are blank — the site shows no date at all rather than a wrong one. Please fill in what you can; a single year or a range like 2014–2018 both work._
+
+### Taken from the CV — please confirm
+
+- **Center of Allergy & Immunology, Tbilisi, Georgia.** — currently `2014`
+  - why: 'Center of Allergy and Immunology' 200m²
+  - correct year: 
+- **Condominium on Aleksidze str. Tbilisi, Georgia.** — currently `2015–2018`
+  - why: 'Residence on Alexidze str.' 5,000m²
+  - correct year: 
+- **Hotel "Savaneti" in Ikalto, Georgia.** — currently `2014–2018`
+  - why: 'Hotel Savaneti in Ikalto' 3,500m²
+  - correct year: 
+- **Hotel "Tornado" Project** — currently `(blank)`
+  - why: listed under Ongoing Works — left blank rather than dated
+  - correct year: 
+- **Hotel "Wave" Project** — currently `(blank)`
+  - why: listed under Ongoing Works — left blank rather than dated
+  - correct year: 
+- **Embassy of Iraq, Tbilisi — Project** — currently `2014`
+  - why: 'Tender winner project of Embassy of Iraq'
+  - correct year: 
+- **Restaurant "Argo" in Zugdidi, Georgia.** — currently `2015`
+  - why: 'Restaurant Argo in Zugdidi' 750m²
+  - correct year: 
+- **Villa at Lisi Lake, Tbilisi, Georgia.** — currently `2011`
+  - why: 'Private villa on Lisi lake' 800m²
+  - correct year: 
+- **Yezidi Cultural Center in Tbilisi, Georgia.** — currently `2014–2015`
+  - why: 'Yezidi Culture Center and Temple' 1,700m² (note: a site photo is date-stamped 2017)
+  - correct year: 
+
+### The CV has more than one possible match — which is it?
+
+- **Allergy & Immunology Polyclinic, Tbilisi, Georgia.** — currently `(blank)`
+  - why: CV has one allergy/immunology entry (2014); this looks like a separate, unbuilt design
+  - correct year: 
+- **CGC Office in Rustavi, Georgia.** — currently `(blank)`
+  - why: CV has CGC Rustavi twice: 2013 (1,000m²) and 2010 (400m²)
+  - correct year: 
+- **CGC Office Reconstruction** — currently `(blank)`
+  - why: same two CGC entries — which is the reconstruction?
+  - correct year: 
+- **Condominium** — currently `(blank)`
+  - why: a site photo is date-stamped 2021; no clear CV entry
+  - correct year: 
+- **Condominium in Tbilisi, Georgia.** — currently `(blank)`
+  - why: possibly the 19-floor Saburtalo block (2006–2009); photos suggest ~15 floors
+  - correct year: 
+- **Hotel Project** — currently `(blank)`
+  - why: could be Tskneti (2012, 1,500m²) or Squri (2013, 7,000m²)
+  - correct year: 
+- **Old Hotel Renovation Project** — currently `(blank)`
+  - why: renders read 'Grand Hotel'; possibly the ongoing Marjan Hotel, but that is described as old-centre, not waterfront
+  - correct year: 
+- **Old House Reconstruction in Saguramo, Georgia.** — currently `(blank)`
+  - why: Saguramo appears as a 1998 villa and as ongoing work
+  - correct year: 
+- **Two Villas in Krtsanisi, Tbilisi, Georgia.** — currently `(blank)`
+  - why: CV lists Krtsanisi only under ongoing works, undated
+  - correct year: 
+- **Villa in Tsavkisi, Georgia.** — currently `(blank)`
+  - why: CV has Tsavkisi twice: 2015 (300m²) and 2008
+  - correct year: 
+
+### Not in the CV at all — year unknown
+
+- **Cafe Project at Eliava str. in Tbilisi, Georgia.** — currently `(blank)`
+  - why: no cafe on Eliava str. in the CV
+  - correct year: 
+- **Condominium Project** — currently `(blank)`
+  - why: no matching entry
+  - correct year: 
+- **Hotel Project in Bakuriani** — currently `(blank)`
+  - why: Bakuriani is not mentioned in the CV
+  - correct year: 
+- **Interior** — currently `(blank)`
+  - why: CV lists many interiors by client name; cannot match to photos
+  - correct year: 
+- **Interior** — currently `(blank)`
+  - why: same
+  - correct year: 
+- **Interior** — currently `(blank)`
+  - why: same
+  - correct year: 
+- **Interior** — currently `(blank)`
+  - why: same
+  - correct year: 
+- **Hotel "Sachveno" Interior, Tbilisi, Georgia.** — currently `(blank)`
+  - why: Hotel 'Sachveno' is not named in the CV
+  - correct year: 
+- **Interior** — currently `(blank)`
+  - why: same
+  - correct year: 
+- **Interior** — currently `(blank)`
+  - why: same
+  - correct year: 
+- **Orthodox Church Project** — currently `(blank)`
+  - why: no matching entry
+  - correct year: 
+- **Restaurant in Dusheti, Georgia.** — currently `(blank)`
+  - why: CV lists a villa in Dusheti (2012), not a restaurant
+  - correct year: 
+- **Villa in Tabakhmela, Georgia.** — currently `(blank)`
+  - why: Tabakhmela is not mentioned in the CV
+  - correct year: 
+
+---
+
+## 7. Projects sharing the same name
+
+_These appear identically in the grid and in search results, so nobody can tell them apart. A distinguishing name would help — the district, the building type, or the year._
+
+**Interior** — 6 projects:
+
+- `interior-5` — better name: 
+- `interior-3` — better name: 
+- `interrior` — better name: 
+- `interior-2` — better name: 
+- `interior-1` — better name: 
+- `interior` — better name: 
+

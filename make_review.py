@@ -137,6 +137,53 @@ def main():
                 {c: p["descs"].get(c, "") for c in ("en", "ka", "ru")},
             )
 
+    out.write("\n---\n\n## 6. Project years\n")
+    out.write(
+        "\n_The old site showed **2022** against every project, which was the date it "
+        "was migrated rather than when anything was built. Seven years below were read "
+        "straight off the CV and are already on the site. The rest are blank — the site "
+        "shows no date at all rather than a wrong one. Please fill in what you can; a "
+        "single year or a range like 2014–2018 both work._\n"
+    )
+    try:
+        import year_mapping
+        mapping = year_mapping.M
+    except Exception:
+        mapping = {}
+    by_slug = {p["slug"]: p for p in projects}
+    for group, heading in (
+        ("CONFIDENT", "Taken from the CV — please confirm"),
+        ("AMBIGUOUS", "The CV has more than one possible match — which is it?"),
+        ("ABSENT", "Not in the CV at all — year unknown"),
+    ):
+        rows = [(s, v) for s, v in mapping.items() if v[1] == group]
+        if not rows:
+            continue
+        out.write(f"\n### {heading}\n\n")
+        for slug, (year, _conf, why) in sorted(rows):
+            name = by_slug[slug]["titles"]["en"] if slug in by_slug else slug
+            shown = year or "(blank)"
+            out.write(f"- **{name}** — currently `{shown}`\n")
+            out.write(f"  - why: {why}\n")
+            out.write(f"  - correct year: \n")
+
+    dupes = {}
+    for p in projects:
+        dupes.setdefault(p["titles"]["en"], []).append(p["slug"])
+    repeated = {k: v for k, v in dupes.items() if len(v) > 1}
+    if repeated:
+        out.write("\n---\n\n## 7. Projects sharing the same name\n")
+        out.write(
+            "\n_These appear identically in the grid and in search results, so nobody "
+            "can tell them apart. A distinguishing name would help — the district, the "
+            "building type, or the year._\n\n"
+        )
+        for title, slugs in repeated.items():
+            out.write(f"**{title}** — {len(slugs)} projects:\n\n")
+            for s in slugs:
+                out.write(f"- `{s}` — better name: \n")
+            out.write("\n")
+
     path = os.path.join(ROOT, "REVIEW.md")
     io.open(path, "w", encoding="utf-8").write(out.getvalue())
     words = len(out.getvalue().split())
