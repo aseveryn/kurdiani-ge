@@ -384,7 +384,7 @@ def render_about():
     page += f"""
       <div class="page-container">
         <header class="page-header about-header">
-          <h1>Kurdiani &amp; Kurdiani</h1>
+          <h1>Paata and Keti Kurdiani</h1>
         </header>
         <div class="about">{portrait}
           <div class="about-text">
