@@ -463,7 +463,7 @@ def header_nav(lang, active, path=""):
     links = (
         f'<a href="{url_for(lang)}"{work}>{t(lang, "work")}</a>\n      '
         f'<a href="{url_for(lang, "about/")}"{about}>{t(lang, "about")}</a>\n      '
-        + contact_buttons(lang)
+        '<span class="nav-cta">' + contact_buttons(lang) + "</span>"
     )
     switcher = lang_switcher(lang, path)
     return f"""

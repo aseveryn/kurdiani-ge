@@ -173,16 +173,21 @@ img { border: 0; }
   color: var(--fg);
   transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
 }
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 16px;
+  vertical-align: middle;
+}
 /* needs to outrank `.site-header nav a`, which would otherwise force
    display:inline-block and collapse the flex layout */
 .site-header nav a.wa-btn {
   display: inline-flex;
-  margin-left: 10px;
   padding: 5px 14px;
   line-height: 20px;
   letter-spacing: 0.03em;
 }
-.site-header nav a.wa-btn:first-of-type { margin-left: 16px; }
 .wa-btn:hover {
   border-color: #25d366;
   background-color: rgba(37, 211, 102, 0.12);
@@ -702,6 +707,20 @@ body.lightbox-open { overflow: hidden; }
   .about-portrait img { max-width: 420px; }
   .about-text { font-size: 16px; line-height: 27px; }
   .about-text .lead { font-size: 19px; line-height: 30px; }
+
+  /* three CTA buttons wrap 2-then-1 at this width and read as a jumble —
+     give them one column each with room to breathe */
+  .responsive-nav nav .nav-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin: 8px 0 0;
+  }
+  .responsive-nav nav a.wa-btn { width: 250px; justify-content: center; }
+
+  .footer-cta { flex-direction: column; align-items: stretch; gap: 12px; }
+  .footer-cta .wa-btn { max-width: 260px; justify-content: center; }
 }
 
 @media (max-width: 540px) {
