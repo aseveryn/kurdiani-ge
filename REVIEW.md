@@ -169,7 +169,59 @@ Kurdiani Architects — архитектурная практика в Тбил�
 
 ---
 
-## 3. Footer
+## 3. Services
+
+_**Please check this list carefully — it was inferred, not supplied.** It was drafted from the CV and the projects on the site, so it may be missing services you offer, or list something you would rather not advertise. Add, remove or reword freely._
+
+### What we do
+_Shown on the About page._
+
+
+**EN**
+
+```
+What we do
+Architecture
+New buildings at every scale — private houses and villas, apartment buildings and residential complexes, hotels, restaurants, offices and public buildings.
+Interiors
+Interior design for homes, hotels, restaurants and offices, from the layout of a space through to its finishes, lighting and joinery.
+Reconstruction and renovation
+Rebuilding and adapting existing buildings, including work in the historic centre of Tbilisi.
+Realisation on site
+Carrying a design through construction to a finished building.
+```
+
+**GE**
+
+```
+რას ვაკეთებთ
+არქიტექტურა
+ახალი შენობები ნებისმიერ მასშტაბზე — კერძო სახლები და ვილები, საცხოვრებელი კორპუსები და კომპლექსები, სასტუმროები, რესტორნები, ოფისები და საზოგადოებრივი დანიშნულების შენობები.
+ინტერიერები
+საცხოვრებელი სახლების, სასტუმროების, რესტორნებისა და ოფისების ინტერიერის დიზაინი — სივრცის გეგმარებიდან მოპირკეთებამდე, განათებამდე და ავეჯამდე.
+რეკონსტრუქცია და რენოვაცია
+არსებული შენობების გადაკეთება და მოდერნიზაცია, მათ შორის მუშაობა თბილისის ისტორიულ ცენტრში.
+მშენებლობის განხორციელება
+პროექტის გატარება მშენებლობის გავლით დასრულებულ შენობამდე.
+```
+
+**RU**
+
+```
+Что мы делаем
+Архитектура
+Новые здания любого масштаба — частные дома и виллы, жилые дома и комплексы, гостиницы, рестораны, офисы и общественные здания.
+Интерьеры
+Дизайн интерьеров для жилья, гостиниц, ресторанов и офисов — от планировки пространства до отделки, освещения и мебели.
+Реконструкция и реновация
+Перестройка и приспособление существующих зданий, включая работу в историческом центре Тбилиси.
+Реализация на площадке
+Ведение проекта через строительство до готового здания.
+```
+
+---
+
+## 4. Footer
 
 ### Footer
 _Practice name, address and contacts._
@@ -213,7 +265,7 @@ kurdiani.paata@gmail.com
 
 ---
 
-## 4. Project names
+## 5. Project names
 
 _One block per project, in the order they appear on the site._
 
@@ -443,7 +495,7 @@ _Year shown on the site: —_
 
 ---
 
-## 5. Project descriptions
+## 6. Project descriptions
 
 _A short paragraph shown under each project title, and used as the Google search snippet. These were written from the photographs, so please correct anything factually wrong — materials, purpose, location, dates._
 
@@ -1162,7 +1214,7 @@ A study model for an Orthodox church: twisting ribbed fins rise and converge int
 
 ---
 
-## 6. Project years
+## 7. Project years
 
 _The old site showed **2022** against every project, which was the date it was migrated rather than when anything was built. Seven years below were read straight off the CV and are already on the site. The rest are blank — the site shows no date at all rather than a wrong one. Please fill in what you can; a single year or a range like 2014–2018 both work._
 
@@ -1273,7 +1325,7 @@ _The old site showed **2022** against every project, which was the date it was m
 
 ---
 
-## 7. Projects sharing the same name
+## 8. Projects sharing the same name
 
 _These appear identically in the grid and in search results, so nobody can tell them apart. A distinguishing name would help — the district, the building type, or the year._
 

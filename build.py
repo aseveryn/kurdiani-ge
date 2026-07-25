@@ -57,6 +57,8 @@ DEFAULT_LANG = "ka"
 
 STRINGS = {
     "en": {
+        "services": "Services",
+        "service_list": "Architecture|Interior design|Reconstruction and renovation|Construction",
         "skip_to_content": "Skip to content",
         "open_menu": "Open menu",
         "close_menu": "Close menu",
@@ -94,6 +96,8 @@ STRINGS = {
         ),
     },
     "ka": {
+        "services": "მომსახურება",
+        "service_list": "არქიტექტურა|ინტერიერის დიზაინი|რეკონსტრუქცია და რენოვაცია|მშენებლობა",
         "skip_to_content": "შიგთავსზე გადასვლა",
         "open_menu": "მენიუს გახსნა",
         "close_menu": "მენიუს დახურვა",
@@ -131,6 +135,8 @@ STRINGS = {
         ),
     },
     "ru": {
+        "services": "Услуги",
+        "service_list": "Архитектура|Дизайн интерьеров|Реконструкция и реновация|Строительство",
         "skip_to_content": "Перейти к содержанию",
         "open_menu": "Открыть меню",
         "close_menu": "Закрыть меню",
@@ -452,6 +458,21 @@ def organization_ld(lang):
             "jobTitle": "Chief Architect",
         },
         "sameAs": ["https://www.facebook.com/kurdiani.ge"],
+        "knowsLanguage": ["ka", "ru", "en"],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": t(lang, "services"),
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {"@type": "Service", "name": name,
+                                    "serviceType": name,
+                                    "provider": {"@id": f"{DOMAIN}/#organization"},
+                                    "areaServed": {"@type": "Country", "name": "Georgia"}},
+                }
+                for name in t(lang, "service_list").split("|")
+            ],
+        },
     }
 
 
@@ -800,6 +821,9 @@ def render_work_page(projects, lang, subdir=""):
 def render_about(lang):
     adir = os.path.join(CONTENT, "about")
     body = read_lang_file(adir, "about", lang)
+    services = read_lang_file(adir, "services", lang)
+    if services:
+        body += '\n<section class="services-block">' + services + "</section>"
 
     portrait = ""
     src = os.path.join(adir, "portrait.jpg")

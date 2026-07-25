@@ -105,7 +105,21 @@ def main():
             if os.path.exists(path) else ""
     multiline_block(out, "About page text", "The whole About page, paragraph by paragraph.", texts)
 
-    out.write("\n---\n\n## 3. Footer\n")
+    out.write("\n---\n\n## 3. Services\n")
+    out.write(
+        "\n_**Please check this list carefully — it was inferred, not supplied.** "
+        "It was drafted from the CV and the projects on the site, so it may be "
+        "missing services you offer, or list something you would rather not "
+        "advertise. Add, remove or reword freely._\n"
+    )
+    texts = {}
+    for code in ("en", "ka", "ru"):
+        path = os.path.join(ROOT, "content", "about", f"services.{code}.html")
+        texts[code] = strip_html(io.open(path, encoding="utf-8").read()) \
+            if os.path.exists(path) else ""
+    multiline_block(out, "What we do", "Shown on the About page.", texts)
+
+    out.write("\n---\n\n## 4. Footer\n")
     texts = {}
     for code in ("en", "ka", "ru"):
         path = os.path.join(ROOT, "content", f"footer.{code}.html")
@@ -115,14 +129,14 @@ def main():
 
     projects = B.load_projects()
 
-    out.write("\n---\n\n## 4. Project names\n")
+    out.write("\n---\n\n## 5. Project names\n")
     out.write("\n_One block per project, in the order they appear on the site._\n")
     for i, p in enumerate(projects, start=1):
         block(out, f"{i}. {p['slug']}", f"Year shown on the site: {p['year'] or '—'}",
               p["titles"]["en"], p["titles"]["ka"], p["titles"]["ru"])
 
     with_desc = [p for p in projects if any(p["descs"].values())]
-    out.write("\n---\n\n## 5. Project descriptions\n")
+    out.write("\n---\n\n## 6. Project descriptions\n")
     if not with_desc:
         out.write("\n_Not written yet — this section will be filled in once the "
                   "descriptions are drafted._\n")
@@ -137,7 +151,7 @@ def main():
                 {c: p["descs"].get(c, "") for c in ("en", "ka", "ru")},
             )
 
-    out.write("\n---\n\n## 6. Project years\n")
+    out.write("\n---\n\n## 7. Project years\n")
     out.write(
         "\n_The old site showed **2022** against every project, which was the date it "
         "was migrated rather than when anything was built. Seven years below were read "
@@ -172,7 +186,7 @@ def main():
         dupes.setdefault(p["titles"]["en"], []).append(p["slug"])
     repeated = {k: v for k, v in dupes.items() if len(v) > 1}
     if repeated:
-        out.write("\n---\n\n## 7. Projects sharing the same name\n")
+        out.write("\n---\n\n## 8. Projects sharing the same name\n")
         out.write(
             "\n_These appear identically in the grid and in search results, so nobody "
             "can tell them apart. A distinguishing name would help — the district, the "
