@@ -3,9 +3,9 @@ title: Old Hotel Renovation Project
 title_ka: ძველი სასტუმროს რეკონსტრუქციის პროექტი
 title_ru: Проект реконструкции старой гостиницы
 category: hotel
-desc_ru: Проект гостиничной башни под названием Grand Hotel, показанный в проектных видах. Витражный фасад с зеленоватым остеклением поднимается к складчатой стеклянной короне, а рядом, на набережной площади, стоит гранёный треугольный стеклянный павильон.
-desc_ka: სასტუმროს კოშკის პროექტი სახელწოდებით Grand Hotel, წარმოდგენილი საპროექტო ხედებში. მომწვანო შეფერილობის მინის ფასადი ზემოთ დაკეცილ მინის გვირგვინამდე ადის, გვერდით კი, სანაპირო მოედანზე, წახნაგოვანი სამკუთხა მინის პავილიონი დგას.
-desc: A design for a hotel tower carrying the name Grand Hotel, shown here in project views. Green-tinted curtain walling rises to a folded glass crown, with a faceted triangular glass pavilion set beside it on a waterfront plaza.
+desc_ru: Проект реконструкции старой гостиницы («Интурист», Кобулети). Мы постарались простыми средствами — лишь добавив лифты и вестибюль и устроив на крыше двухуровневый ресторан — придать зданию современный облик.
+desc_ka: ძველი სასტუმროს („ინტურისტი“, ქობულეთი) რეკონსტრუქციის პროექტი. ვეცადეთ მარტივი ხერხებით — მხოლოდ ლიფტების და სადარბაზოს დამატებით და სახურავზე ორდონიანი რესტორნის მოწყობით — თანამედროვე იერის მიღებას.
+desc: A reconstruction project for an old hotel — the Intourist in Kobuleti. We sought a contemporary look by the simplest of means: adding only lifts and an entrance hall, and setting a two-level restaurant on the roof.
 order: 23
 layout: video:1 grid:1-5
 ---

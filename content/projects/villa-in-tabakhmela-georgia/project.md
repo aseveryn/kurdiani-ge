@@ -3,8 +3,8 @@ title: Villa in Tabakhmela, Georgia.
 title_ka: ვილა ტაბახმელაში
 title_ru: Вилла в Табахмела
 category: residential
-desc_ru: Дом в Табахмела под Тбилиси. Асимметричная кровля низко опускается с одной стороны, тогда как противоположный фронтон остеклён на всю высоту; вход отмечен складчатым металлическим навесом на наклонных стойках среди ландшафта из речного камня.
-desc_ka: სახლი ტაბახმელაში, თბილისის მახლობლად. ასიმეტრიული სახურავი ერთ მხარეს დაბლა ეშვება, მოპირდაპირე ფრონტონი კი მთელ სიმაღლეზე მოშუშულია; შესასვლელს დაკეცილი ლითონის ტენტი აღნიშნავს დახრილ საყრდენებზე, მდინარის რიყის ქვით გაწყობილ ეზოში.
-desc: A house in Tabakhmela, outside Tbilisi. An asymmetric roof sweeps low to one side while the opposite gable is glazed to its full height, and a folded metal canopy on raked struts marks the entrance among river-stone landscaping.
+desc_ru: Заказчик просил традиционный дом «кантри». Хотя традиционны здесь только каменный цоколь и черепичная крыша, а остальные формы и материалы современны, образ «кантри» удалось получить.
+desc_ka: დამკვეთის მოთხოვნა ტრადიციული „ქანთრი“ იყო. მიუხედავად იმისა, რომ ტრადიციული მხოლოდ ქვის ბაზისი და კრამიტის სახურავია, დანარჩენი ფორმებიც და მასალებიც კი თანამედროვეა, მოხერხდა ქანთრის იმიჯის მიღება.
+desc: The client asked for a traditional country house. Although the only traditional elements are the stone base and the tiled roof, and every other form and material is contemporary, the country image was achieved.
 order: 4
 ---

@@ -3,9 +3,9 @@ title: Hotel "Wave" Project
 title_ka: სასტუმრო „ტალღის“ პროექტი
 title_ru: Проект гостиницы «Волна»
 category: hotel
-desc_ru: Отель «Волна» — курортный комплекс площадью 15 000 м² в стадии проектирования. Триангулированная стеклянная оболочка изгибается над ярусами балконов на диагональной сетке и раскрывается на площадь, обсаженную пальмами.
-desc_ka: სასტუმრო „ტალღა“ — 15 000 კვ.მ-იანი საკურორტო კომპლექსი პროექტირების სტადიაზე. სამკუთხედებად დანაწევრებული მინის გარსი მოხრილად გადაფარავს დიაგონალურ ბადეზე განლაგებულ აივნების იარუსებს და პალმებით შემოსაზღვრულ მოედანზე იხსნება.
-desc: Hotel "Wave", a 15,000 m² resort in design. A triangulated glass shell curves over tiers of balconies set on a diagonal grid, opening onto a palm-lined forecourt.
+desc_ru: Выполнен для морского побережья Кобулети.
+desc_ka: შესრულდა ქობულეთის ზღვის პირისთვის.
+desc: Designed for the seafront at Kobuleti.
 order: 3
 layout: video:1 grid:1-5
 ---

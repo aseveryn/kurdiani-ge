@@ -3,8 +3,8 @@ title: Interior
 title_ka: ინტერიერი
 title_ru: Интерьер
 category: interior
-desc_ru: Жилой интерьер: травертиновая стена камина проходит горизонтальными полосами через гостиную, изогнутые потолочные ниши несут непрерывную подсветку, кожаная мебель стоит на полированном камне, а кухня решена в глянцевом оранжевом лаке.
-desc_ka: საცხოვრებელი ინტერიერი: ტრავერტინის ბუხრის კედელი ჰორიზონტალური ზოლებით კვეთს მისაღებს, მოხრილი ჭერის ნიშები უწყვეტ განათებას ატარებს, ტყავის ავეჯი გაპრიალებულ ქვის იატაკზე დგას, სამზარეულო კი მბზინავი ნარინჯისფერი ლაქითაა გადაწყვეტილი.
-desc: A residential interior with a travertine fireplace wall banded horizontally across the living room, curved cove ceilings carrying continuous strip lighting, leather seating on polished stone floors, and a kitchen in gloss orange lacquer.
+desc_ru: Интерьер в многоэтажном доме 1990-х годов — дань уважения «эго» заказчика, уставшего от советских «хрущёвок»!
+desc_ka: ინტერიერი 1990-იანებში აშენებულ მრავალსართულიან სახლში — საბჭოეთის პერიოდის „ხრუშოვკებით“ დაღლილი დამკვეთის „ეგოს“ პატივისცემა!
+desc: An interior in a multi-storey building from the 1990s — a tribute to the “ego” of a client weary of Soviet-era khrushchyovkas!
 order: 9
 ---
