@@ -18,6 +18,11 @@ content/
     about.<lang>.html   # About page copy, one file per language
     portrait.jpg        # studio portrait
   footer.<lang>.html    # footer contact block, one file per language
+  kutaisi-project/  # self-contained Kutaisi land-sale page (built in the
+                    # separate ~/projects/kutaisi-land repo, URLs rewritten),
+                    # copied verbatim to docs/kutaisi-project/; its language
+                    # folders are /, ge/, ru/ — hence KUTAISI_PATHS in build.py.
+                    # The brass "Kutaisi Project" header pill links to it.
 assets/             # css / js / fonts, copied verbatim into the build
 build.py            # static site generator (Python 3 + Pillow), writes docs/
 docs/               # GENERATED output, served by GitHub Pages — do not edit by hand

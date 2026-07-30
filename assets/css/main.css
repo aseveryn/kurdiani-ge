@@ -288,6 +288,20 @@ video:focus-visible {
 }
 .call-btn:hover .wa-icon { fill: var(--accent); }
 
+/* Kutaisi special-project pill — the one deliberately loud item in the nav */
+.site-header nav a.special-btn {
+  margin-left: 10px;
+  padding: 0 16px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+}
+.site-header nav a.special-btn::after { content: none; }
+.site-header nav a.special-btn:hover {
+  background-color: rgba(192, 143, 79, 0.14);
+  color: var(--fg);
+}
+
 /* language switcher */
 .lang-switch {
   display: inline-flex;
@@ -354,6 +368,7 @@ video:focus-visible {
   line-height: 26px;
 }
 .responsive-nav nav a.wa-btn .wa-icon { width: 19px; height: 19px; }
+.responsive-nav nav a.special-btn { color: var(--accent); }
 .responsive-nav nav .lang-switch {
   display: flex;
   justify-content: center;
@@ -722,11 +737,16 @@ body.lightbox-open { overflow: hidden; }
 
 /* ---------- responsive ---------- */
 
+/* with the Kutaisi pill the full nav needs ~1120px in Georgian, so the
+   hamburger takes over well before the 932px content breakpoint */
+@media (max-width: 1140px) {
+  .site-header nav { display: none; }
+  .hamburger { display: block; }
+}
+
 @media (max-width: 932px) {
   :root { --header-h: 62px; }
   .header-inner { padding: 0 5%; }
-  .site-header nav { display: none; }
-  .hamburger { display: block; }
 
   .page-header { padding: 60px 5% 40px; }
   .page-header h1 { font-size: 42px; line-height: 50px; }

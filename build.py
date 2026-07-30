@@ -47,6 +47,13 @@ WHATSAPP_NUMBER = "995599505971"  # Paata, digits only — wa.me link format
 PHONE_NUMBER = "+995599505971"  # Paata — same line as WhatsApp
 MESSENGER_URL = "https://m.me/kurdiani.ge"  # facebook.com/kurdiani.ge
 
+# The Kutaisi land page is a self-contained site built in the separate
+# kutaisi-land repo; a rewritten copy lives in content/kutaisi-project/ and is
+# served verbatim. Its language folders are /, ge/, ru/ — not this site's
+# prefix scheme — hence the explicit map.
+KUTAISI_PATHS = {"ka": "/kutaisi-project/ge/", "ru": "/kutaisi-project/ru/",
+                 "en": "/kutaisi-project/"}
+
 # Georgian is the default language and lives at the site root.
 LANGS = [
     {"code": "ka", "label": "GE", "prefix": ""},
@@ -87,6 +94,7 @@ STRINGS = {
         "call": "Call",
         "back_to_top": "Back to Top",
         "about_title": "Paata and Keti Kurdiani",
+        "kutaisi_btn": "Kutaisi Project",
         "site_title": "paata kurdiani",
         "not_found": "Page not found",
         "back_to_work": "Back to work",
@@ -139,6 +147,7 @@ STRINGS = {
         "call": "დარეკვა",
         "back_to_top": "ზემოთ",
         "about_title": "პაატა და ქეთი ქურდიანი",
+        "kutaisi_btn": "ქუთაისის პროექტი",
         "site_title": "პაატა ქურდიანი",
         "not_found": "გვერდი ვერ მოიძებნა",
         "back_to_work": "პროექტებზე დაბრუნება",
@@ -191,6 +200,7 @@ STRINGS = {
         "call": "Позвонить",
         "back_to_top": "Наверх",
         "about_title": "Паата и Кети Курдиани",
+        "kutaisi_btn": "Проект в Кутаиси",
         "site_title": "Паата Курдиани",
         "not_found": "Страница не найдена",
         "back_to_work": "К проектам",
@@ -570,6 +580,7 @@ def header_nav(lang, active, path=""):
         f'<a href="{url_for(lang)}"{home}>{t(lang, "home")}</a>\n      '
         f'<a href="{url_for(lang, "projects/")}"{projects}>{t(lang, "projects")}</a>\n      '
         f'<a href="{url_for(lang, "about/")}"{about}>{t(lang, "about")}</a>\n      '
+        f'<a class="special-btn" href="{KUTAISI_PATHS[lang]}">{t(lang, "kutaisi_btn")}</a>\n      '
         '<span class="nav-cta">' + contact_buttons(lang) + "</span>"
     )
     switcher = lang_switcher(lang, path)
@@ -1104,6 +1115,12 @@ def main():
         shutil.copy2(os.path.join(ASSETS, "static", fname), os.path.join(DOCS, fname))
     ASSET_TAGS["css"] = fingerprint(os.path.join(DOCS, "css", "main.css"))
     ASSET_TAGS["js"] = fingerprint(os.path.join(DOCS, "js", "site.js"))
+
+    # the Kutaisi land page, served verbatim (see KUTAISI_PATHS)
+    kdst = os.path.join(DOCS, "kutaisi-project")
+    if os.path.isdir(kdst):
+        shutil.rmtree(kdst)
+    shutil.copytree(os.path.join(CONTENT, "kutaisi-project"), kdst)
 
     projects = load_projects()
     if not projects:

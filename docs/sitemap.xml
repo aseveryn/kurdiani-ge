@@ -73,6 +73,30 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kurdiani.ge/resort-complex-at-kutaisi-airport/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/resort-complex-at-kutaisi-airport/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/resort-complex-at-kutaisi-airport/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/resort-complex-at-kutaisi-airport/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/resort-complex-at-kutaisi-airport/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/ru/resort-complex-at-kutaisi-airport/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/resort-complex-at-kutaisi-airport/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/resort-complex-at-kutaisi-airport/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/resort-complex-at-kutaisi-airport/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/resort-complex-at-kutaisi-airport/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kurdiani.ge/en/resort-complex-at-kutaisi-airport/</loc>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/resort-complex-at-kutaisi-airport/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/resort-complex-at-kutaisi-airport/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kurdiani.ge/en/resort-complex-at-kutaisi-airport/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kurdiani.ge/resort-complex-at-kutaisi-airport/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kurdiani.ge/two-vllas-in-krtsanisi-tbilisi-georgia/</loc>
     <xhtml:link rel="alternate" hreflang="ka" href="https://kurdiani.ge/two-vllas-in-krtsanisi-tbilisi-georgia/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://kurdiani.ge/ru/two-vllas-in-krtsanisi-tbilisi-georgia/"/>
