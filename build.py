@@ -46,6 +46,8 @@ DOMAIN = "https://kurdiani.ge"
 WHATSAPP_NUMBER = "995599505971"  # Paata, digits only — wa.me link format
 PHONE_NUMBER = "+995599505971"  # Paata — same line as WhatsApp
 MESSENGER_URL = "https://m.me/kurdiani.ge"  # facebook.com/kurdiani.ge
+# Cloudflare Web Analytics beacon (cookieless). Empty string = no analytics.
+CF_BEACON_TOKEN = "67a8f54725b9422fa77bb06b6967aba6"
 
 # The Kutaisi land page is a self-contained site built in the separate
 # kutaisi-land repo; a rewritten copy lives in content/kutaisi-project/ and is
@@ -633,6 +635,13 @@ def footer(lang, back_to_top=True):
         )},
         ensure_ascii=False,
     )
+    beacon = ""
+    if CF_BEACON_TOKEN:
+        beacon = (
+            "\n  <script type='module' "
+            "src='https://static.cloudflareinsights.com/beacon.min.js' "
+            f"data-cf-beacon='{{\"token\": \"{CF_BEACON_TOKEN}\"}}'></script>"
+        )
     return f"""{btt}
     </main>
     <footer class="site-footer">
@@ -645,7 +654,7 @@ def footer(lang, back_to_top=True):
     </footer>
   </div>
   <script>window.__i18n={i18n};</script>
-  <script src="/js/site.js?v={ASSET_TAGS['js']}"></script>
+  <script src="/js/site.js?v={ASSET_TAGS['js']}"></script>{beacon}
 </body>
 </html>"""
 
