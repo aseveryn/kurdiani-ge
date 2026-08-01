@@ -54,6 +54,15 @@ NAME = {  # stable, descriptive filenames
 }
 EXT = {"image/jpeg": "jpg", "image/png": "png", "font/woff2": "woff2"}
 
+# Informational images — a map and a cadastral overlay. Their content IS the
+# spatial relationship, so cropping to a fixed-height box destroys the point:
+# the 1434x856 map in a 552x460 box lost roughly a third of its width, taking
+# the parcel off one edge and the terminal off the other. These render at their
+# own aspect ratio instead, and the container's fixed height is dropped so the
+# box hugs the image. Renders and photographs keep object-fit:cover, where any
+# crop still reads.
+NATURAL_FIT = {"location-map", "cadastral-plan"}
+
 
 def _decode(entry):
     raw = base64.b64decode(entry["data"])
@@ -104,15 +113,23 @@ def flatten(page_html, asset_prefix):
         # the hero is the LCP element: it must not be lazy
         eager = sid == "hero-plot"
         lazy = "" if eager else 'loading="lazy" '
+        fit = ("width:100%;height:auto;display:block"
+               if sid in NATURAL_FIT else
+               "width:100%;height:100%;object-fit:cover;display:block")
         img = (f'<img src="{asset_prefix}{rel}" alt="{alt}" '
-               f'{lazy}decoding="async" '
-               f'style="width:100%;height:100%;object-fit:cover;display:block">')
+               f'{lazy}decoding="async" style="{fit}">')
         if credit:
             img = ('<span style="position:relative;display:block;width:100%;height:100%">' + img +
                    f'<span style="position:absolute;left:8px;bottom:6px;font-size:11px;'
                    f'color:rgba(255,255,255,0.85);text-shadow:0 1px 2px rgba(0,0,0,0.55)">'
                    f'{htmllib.escape(credit)}</span></span>')
         return img
+
+    for sid in NATURAL_FIT:
+        doc, n = re.subn(
+            r'(<div style=")height:[^;]+;([^"]*"[^>]*>\s*<image-slot\b[^>]*id="' + sid + '")',
+            r'\1\2', doc)
+        assert n == 1, f"{sid}: expected one fixed-height container, found {n}"
 
     doc = re.sub(r'<image-slot\b[^>]*>\s*</image-slot>', slot_to_img, doc)
     doc = re.sub(r'<image-slot\b[^>]*>', slot_to_img, doc)
