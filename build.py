@@ -97,6 +97,8 @@ STRINGS = {
         "back_to_top": "Back to Top",
         "about_title": "Paata and Keti Kurdiani",
         "kutaisi_btn": "Kutaisi Project",
+        "kutaisi_land_cta": "This site is offered for sale — 36,318 m² under a single non-agricultural title, 900 m from the terminal. See the land, the terms and the registry analysis.",
+        "kutaisi_land_link": "Kutaisi airport land — details and terms",
         "site_title": "paata kurdiani",
         "not_found": "Page not found",
         "back_to_work": "Back to work",
@@ -150,6 +152,8 @@ STRINGS = {
         "back_to_top": "ზემოთ",
         "about_title": "პაატა და ქეთი ქურდიანი",
         "kutaisi_btn": "ქუთაისის პროექტი",
+        "kutaisi_land_cta": "ნაკვეთი იყიდება — 36 318 მ² ერთიანი არასასოფლო-სამეურნეო საკუთრებით, ტერმინალიდან 900 მეტრში. იხილეთ მიწა, პირობები და რეესტრის ანალიზი.",
+        "kutaisi_land_link": "ქუთაისის აეროპორტის მიწა — დეტალები და პირობები",
         "site_title": "პაატა ქურდიანი",
         "not_found": "გვერდი ვერ მოიძებნა",
         "back_to_work": "პროექტებზე დაბრუნება",
@@ -203,6 +207,8 @@ STRINGS = {
         "back_to_top": "Наверх",
         "about_title": "Паата и Кети Курдиани",
         "kutaisi_btn": "Проект в Кутаиси",
+        "kutaisi_land_cta": "Участок продаётся — 36 318 м² в едином несельскохозяйственном титуле, в 900 м от терминала. Смотрите участок, условия и анализ реестра.",
+        "kutaisi_land_link": "Земля у аэропорта Кутаиси — детали и условия",
         "site_title": "Паата Курдиани",
         "not_found": "Страница не найдена",
         "back_to_work": "К проектам",
@@ -740,6 +746,16 @@ def render_project_page(p, lang, prev=None, nxt=None):
         )
         desc_html = f'\n            <div class="description">{paras}</div>'
 
+    # The land itself is for sale; the sale page is a separate site at
+    # /kutaisi-project/. A contextual link (not just the nav button) tells
+    # search engines which page answers a commercial query, and passes the
+    # portfolio page's authority to it.
+    if slug == "resort-complex-at-kutaisi-airport":
+        desc_html += (
+            f'\n            <div class="description"><p>{html.escape(t(lang, "kutaisi_land_cta"))} '
+            f'<a href="{KUTAISI_PATHS[lang]}">{html.escape(t(lang, "kutaisi_land_link"))}</a>.</p></div>'
+        )
+
     og_image = f"{DOMAIN}/img/{slug}/cover-1280.jpg" if p["cover"] else None
     path = f"{slug}/"
     # a written description makes a far better search snippet than the
@@ -1172,6 +1188,23 @@ def main():
             )
             sitemap.append(f"    <priority>{'1.0' if path == '' else '0.8'}</priority>")
             sitemap.append("  </url>")
+    # The Kutaisi land page is a separate site served under /kutaisi-project/
+    # with its own language folders, so it cannot go through url_for above.
+    for lang_def in LANGS:
+        loc = KUTAISI_PATHS[lang_def["code"]]
+        sitemap.append("  <url>")
+        sitemap.append(f"    <loc>{DOMAIN}{loc}</loc>")
+        for alt in LANGS:
+            sitemap.append(
+                f'    <xhtml:link rel="alternate" hreflang="{alt["code"]}"'
+                f' href="{DOMAIN}{KUTAISI_PATHS[alt["code"]]}"/>'
+            )
+        sitemap.append(
+            f'    <xhtml:link rel="alternate" hreflang="x-default"'
+            f' href="{DOMAIN}{KUTAISI_PATHS[DEFAULT_LANG]}"/>'
+        )
+        sitemap.append("    <priority>0.9</priority>")
+        sitemap.append("  </url>")
     sitemap.append("</urlset>")
     write(os.path.join(DOCS, "sitemap.xml"), "\n".join(sitemap) + "\n")
     write(os.path.join(DOCS, "robots.txt"),
