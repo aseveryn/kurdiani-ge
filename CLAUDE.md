@@ -68,8 +68,10 @@ browser picks them per glyph. Preserve that ordering.
    ```
 
    `order: 0` puts the newest project first in the grid (lower = earlier;
-   existing projects are numbered 1–32). Renumber if the user wants a
-   specific position.
+   existing numbers are sparse after several drops — gaps are fine).
+   Renumber if the user wants a specific position. To retire a project,
+   `git rm` its content dir and docs/img dir and add its slug to
+   `SLUG_REDIRECTS` in build.py so the old URL keeps working.
 3. Cover: copy the best image to `content/projects/<new-slug>/cover.jpg`
    (it is displayed center-cropped to 202:158; pre-crop with Pillow if the
    user wants specific framing).

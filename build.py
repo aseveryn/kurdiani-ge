@@ -56,12 +56,18 @@ CF_BEACON_TOKEN = "67a8f54725b9422fa77bb06b6967aba6"
 KUTAISI_PATHS = {"ka": "/kutaisi-project/ge/", "ru": "/kutaisi-project/ru/",
                  "en": "/kutaisi-project/"}
 
-# Slug typos that shipped and were later corrected — the old URLs stay live as
-# meta-refresh stubs pointing at the renamed project, in every language.
+# Retired URLs stay live as meta-refresh stubs, one per language: slug typos
+# point at the renamed project, dropped projects point at the projects index.
 SLUG_REDIRECTS = {
-    "two-vllas-in-krtsanisi-tbilisi-georgia": "two-villas-in-krtsanisi-tbilisi-georgia",
-    "orthodox-curch-project": "orthodox-church-project",
-    "interrior": "interior-6",
+    "two-vllas-in-krtsanisi-tbilisi-georgia": "two-villas-in-krtsanisi-tbilisi-georgia/",
+    "orthodox-curch-project": "orthodox-church-project/",
+    "interrior": "projects/",
+    "interior-6": "projects/",
+    "restaurant-in-dusheti-georgia": "projects/",
+    "interior": "projects/",
+    "villa-in-tsavkisi-georgia": "projects/",
+    "interior-3": "projects/",
+    "interior-4": "projects/",
 }
 
 # Georgian is the default language and lives at the site root.
@@ -1174,11 +1180,11 @@ def main():
 
     render_redirect("contact")   # indexed for years on the previous site
     render_redirect("work")      # used to duplicate the home page
-    for old, new in SLUG_REDIRECTS.items():
+    for old, target in SLUG_REDIRECTS.items():
         for lang_def in LANGS:
             stub = (lang_def["prefix"].lstrip("/") + "/" if lang_def["prefix"]
                     else "") + old
-            render_redirect(stub, url_for(lang_def["code"], new + "/"))
+            render_redirect(stub, url_for(lang_def["code"], target))
     render_404()
 
     # every URL declares its translations, so Google serves the right one
