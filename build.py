@@ -355,7 +355,12 @@ def load_projects():
             "videos": videos,
             "cover": cover if os.path.exists(cover) else None,
         })
-    projects.sort(key=lambda p: p["order"])
+    # newest work first — a range like "2015–2018" sorts by its completion
+    # year, and `order` breaks ties within a year
+    def completion(p):
+        years = re.findall(r"\d{4}", str(p["year"]))
+        return int(years[-1]) if years else 0
+    projects.sort(key=lambda p: (-completion(p), p["order"]))
     return projects
 
 
