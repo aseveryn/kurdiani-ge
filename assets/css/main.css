@@ -218,7 +218,7 @@ video:focus-visible {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
-  padding: 0 12px;
+  padding: 0 8px;
   transition: color 0.2s ease;
 }
 .site-header nav a:hover, .site-header nav a.active { color: var(--fg); }
@@ -227,8 +227,8 @@ video:focus-visible {
 .site-header nav > a::after {
   content: '';
   position: absolute;
-  left: 12px;
-  right: 12px;
+  left: 8px;
+  right: 8px;
   bottom: 2px;
   height: 1px;
   background-color: var(--accent);
@@ -254,8 +254,8 @@ video:focus-visible {
 .nav-cta {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-left: 14px;
+  gap: 6px;
+  margin-left: 8px;
   vertical-align: middle;
 }
 /* needs to outrank `.site-header nav a`, which would otherwise force
@@ -290,8 +290,8 @@ video:focus-visible {
 
 /* Kutaisi special-project pill — the one deliberately loud item in the nav */
 .site-header nav a.special-btn {
-  margin-left: 10px;
-  padding: 0 16px;
+  margin-left: 4px;
+  padding: 0 12px;
   border: 1px solid var(--accent);
   border-radius: 999px;
   color: var(--accent);
@@ -307,7 +307,7 @@ video:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 2px;
-  margin-left: 18px;
+  margin-left: 10px;
   vertical-align: middle;
 }
 .site-header nav .lang-switch a {
@@ -739,16 +739,6 @@ body.lightbox-open { overflow: hidden; }
 
 /* with the Kutaisi pill the full nav needs ~1120px in Georgian, so the
    hamburger takes over well before the 932px content breakpoint */
-/* between full-width and the hamburger the Georgian nav is the tightest fit —
-   compress the spacing first, and hand over to the hamburger with real margin
-   so zoom rounding or a scrollbar can never wrap the language switcher */
-@media (max-width: 1360px) {
-  .site-header nav a { padding: 0 8px; }
-  .site-header nav > a::after { left: 8px; right: 8px; }
-  .site-header nav a.special-btn { margin-left: 4px; padding: 0 12px; }
-  .site-header .nav-cta { margin-left: 8px; gap: 6px; }
-  .site-header nav .lang-switch { margin-left: 10px; }
-}
 @media (max-width: 1220px) {
   .site-header nav { display: none; }
   .hamburger { display: block; }
