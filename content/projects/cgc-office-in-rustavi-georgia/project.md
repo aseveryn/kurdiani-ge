@@ -1,5 +1,5 @@
 ---
-title: CGC Office in Rustavi, Georgia.
+title: CGC Office in Rustavi, Georgia
 title_ka: CGC-ის ოფისი, რუსთავი
 title_ru: Офис CGC, Рустави
 category: office

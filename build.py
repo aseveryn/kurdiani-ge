@@ -56,6 +56,14 @@ CF_BEACON_TOKEN = "67a8f54725b9422fa77bb06b6967aba6"
 KUTAISI_PATHS = {"ka": "/kutaisi-project/ge/", "ru": "/kutaisi-project/ru/",
                  "en": "/kutaisi-project/"}
 
+# Slug typos that shipped and were later corrected — the old URLs stay live as
+# meta-refresh stubs pointing at the renamed project, in every language.
+SLUG_REDIRECTS = {
+    "two-vllas-in-krtsanisi-tbilisi-georgia": "two-villas-in-krtsanisi-tbilisi-georgia",
+    "orthodox-curch-project": "orthodox-church-project",
+    "interrior": "interior-6",
+}
+
 # Georgian is the default language and lives at the site root.
 LANGS = [
     {"code": "ka", "label": "GE", "prefix": ""},
@@ -112,7 +120,7 @@ STRINGS = {
         "prev": "Previous project",
         "next": "Next project",
         "site_description": (
-            "Kurdiani Architects — architecture portfolio of Paata Kurdiani. "
+            "Kurdiani Architects — architecture portfolio of Paata and Keti Kurdiani. "
             "Residential, hotel, restaurant and interior projects in Tbilisi, Georgia."
         ),
         "about_description": (
@@ -167,7 +175,7 @@ STRINGS = {
         "prev": "წინა პროექტი",
         "next": "შემდეგი პროექტი",
         "site_description": (
-            "ქურდიანი არქიტექტორები — პაატა ქურდიანის არქიტექტურული პორტფოლიო. "
+            "ქურდიანი არქიტექტორები — პაატა და ქეთი ქურდიანების არქიტექტურული პორტფოლიო. "
             "საცხოვრებელი სახლები, სასტუმროები, რესტორნები და ინტერიერები თბილისში."
         ),
         "about_description": (
@@ -222,7 +230,7 @@ STRINGS = {
         "prev": "Предыдущий проект",
         "next": "Следующий проект",
         "site_description": (
-            "Kurdiani Architects — архитектурное портфолио Пааты Курдиани. "
+            "Kurdiani Architects — архитектурное портфолио Пааты и Кети Курдиани. "
             "Жилые дома, гостиницы, рестораны и интерьеры в Тбилиси, Грузия."
         ),
         "about_description": (
@@ -1096,18 +1104,18 @@ def render_404():
     write(os.path.join(DOCS, "404.html"), page)
 
 
-def render_redirect(path, note=""):
-    """Keep a retired URL working by bouncing it to the home page."""
+def render_redirect(path, target="/"):
+    """Keep a retired URL working by bouncing it to target (Pages can't 301)."""
     write(os.path.join(DOCS, path, "index.html"), f"""<!DOCTYPE html>
 <html lang="{DEFAULT_LANG}">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="refresh" content="0; url=/">
-  <link rel="canonical" href="{DOMAIN}/">
+  <meta http-equiv="refresh" content="0; url={target}">
+  <link rel="canonical" href="{DOMAIN}{target}">
   <meta name="robots" content="noindex">
   <title>{t(DEFAULT_LANG, "site_title")}</title>
 </head>
-<body><p><a href="/">kurdiani.ge</a></p></body>
+<body><p><a href="{target}">kurdiani.ge</a></p></body>
 </html>
 """)
 
@@ -1166,6 +1174,11 @@ def main():
 
     render_redirect("contact")   # indexed for years on the previous site
     render_redirect("work")      # used to duplicate the home page
+    for old, new in SLUG_REDIRECTS.items():
+        for lang_def in LANGS:
+            stub = (lang_def["prefix"].lstrip("/") + "/" if lang_def["prefix"]
+                    else "") + old
+            render_redirect(stub, url_for(lang_def["code"], new + "/"))
     render_404()
 
     # every URL declares its translations, so Google serves the right one

@@ -1,5 +1,5 @@
 ---
-title: Resort Complex at Kutaisi International Airport, Georgia.
+title: Resort Complex at Kutaisi International Airport, Georgia
 title_ka: დასასვენებელი კომპლექსი ქუთაისის საერთაშორისო აეროპორტთან
 title_ru: Курортный комплекс у международного аэропорта Кутаиси
 category: hotel

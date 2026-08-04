@@ -1,5 +1,5 @@
 ---
-title: Condominium in Tbilisi, Georgia.
+title: Condominium in Tbilisi, Georgia
 title_ka: მრავალბინიანი საცხოვრებელი სახლი, თბილისი
 title_ru: Жилой комплекс, Тбилиси
 category: residential

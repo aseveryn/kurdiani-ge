@@ -1,5 +1,5 @@
 ---
-title: Villa in Tabakhmela, Georgia.
+title: Villa in Tabakhmela, Georgia
 title_ka: ვილა ტაბახმელაში
 title_ru: Вилла в Табахмела
 category: residential

@@ -1,5 +1,5 @@
 ---
-title: Old House Reconstruction in Saguramo, Georgia.
+title: Old House Reconstruction in Saguramo, Georgia
 title_ka: ძველი სახლის რეკონსტრუქცია, საგურამო
 title_ru: Реконструкция старого дома, Сагурамо
 category: residential

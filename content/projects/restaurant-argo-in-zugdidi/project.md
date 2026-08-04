@@ -1,5 +1,5 @@
 ---
-title: Restaurant "Argo" in Zugdidi, Georgia.
+title: Restaurant "Argo" in Zugdidi, Georgia
 title_ka: რესტორანი „არგო“, ზუგდიდი
 title_ru: Ресторан «Арго», Зугдиди
 category: restaurant

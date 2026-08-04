@@ -1,5 +1,5 @@
 ---
-title: Villa in Tsavkisi, Georgia.
+title: Villa in Tsavkisi, Georgia
 title_ka: ვილა წავკისში
 title_ru: Вилла в Цавкиси
 category: residential

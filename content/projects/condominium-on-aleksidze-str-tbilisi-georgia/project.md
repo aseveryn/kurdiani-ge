@@ -1,5 +1,5 @@
 ---
-title: Condominium on Aleksidze str. Tbilisi, Georgia.
+title: Condominium on Aleksidze str. Tbilisi, Georgia
 title_ka: საცხოვრებელი სახლი ალექსიძის ქუჩაზე, თბილისი
 title_ru: Жилой дом на улице Алексидзе, Тбилиси
 category: residential

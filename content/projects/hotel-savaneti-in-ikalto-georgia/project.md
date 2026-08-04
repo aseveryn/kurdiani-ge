@@ -1,5 +1,5 @@
 ---
-title: Hotel "Savaneti" in Ikalto, Georgia.
+title: Hotel "Savaneti" in Ikalto, Georgia
 title_ka: სასტუმრო „სავანეთი“, იყალთო
 title_ru: Гостиница «Саванети», Икалто
 category: hotel

@@ -1,5 +1,5 @@
 ---
-title: Hotel "Sachveno" Interior, Tbilisi, Georgia.
+title: Hotel "Sachveno" Interior, Tbilisi, Georgia
 title_ka: სასტუმრო „საჩვენოს“ ინტერიერი, თბილისი
 title_ru: Интерьер гостиницы «Сачвено», Тбилиси
 category: interior

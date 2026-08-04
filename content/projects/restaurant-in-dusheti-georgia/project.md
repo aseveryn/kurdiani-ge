@@ -1,5 +1,5 @@
 ---
-title: Restaurant in Dusheti, Georgia.
+title: Restaurant in Dusheti, Georgia
 title_ka: რესტორანი, დუშეთი
 title_ru: Ресторан, Душети
 category: restaurant

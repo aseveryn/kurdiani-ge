@@ -1,5 +1,5 @@
 ---
-title: Villa at Lisi Lake, Tbilisi, Georgia.
+title: Villa at Lisi Lake, Tbilisi, Georgia
 title_ka: ვილა ლისის ტბასთან, თბილისი
 title_ru: Вилла у озера Лиси, Тбилиси
 category: residential
