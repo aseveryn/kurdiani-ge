@@ -739,7 +739,17 @@ body.lightbox-open { overflow: hidden; }
 
 /* with the Kutaisi pill the full nav needs ~1120px in Georgian, so the
    hamburger takes over well before the 932px content breakpoint */
-@media (max-width: 1140px) {
+/* between full-width and the hamburger the Georgian nav is the tightest fit —
+   compress the spacing first, and hand over to the hamburger with real margin
+   so zoom rounding or a scrollbar can never wrap the language switcher */
+@media (max-width: 1360px) {
+  .site-header nav a { padding: 0 8px; }
+  .site-header nav > a::after { left: 8px; right: 8px; }
+  .site-header nav a.special-btn { margin-left: 4px; padding: 0 12px; }
+  .site-header .nav-cta { margin-left: 8px; gap: 6px; }
+  .site-header nav .lang-switch { margin-left: 10px; }
+}
+@media (max-width: 1220px) {
   .site-header nav { display: none; }
   .hamburger { display: block; }
 }
